@@ -1,16 +1,44 @@
 import React from 'react'
-import { SignUp } from '../components/SignUp'
-import { LoginForm } from '../components/LoginForm'
+
+import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
 
 export const StartPage = () => {
   return (
-    <section> 
-      <div>
-        <SignUp />
-      </div>
-      <div>
-        <LoginForm />
-      </div>
-    </section> 
+    <>
+    <div className ="start-text">
+     <MediumCard />
+     <p> lorem ipsumlorem ipsumlorem ipsumlorem ipsum
+     lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+     lorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum
+     lorem ipsumlorem ipsumlorem ipsumlorem ipsum
+     lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+     lorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum  </p>
+    
+     </div>
+    
+    <div className ="container-cards">
+      <SmallCard> 
+      <h3>QUIZ</h3>
+      </SmallCard>
+      <SmallCard> 
+      <h3>LAW BOOK</h3>
+      </SmallCard>
+      <SmallCard> 
+      <h3>DISCUSSIONS CARDS</h3>
+      </SmallCard>
+      
+    
+    </div>
+
+    <div className="facts-container">
+      <h2>FAST FACTS</h2>
+    <LargeCard />
+    </div>
+
+    <div className ="wide-container">
+      <WideCard />
+    </div>
+    
+    </>
   )
 }
