@@ -1,16 +1,13 @@
 import React from 'react'
 
+import { Nav } from '../components/Nav'
+
 
 
 export const Footer = () => {
 	return (
     <div className ="container">
-			 <nav>
-				 <p>link</p> 
-				 <p>link</p> 
-				 <p>link</p> 
-				 <p>link</p> 
-      </nav>
+			<Nav />
 			  <div className="end-text">
           <p>This is a project made during This is my final project for the Technigo Bootcamp.
 						I wanted to build a webpage in a topic i care about. 
@@ -20,3 +17,11 @@ export const Footer = () => {
     </div>
 	)
 }
+
+
+//<nav>
+//<p>link</p> 
+//<p>link</p> 
+//<p>link</p> 
+//<p>link</p> 
+//</nav>

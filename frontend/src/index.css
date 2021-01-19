@@ -83,10 +83,7 @@ h2, h3 {
   flex-direction: column;
 }
 
-.nav-links {
-  padding: 20px;
-  margin: 10px;
-}
+
 /*Start page */
 
 .facts-container {
@@ -196,6 +193,11 @@ nav {
   margin: 100px 0px 50px 0px;
 }
 
+.nav-links {
+  padding: 20px;
+  margin: 10px;
+}
+
 }
 
 @media (min-width: 1024px) {
@@ -250,4 +252,22 @@ nav {
   justify-content: space-evenly;
   margin: 130px 0px 50px 0px;
 }
+
+.nav-links {
+  padding: 20px;
+  margin: 10px;
+}
+
+.love {
+  width: 50%;
+}
+
+nav {
+  justify-content: left;
+}
+
+nav p {
+  padding:10px 30px 0px 0px;
+}
+
 }

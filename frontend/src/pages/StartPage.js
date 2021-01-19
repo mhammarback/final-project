@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
+//import Book from '../img/open-book.png'
 
 export const StartPage = () => {
   return (
@@ -13,12 +14,12 @@ export const StartPage = () => {
      lorem ipsumlorem ipsumlorem ipsumlorem ipsum
      lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
      lorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum  </p>
-    
      </div>
     
     <div className ="container-cards">
-      <SmallCard> 
+      <SmallCard > 
       <h3>QUIZ</h3>
+      
       </SmallCard>
       <SmallCard> 
       <h3>LAW BOOK</h3>
@@ -26,19 +27,18 @@ export const StartPage = () => {
       <SmallCard> 
       <h3>DISCUSSIONS CARDS</h3>
       </SmallCard>
-      
-    
     </div>
 
     <div className="facts-container">
       <h2>FAST FACTS</h2>
-    <LargeCard />
+    <LargeCard>
+      <p>Lorem Ipsum</p>
+    </LargeCard>
     </div>
 
     <div className ="wide-container">
       <WideCard />
     </div>
-    
     </>
   )
 }
