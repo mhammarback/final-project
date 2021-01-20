@@ -37,7 +37,9 @@ export const StartPage = () => {
     </div>
 
     <div className ="wide-container">
-      <WideCard />
+      <WideCard>
+      <p>Link : https://www.frivilligtsex.se/summary-in-english/ </p>
+      </WideCard>
     </div>
     </>
   )

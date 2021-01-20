@@ -32,7 +32,7 @@ h2, h3 {
 .header-color-container {
   background-color: #F5E9DC;
   width:70%;
-  height: 450px;
+  height: 350px;
   text-align: center;
 }
 
@@ -62,6 +62,7 @@ h2, h3 {
 
 .navbar {
   display: flex;
+  flex-direction: column;
   margin:10px;
 }
 
@@ -142,6 +143,11 @@ nav {
 
 @media (min-width: 700px) and (max-width: 1024px) {
 
+
+.header-color-container {
+  height: 450px;
+}
+
 .header-color-container h1 {
   left: 60%;
   font-size: 130px;
@@ -150,7 +156,7 @@ nav {
 .header-color-container p {
   display: flex;
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 48%;
   transform: translate(-50%, -50%);
   font-size: 14px;
@@ -201,6 +207,11 @@ nav {
 }
 
 @media (min-width: 1024px) {
+
+.header-color-container {
+  height: 450px;
+}
+
 .header-color-container h1 {
   left: 60%;
   font-size: 180px;
@@ -260,6 +271,10 @@ nav {
 
 .love {
   width: 50%;
+}
+
+.navbar {
+  flex-direction: row;
 }
 
 nav {

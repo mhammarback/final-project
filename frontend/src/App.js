@@ -8,6 +8,7 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { StartPage } from './pages/StartPage'
 import { DiscussionsCards } from './pages/DiscussionsCards'
+import { Forum } from './components/Forum'
 
 
 const reducer = combineReducers({ user: user.reducer })
@@ -26,7 +27,10 @@ return (
         </Route>
         <Route path='/discussion' exact>
         <DiscussionsCards />
-          
+        </Route>
+
+        <Route path='/forum' exact>
+        <Forum />
         </Route>
       </Switch>
       <Footer />

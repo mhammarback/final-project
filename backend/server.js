@@ -9,6 +9,8 @@ const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/authAPI'
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
+
+// MODELS 
 const User = mongoose.model('User', {
   name: {
     type: String, 
@@ -30,6 +32,26 @@ const User = mongoose.model('User', {
   },
 })
 
+const Story = mongoose.model('Story', {
+  message: {
+    type: String, 
+    required: true, 
+    minlength: 5, 
+    maxlength: 200
+  }, 
+  username: {
+    type: String, 
+    maxlength: 20, 
+    default: 'Anonymous'
+  },
+  createdAt: {
+    type: Date, 
+    default: Date.now
+  }
+})
+
+//AUTENTICATION 
+
 const authenticateUser = async (req, res, next) => {
   try {
     const user = await User.findOne({ accessToken: req.header('Authorization') })
@@ -43,14 +65,14 @@ const authenticateUser = async (req, res, next) => {
     res.status(403).json({ message: 'Access token is missing or wrong', errors: err })
   }
 }
-//   PORT=9000 npm start
+
 const port = process.env.PORT || 8080
 const app = express()
 
 app.use(cors())
 app.use(bodyParser.json())
 
-// Start defining your routes here
+// ROUTES AUTHENTICATION 
 
 app.use((req, res, next) => {
   if (mongoose.connection.readyState === 1) {
@@ -60,11 +82,11 @@ app.use((req, res, next) => {
   }
 })
 
-app.get('/', (req, res) => {
-  res.send('Hello world')
+app.get('/forum', (req, res) => {
+  res.send('Welcome to our shared forum')
 })
 
-app.post('/users', async (req, res) => {
+app.post('/forum', async (req, res) => {
   try {
     const {name, email, password} = req.body
     const SALT = bcrypt.genSaltSync(10)
@@ -88,6 +110,20 @@ app.post('/sessions', async (req, res) => {
     res.json({ userId: user._id, accessToken: user.accessToken, name: user.name })
   } else {
     res.status(401).json({ notFound: true, error: 'Login failed' })
+  }
+})
+
+// ROUTES MESSAGES 
+
+app.post('/forum/stories' , async (req, res) => {
+  const { message, username } = req.body 
+  const story = new Story ({ message, username: username || 'Anonymous' })
+
+  try {
+    const savedStory = await story.save()
+    res.status(201).json(savedStory)
+  } catch (err) {
+    res.status(400).json ({ message: 'could not post story', errors:err.errors})
   }
 })
 
