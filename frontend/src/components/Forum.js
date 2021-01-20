@@ -32,11 +32,11 @@ export const Forum = () => {
 			body: JSON.stringify({ text: newStory})
 		})
 		.then(() => fetchStorys())
-		.catch(error => console.error.apply(error))
+		.catch(error => console.error(error))
 	}
 
 	return(
-		<section>
+		<section className ="facts-container ">
 			<StoryInput onMessageChange={postSingleStory} />
 			{storys.map((story) => (
 					<StoryList 

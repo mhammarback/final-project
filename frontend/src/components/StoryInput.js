@@ -16,9 +16,8 @@ export const StoryInput = ({ onMessageChange }) => {
   }
 
   return(
-    <main>
     <section className ="story-input-container">
-      <form className ="story-input-content" onSubmit ={handleSubmit} >
+      <form className ="story-input-content" onSubmit={handleSubmit} >
         <input
         type='text'
         placeholder='share consent tip'
@@ -29,11 +28,10 @@ export const StoryInput = ({ onMessageChange }) => {
 
        <button
         className="button-send-message button-send-message-active">
-          <img src={icon} />
+          <img src={icon} alt="send-icon" />
        </button>
 
       </form>  
     </section>
-    </main>
   )
 }
