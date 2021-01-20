@@ -118,6 +118,68 @@ h2, h3 {
   margin-bottom: 50px;
 }
 
+/* FORUM */
+
+main {
+  width: 420px;
+  max-width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  padding: 48px 16px 80px 16px;
+  overflow: scroll;
+}
+
+.story-input-container {
+  height: 96px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.story-input-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.message-field {
+  height: 48px;
+  padding: 0 16px 0 16px;
+  background: #ffffff;
+  border: 1px solid black;
+  border-radius: 24px;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 0.87);
+
+  flex: 1;
+}
+
+
+.button-send-message {
+  margin-left: 8px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #F5E9DC;
+}
+
+/* Aligns the icon in the button */
+.button-send-message img {
+  position: relative;
+  left: 2px;
+  top: 1px;
+  width:50%
+}
 
 
 /* Footer */

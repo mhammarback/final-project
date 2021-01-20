@@ -1,6 +1,6 @@
 import React, { useState ,useEffect } from 'react'
 
-import { StoryForm } from '../components/StoryForm'
+import { StoryInput } from './StoryInput'
 import { StoryList } from '../components/StoryList'
 
 export const Forum = () => {
@@ -37,7 +37,7 @@ export const Forum = () => {
 
 	return(
 		<section>
-			<StoryForm onMessageChange={postSingleStory} />
+			<StoryInput onMessageChange={postSingleStory} />
 			{storys.map((story) => (
 					<StoryList 
 					key={story._id}
