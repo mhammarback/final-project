@@ -30,7 +30,6 @@ export const StoryInput = ({ onMessageChange }) => {
         className="button-send-message button-send-message-active">
           <img src={icon} alt="send-icon" />
        </button>
-
       </form>  
     </section>
   )

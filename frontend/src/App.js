@@ -6,9 +6,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { user } from './reducers/user'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { Forum } from './components/Forum'
 import { StartPage } from './pages/StartPage'
 import { DiscussionsCards } from './pages/DiscussionsCards'
-import { Forum } from './components/Forum'
+import { Lawbook } from './pages/Lawbook'
+
 
 
 const reducer = combineReducers({ user: user.reducer })
@@ -31,6 +33,9 @@ return (
 
         <Route path='/forum' exact>
         <Forum />
+        </Route>
+        <Route path='/lawbook' exact>
+        <Lawbook />
         </Route>
       </Switch>
       <Footer />

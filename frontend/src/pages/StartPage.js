@@ -7,13 +7,14 @@ export const StartPage = () => {
   return (
     <>
     <div className ="start-text">
-     <MediumCard />
-     <p> lorem ipsumlorem ipsumlorem ipsumlorem ipsum
-     lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-     lorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum
-     lorem ipsumlorem ipsumlorem ipsumlorem ipsum
-     lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-     lorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum  </p>
+       <MediumCard />
+         <div className ="start-text-header">
+          <p className="small-header">What, Why and how?</p>
+          <p> lorem ipsumlorem ipsumlorem ipsumlorem ipsum
+          lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+          lorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum
+           </p>
+         </div>
      </div>
     
     <div className ="container-cards">

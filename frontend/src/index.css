@@ -22,6 +22,10 @@ h2, h3 {
 
 
 /* Header */
+
+header {
+  margin-bottom: 150px;
+}
 .container-cards {
   display: flex;
   flex-direction: column;
@@ -70,14 +74,11 @@ h2, h3 {
   justify-content: right;
 }
 
-
-.start-text { 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 40px;
+.hidden-nav {
+  display: none;
 }
+
+
 
 .header-text-container {
   display: flex;
@@ -101,6 +102,11 @@ h2, h3 {
   margin: 100px 0px 100px 0px;
 }
 
+.start-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 /*Discussion page */
@@ -117,6 +123,30 @@ h2, h3 {
   justify-content: center;
   margin-bottom: 50px;
 }
+
+/* LAWBOOK */
+
+.lawbook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lawbook-opposite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.small-header {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
 
 /* FORUM */
 
@@ -254,16 +284,6 @@ nav {
   justify-content: space-evenly;
 }
 
-.start-text {
-  flex-direction: row;
-  justify-content: center;
-}
-
-.start-text p {
-  width: 30%;
-  margin-left: 50px;
-  text-align: left;
-}
 
 .start-style {
   display: flex;
@@ -281,9 +301,29 @@ nav {
   margin: 10px;
 }
 
+
+.start-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.start-text-header {
+  width:30%;
+  margin: 10px;
+}
+
 }
 
 @media (min-width: 1024px) {
+
+.hidden-hamburger {
+  display: none;
+}
+
+.hidden-nav {
+  display: flex;
+}
 
 .header-color-container {
   height: 450px;
@@ -319,16 +359,19 @@ nav {
   justify-content: space-evenly;
 }
   
+
+
 .start-text {
+  display: flex;
   flex-direction: row;
   justify-content: center;
 }
-  
-.start-text p {
-  width: 30%;
-  margin-left: 50px;
-  text-align: left;
+
+.start-text-header {
+  width:30%;
+  margin: 10px;
 }
+
   
 .start-style {
   display: flex;
@@ -365,6 +408,21 @@ nav p {
 /* FORUM*/
 .forum-card {
   width: 30%;
+}
+
+.lawbook {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  margin-left: 150px;
+}
+
+/* lAWBOOK*/
+.lawbook-opposite {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+  margin-right: 150px;
 }
 
 }
