@@ -82,11 +82,11 @@ app.use((req, res, next) => {
   }
 })
 
-app.get('/forum', (req, res) => {
+app.get('/user', (req, res) => {
   res.send('Welcome to our shared forum')
 })
 
-app.post('/forum', async (req, res) => {
+app.post('/user', async (req, res) => {
   try {
     const {name, email, password} = req.body
     const SALT = bcrypt.genSaltSync(10)
@@ -115,7 +115,7 @@ app.post('/sessions', async (req, res) => {
 
 // ROUTES MESSAGES 
 
-app.post('/forum/stories' , async (req, res) => {
+app.post('/forum' , async (req, res) => {
   const { message, username } = req.body 
   const story = new Story ({ message, username: username || 'Anonymous' })
 

@@ -12,7 +12,6 @@ import { DiscussionsCards } from './pages/DiscussionsCards'
 import { Lawbook } from './pages/Lawbook'
 
 
-
 const reducer = combineReducers({ user: user.reducer })
 const store = configureStore({ reducer })
 
