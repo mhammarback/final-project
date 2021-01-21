@@ -6,6 +6,7 @@ color:#000;
 border: none;
 border-radius: 5px;
 padding: 15px 60px;
+margin: 5px;
 text-align: center;
 text-decoration: none;
 font-size: 16px;

@@ -10,6 +10,7 @@ import { Forum } from './components/Forum'
 import { StartPage } from './pages/StartPage'
 import { DiscussionsCards } from './pages/DiscussionsCards'
 import { Lawbook } from './pages/Lawbook'
+import { LoginPage } from './pages/LoginPage'
 
 
 const reducer = combineReducers({ user: user.reducer })
@@ -24,17 +25,21 @@ return (
       <Switch>
         <Route path='/' exact>
          <StartPage />
-         
         </Route>
         <Route path='/discussion' exact>
         <DiscussionsCards />
         </Route>
-
         <Route path='/forum' exact>
         <Forum />
         </Route>
         <Route path='/lawbook' exact>
         <Lawbook />
+        </Route>
+        <Route path='/quiz' exact>
+        
+        </Route>
+        <Route path='/user' exact>
+        <LoginPage />
         </Route>
       </Switch>
       <Footer />

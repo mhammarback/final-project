@@ -146,6 +146,32 @@ header {
 }
 
 
+/* SIGN IN / UP  */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/*USE AS CONTAINER FOR STYLED COMPONENT? */ 
+.content-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  padding: 50px 50px;
+}
+
+.content-container input {
+  margin: 10px;
+}
+
+.form-style {
+  background-color: #F5E9DC;
+  
+}
 
 
 /* FORUM */
