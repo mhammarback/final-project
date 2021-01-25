@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+
+
 import { logout } from '../reducers/user'
 
 const SIGNUP_URL = 'https://login-logout-authentication.herokuapp.com/users'
@@ -83,3 +85,4 @@ export const SignUp = () => {
    return <h2>Registration completed, please log in</h2>
   }
 }
+

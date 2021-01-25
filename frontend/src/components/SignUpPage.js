@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import styled from 'styled-components/macro'
 
 import { user } from '../reducers/user'
+import { Button } from '../lib/Button'
 
 const SIGNUP_URL = 'https://test/users'
 
@@ -41,6 +43,7 @@ export const SignUpPage = ({ setPage }) => {
   
 return ( 
   <>
+  <Section>
   <form className='login-form form-style' onSubmit={handleSubmit}>
     <h1>Sign up </h1>
       <div className='content-container'>
@@ -63,11 +66,19 @@ return (
           minLength='5'
           required
         />
-        <button className='input-button' type='submit'>Sign up</button>
+        <Button className='input-button' type='submit'>Sign up</Button>
       </div>
     </form>
     <p>Already a user?</p>
-    <button className="input-button" type="button" onClick={() => setPage('login')}>Log in</button>
+    <Button className="input-button" type="button" onClick={() => setPage('login')}>Log in</Button>
+    </Section>
   </>
-)
+  )
 }
+
+const Section = styled.section`
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin-bottom: 40px;
+`  

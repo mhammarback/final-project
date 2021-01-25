@@ -157,7 +157,7 @@ header {
 }
 
 /*USE AS CONTAINER FOR STYLED COMPONENT? */ 
-.content-container{
+.content-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
@@ -166,11 +166,16 @@ header {
 
 .content-container input {
   margin: 10px;
+  padding: 10px;
+  font-size: 16px;
 }
 
 .form-style {
   background-color: #F5E9DC;
-  
+}
+
+.form-style h1 {
+  text-align: center;
 }
 
 
@@ -252,6 +257,8 @@ main {
   width:50%
 }
 
+
+/* LOGIN /SIGN UP */
 
 /* Footer */
 .container {
@@ -434,6 +441,10 @@ nav p {
 /* FORUM*/
 .forum-card {
   width: 30%;
+}
+
+.form-style {
+  width: 40%;
 }
 
 .lawbook {

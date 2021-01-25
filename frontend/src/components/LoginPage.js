@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import styled from 'styled-components/macro'
 
 import { user, login } from '../reducers/user'
+import { Button } from '../lib/Button'
 
 export const LoginPage = ({ setPage }) => {
   const dispatch = useDispatch()
@@ -20,8 +22,9 @@ export const LoginPage = ({ setPage }) => {
 	
 	return ( 
 		<>
+    <Section>
 		<form className='login-form form-style' onSubmit={handleSubmit}>
-      <h1>Login</h1>
+      <h1>Sign in </h1>
         <div className='content-container'>
           <label>Name</label>
           <input
@@ -42,11 +45,33 @@ export const LoginPage = ({ setPage }) => {
             minLength='5'
             required
           />
-          <button className='input-button' type='submit'>Log in</button>
+          <Button className='input-button' type='submit'>Sign in</Button>
         </div>
       </form>
-			<p className="p-label">Don't have a user?</p>
-      <button className="input-button" type="button" onClick={() => setPage('signup')}>Sign up</button>
+			<p>Not a user?</p>
+      <Button className="input-button" type="button" onClick={() => setPage('signup')}>Sign up</Button>
+      </Section>
 		</>
 	)
 }
+
+
+const Input = styled.input`
+  height: 48px;
+  padding: 0 16px 0 16px;
+  background: #ffffff;
+  border: 1px solid black;
+  border-radius: 24px;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 0.87);
+
+  flex: 1;
+`
+
+const Section = styled.section`
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin-bottom: 40px;
+`

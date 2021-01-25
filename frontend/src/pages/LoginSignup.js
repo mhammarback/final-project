@@ -7,13 +7,14 @@ import { QuizPage } from '../pages/QuizPage'
 
 
 export const LoginSignup = () => {
-  const [page, setPage] = useState('signup')
+  const [page, setPage] = useState('login')
   const accessToken = useSelector((store) => store.user.accessToken)
   
   if (!accessToken) {
     return (
       <>
-        {page === 'signup' ? (<SignUpPage setPage={setPage} />) : (<LoginPage setPage={setPage} />)}
+       
+        {page === 'login' ? (<LoginPage setPage={setPage} />) : (<SignUpPage setPage={setPage} />)}
       </>
     )
   } else {
