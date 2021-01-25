@@ -125,7 +125,7 @@ app.get('/user', (req, res) => {
 
 app.post('/user', async (req, res) => {
   try {
-    const {name, password} = req.body
+    const { name, password } = req.body
     const user = await new User({ name, password }).save()
     res.status(201).json({ userId: user._id, accessToken: user.accessToken })
   } catch (err) {
