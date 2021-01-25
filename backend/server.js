@@ -5,12 +5,46 @@ import mongoose from 'mongoose'
 import crypto from 'crypto'
 import bcrypt from 'bcrypt'
 
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/authAPI'
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/final-project'
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
-
 // MODELS 
+
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    minlength: 2, 
+    maxlength: 20,
+    unique: true,
+    required: true, 
+  },
+  password: {
+    type: String, 
+    minlength: 5, 
+    maxlength: 30, 
+    required: true,
+  },
+  accessToken: {
+    type: String, 
+    default: () => crypto.randomBytes(128).toString('hex'),
+    unique: true,
+  },
+})
+
+userSchema.pre('save', async function (next) {
+  const user = this
+  if (!user.isModified('password')) {
+    return next()
+  }
+  const salt = bcrypt.genSaltSync(10)
+  user.password = bcrypt.hashSync(user.password, salt)
+  next()
+})
+
+const User = mongoose.model('User', userSchema)
+
+/*
 const User = mongoose.model('User', {
   name: {
     type: String, 
@@ -31,6 +65,7 @@ const User = mongoose.model('User', {
     default: () => crypto.randomBytes(128).toString('hex'),
   },
 })
+*/
 
 const Story = mongoose.model('Story', {
   message: {
@@ -82,36 +117,45 @@ app.use((req, res, next) => {
   }
 })
 
+/*maybe delete*/
 app.get('/user', (req, res) => {
   res.send('Welcome to our shared forum')
 })
 
+
 app.post('/user', async (req, res) => {
   try {
-    const {name, email, password} = req.body
-    const SALT = bcrypt.genSaltSync(10)
-    const user = new User({name, email, password: bcrypt.hashSync(password, SALT)})
-    await user.save()
+    const {name, password} = req.body
+    const user = await new User({ name, password }).save()
     res.status(201).json({ userId: user._id, accessToken: user.accessToken })
   } catch (err) {
     res.status(400).json({ message: 'Could not create user', errors: err.errors })
   }
 })
 
-app.get('/secrets', authenticateUser)
-app.get('/secrets', async (req, res) => {
+app.get('/user/secrets', authenticateUser)
+app.get('/user/secrets', async (req, res) => {
   const secretMessage = `This is a super secret message for ${req.user.name}`
   res.status(201).json({ secretMessage })
 })
 
 app.post('/sessions', async (req, res) => {
-  const user = await User.findOne({ email: req.body.email })
-  if (user && bcrypt.compareSync(req.body.password, user.password)) {
-    res.json({ userId: user._id, accessToken: user.accessToken, name: user.name })
-  } else {
-    res.status(401).json({ notFound: true, error: 'Login failed' })
+  try {
+    const { name, password } = req.body
+    const user = await User.findOne({ name })
+
+    if (user && bcrypt.compareSync(password, user.password)) {
+      res.status(201).json({ userId: user._id, accessToken: user.accessToken })
+    } else {
+      res.status(404).json({ notFound: true, message: 'Verify username and password is correct' })
+    }
+  } catch (err) {
+    res.status(404).json({ notFound: true, message: 'Verify username and password is correct' })
   }
 })
+
+
+
 
 // ROUTES MESSAGES 
 

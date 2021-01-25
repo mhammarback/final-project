@@ -77,7 +77,7 @@ export const LoginForm = () => {
     </section>
   )
   } else {
-    return <Redirect to='/secrets' />
+    return <Redirect to='/user/secrets' />
   }
 }
 
