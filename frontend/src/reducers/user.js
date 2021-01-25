@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState= {
   login: {
-    accessToken: null,
     userId: 0,
+    accessToken: localStorage.validToken || null,
     secretMessage:null,
     errorMessage:null, 
     name: null, 
@@ -14,13 +14,14 @@ export const user = createSlice({
   name:'user',
   initialState: initialState,
   reducers: {
-    setAccessToken: ( state, action) => {
-      const { accessToken } = action.payload
-      state.login.accessToken = accessToken
-    },
     setUserId: (state, action) => {
       const { userId } = action.payload
       state.login.userId = userId
+    },
+    setAccessToken: ( state, action) => {
+      const { accessToken } = action.payload
+      state.login.accessToken = accessToken
+      localStorage.setItem('validToken', accessToken)
     },
     setUserName: (state,action) => {
       const { name } = action.payload
@@ -37,11 +38,37 @@ export const user = createSlice({
   }
 })
 
+export const login = (name, password) => {
+  return (dispatch) => {
+    fetch('', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, password })
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Unable to log in, please check your username and password.')
+        } else {
+          return res.json()
+        }
+      })
+      .then((json) => {
+        dispatch(user.actions.setUserId({ userId: json.userId }))
+        dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }))
+      })
+      .catch((error) => {
+        dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }))
+      })
+  }
+}
+
+
 export const logout = () => {
   return (dispatch) => {
     dispatch(user.actions.setSecretMessage({ secretMessage: null }))
     dispatch(user.actions.setErrorMessage({ errorMessage: null }))
     dispatch(user.actions.setAccessToken({ accessToken: null }))
     dispatch(user.actions.setUserId({ userId: 0 }))
+    localStorage.removeItem('validToken')
   }
 }
