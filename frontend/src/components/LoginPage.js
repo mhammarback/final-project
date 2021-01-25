@@ -46,10 +46,10 @@ export const LoginPage = ({ setPage }) => {
             required
           />
           <Button className='input-button' type='submit'>Sign in</Button>
+            <p>Not a user?</p>
+              <Button className="input-button" type="button" onClick={() => setPage('signup')}>Sign up</Button>
         </div>
       </form>
-			<p>Not a user?</p>
-      <Button className="input-button" type="button" onClick={() => setPage('signup')}>Sign up</Button>
       </Section>
 		</>
 	)

@@ -66,11 +66,11 @@ return (
           minLength='5'
           required
         />
-        <Button className='input-button' type='submit'>Sign up</Button>
-      </div>
-    </form>
-    <p>Already a user?</p>
-    <Button className="input-button" type="button" onClick={() => setPage('login')}>Log in</Button>
+          <Button className='input-button' type='submit'>Sign up</Button>
+          <p>Already a user?</p>
+            <Button className="input-button" type="button" onClick={() => setPage('login')}>Log in</Button>
+        </div>
+      </form>
     </Section>
   </>
   )

@@ -2,11 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const questions = [
   {id: 0, questionText: 'First question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 0, questionText: 'First question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 0, questionText: 'First question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 0, questionText: 'First question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 0, questionText: 'First question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 0, questionText: 'First question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  {id: 1, questionText: 'Second question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  {id: 2, questionText: 'Third question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  {id: 3, questionText: 'Four question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  {id: 4, questionText: 'Five question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  {id: 5, questionText: 'Six question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
 ]
 
 const results = [
@@ -22,12 +22,12 @@ const summary = {
 }
 
 const initialState = {
-	questions, 
-	answers: [],
-	currentQuestionIndex: 0,
-	disabled: true, 
-	optionDisabled: false, 
-	deciseconds: 200,
+  questions,
+  answers: [],
+  currentQuestionIndex: 0,
+  disabled: true,
+  optionDisabled : false,
+  deciseconds: 100,
   timerStart: true,
   showSummary: false,
   results,
@@ -91,7 +91,7 @@ export const quiz = createSlice({
       state.disabled = false
 		},
 		setSummary: (state, action) => {
-			const { numberOfQuestions, correctAnswerIndex } = action.payload
+			const { numberOfQuestions, correctAnswers } = action.payload
 			state.summary.numberOfQuestions = numberOfQuestions
 			state.summary.correctAnswers = correctAnswers
 

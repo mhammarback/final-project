@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 import { SignUpPage } from '../components/SignUpPage'
 import { LoginPage } from '../components/LoginPage'
-import { QuizPage } from '../pages/QuizPage'
+import { QuizHome } from '../quiz/QuizHome'
 
 
 export const LoginSignup = () => {
@@ -13,13 +13,12 @@ export const LoginSignup = () => {
   if (!accessToken) {
     return (
       <>
-       
         {page === 'login' ? (<LoginPage setPage={setPage} />) : (<SignUpPage setPage={setPage} />)}
       </>
     )
   } else {
       return (
-        <QuizPage setPage={setPage} />
+        <QuizHome setPage={setPage} />
       )
     }
 }

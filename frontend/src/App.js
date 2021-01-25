@@ -12,6 +12,8 @@ import { DiscussionsCards } from './pages/DiscussionsCards'
 import { Lawbook } from './pages/Lawbook'
 import { LoginPage } from './pages/LoginPage'
 import { LoginSignup } from'./pages/LoginSignup'
+import { QuizHome } from './quiz/QuizHome'
+import { QuizStart } from './quiz/Quiz'
 
 
 const reducer = combineReducers({ user: user.reducer })
@@ -37,8 +39,14 @@ return (
         <Lawbook />
         </Route>
         <Route path='/quiz' exact>
+          <QuizHome />
+        </Route>
+        <Route path='/quiz-start'>
+          <QuizStart />
         
         </Route>
+
+
         <Route path='/user' exact>
         <LoginPage />
         </Route>
