@@ -10,7 +10,6 @@ import { Forum } from './components/Forum'
 import { StartPage } from './pages/StartPage'
 import { DiscussionsCards } from './pages/DiscussionsCards'
 import { Lawbook } from './pages/Lawbook'
-import { LoginPage } from './pages/LoginPage'
 import { LoginSignup } from'./pages/LoginSignup'
 import { QuizHome } from './quiz/QuizHome'
 import { QuizStart } from './quiz/Quiz'
@@ -45,12 +44,6 @@ return (
           <QuizStart />
         
         </Route>
-
-
-        <Route path='/user' exact>
-        <LoginPage />
-        </Route>
-
         <Route path='/sign' exact>
         <LoginSignup />
         </Route>

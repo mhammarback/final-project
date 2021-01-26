@@ -6,7 +6,7 @@ export const Nav = () => {
   return (
     <section className ="navbar">
      <div>
-      <NavLink to ="/" className="nav-links">
+      <NavLink to ="/sign" className="nav-links">
       SIGN UP
       </NavLink>
       ||
@@ -15,14 +15,14 @@ export const Nav = () => {
       </NavLink>
     </div>
     <div className ="links-right">
-      <NavLink to ="/" className="nav-links">
-      DISCUSSION CARDS
+      <NavLink to ="/lawbook" className="nav-links">
+      LAWBOOK 
       </NavLink>
       <NavLink to="/discussion" exact className="nav-links">
-      LAWBOOK
+      DISCUSSION CARDS
       </NavLink>
-      <NavLink to="/contact" exact className="nav-links">
-      QUIZ
+      <NavLink to="/" exact className="nav-links">
+      HOME 
       </NavLink>  
     </div> 
   </section>

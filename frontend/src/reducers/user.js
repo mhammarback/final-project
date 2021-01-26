@@ -40,9 +40,9 @@ export const user = createSlice({
 
 export const login = (name, password) => {
   return (dispatch) => {
-    fetch('', {
+    fetch('https://final-project-technigo.herokuapp.com/sessions', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify({ name, password })
     })
       .then((res) => {
@@ -55,6 +55,27 @@ export const login = (name, password) => {
       .then((json) => {
         dispatch(user.actions.setUserId({ userId: json.userId }))
         dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }))
+      })
+      .catch((error) => {
+        dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }))
+      })
+  }
+}
+
+export const getSecretMessage = (userId, accessToken) => {
+  return (dispatch) => {
+    fetch(`https://final-project-technigo.herokuapp.com/${userId}/secret`, {
+      method: 'GET',
+      headers: { Authorization: accessToken }
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Could not get information, please make sure you are logged in.')
+        }
+        return res.json()
+      })
+      .then((json) => {
+        dispatch(user.actions.setSecretMessage({ secretMessage: json.secretMessage }))
       })
       .catch((error) => {
         dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }))

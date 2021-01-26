@@ -6,6 +6,9 @@ export const SmallCard = styled.div`
   margin: 40px 0 40px 0;
   background-color: #F5E9DC;
   border-radius: 5px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const MediumCard = styled.div`
@@ -14,6 +17,9 @@ export const MediumCard = styled.div`
   margin: 40px 0 40px 0;
   background-color: #F5E9DC;
   border-radius: 5px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: 700px) {
     width: 480px;

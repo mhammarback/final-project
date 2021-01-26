@@ -24,7 +24,7 @@ export const LoginPage = ({ setPage }) => {
 		<>
     <Section>
 		<form className='login-form form-style' onSubmit={handleSubmit}>
-      <h1>Sign in </h1>
+      <h1>SIGN IN </h1>
         <div className='content-container'>
           <label>Name</label>
           <input
@@ -50,13 +50,20 @@ export const LoginPage = ({ setPage }) => {
               <Button className="input-button" type="button" onClick={() => setPage('signup')}>Sign up</Button>
         </div>
       </form>
+      {error && <div className="div-error">{`${error}`}</div>}
       </Section>
 		</>
 	)
 }
 
+const Section = styled.section`
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin-bottom: 40px;
+`
 
-const Input = styled.input`
+/*const Input = styled.input`
   height: 48px;
   padding: 0 16px 0 16px;
   background: #ffffff;
@@ -67,11 +74,5 @@ const Input = styled.input`
   color: rgba(0, 0, 0, 0.87);
 
   flex: 1;
-`
+` */
 
-const Section = styled.section`
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-  margin-bottom: 40px;
-`

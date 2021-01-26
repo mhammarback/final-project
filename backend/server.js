@@ -133,8 +133,8 @@ app.post('/user', async (req, res) => {
   }
 })
 
-app.get('/user/secrets', authenticateUser)
-app.get('/user/secrets', async (req, res) => {
+app.get('/users/:id/secret', authenticateUser)
+app.get('/users/:id/secret', async (req, res) => {
   const secretMessage = `This is a super secret message for ${req.user.name}`
   res.status(201).json({ secretMessage })
 })

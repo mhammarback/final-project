@@ -5,7 +5,7 @@ import styled from 'styled-components/macro'
 import { user } from '../reducers/user'
 import { Button } from '../lib/Button'
 
-const SIGNUP_URL = 'https://test/users'
+const SIGNUP_URL = 'https://final-project-technigo.herokuapp.com/user'
 
 export const SignUpPage = ({ setPage }) => {
   const dispatch = useDispatch()
@@ -45,7 +45,7 @@ return (
   <>
   <Section>
   <form className='login-form form-style' onSubmit={handleSubmit}>
-    <h1>Sign up </h1>
+    <h1>SIGN UP</h1>
       <div className='content-container'>
         <label>Name</label>
         <input
@@ -71,6 +71,7 @@ return (
             <Button className="input-button" type="button" onClick={() => setPage('login')}>Log in</Button>
         </div>
       </form>
+      {error && <div className="div-error">{`${error}`}</div>}
     </Section>
   </>
   )
@@ -82,3 +83,4 @@ const Section = styled.section`
   align-items: center;
   margin-bottom: 40px;
 `  
+
