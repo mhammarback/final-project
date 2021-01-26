@@ -1,11 +1,11 @@
 import React,{ useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-
 import styled from 'styled-components/macro'
-import { user, getSecretMessage, logout } from '../reducers/user'
 
+import { user, getSecretMessage, logout } from '../reducers/user'
 import { Button } from '../lib/Button'
+import { ContainerCenter } from '../lib/Container'
 
 export const QuizHome = ({ setPage }) => {
 	const dispatch = useDispatch()
@@ -26,10 +26,12 @@ export const QuizHome = ({ setPage }) => {
 	return(
 		<>
 		<Section>
-		<h1>Welcome to the quiz page username</h1>
-		<h3>{`${secretMessage}`}</h3>
-		 <NavLink to="/quiz-start"><Button>start</Button></NavLink>
-		 <Button type="button" onClick={handleClick}>Log out</Button>
+		  <h1>Welcome to the quiz page username</h1>
+		  <h3>{`${secretMessage}`}</h3>
+			<ContainerCenter>
+			  <Button type="button" onClick={handleClick}>Log out</Button>
+		    <NavLink to="/quiz-start"><Button>start</Button></NavLink>
+			 </ContainerCenter>
 		</Section>
 		</>
 	)

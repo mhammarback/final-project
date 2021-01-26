@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom'
 import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
 import Book from '../img/open-book.png'
 import Heart from '../img/love.png'
+import Discussion from '../img/debate.png'
+import Feedback from '../img/stars.png'
 
 export const StartPage = () => {
   return (
@@ -18,6 +20,10 @@ export const StartPage = () => {
           <p> lorem ipsumlorem ipsumlorem ipsumlorem ipsum
           lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
           lorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum
+          orem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem 
+          ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem 
+          ipsumvlorem ipsumlorem ipsumlorem ipsum
+          orem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem 
            </p>
          </div>
      </div>
@@ -25,7 +31,8 @@ export const StartPage = () => {
     <div className ="container-cards">
       <NavLink to ="/forum" className="nav-links">
         <SmallCard> 
-          <h3>FEEDBACK</h3>
+          <h3>FEEDBACK FORUM</h3>
+          <Icon src={Feedback} alt="feedback icon" />  
         </SmallCard> 
       </NavLink>
 
@@ -39,6 +46,7 @@ export const StartPage = () => {
       <NavLink to ="/discussion" className="nav-links">
         <SmallCard> 
           <h3>DISCUSSIONS CARDS</h3>
+          <Icon src={Discussion} alt="discussion icon" />  
         </SmallCard>
       </NavLink>  
     </div>
@@ -52,7 +60,6 @@ export const StartPage = () => {
 
     <div className ="wide-container">
       <WideCard>
-      <p>Link : https://www.frivilligtsex.se/summary-in-english/ </p>
       </WideCard>
     </div>
     </>
