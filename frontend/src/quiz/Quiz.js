@@ -3,10 +3,13 @@ import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { quiz } from '../reducers/quiz'
-import { Button } from '../lib/Button'
+import { Button, SmallButton } from '../lib/Button'
+import { ContainerCenter , QuizOptionsContainer, ContainerColor  } from '../lib/Container'
+import { Timer } from '../quiz/Timer'
+import { TimeIsUp } from '../quiz/TimeIsUp'
 
  
-export const QuizStart = () => {
+export const Quiz = () => {
 	const disabled = useSelector((state) => state.quiz.disabled)
   const deciseconds = useSelector((state) => state.quiz.deciseconds)
   const optionDisabled = useSelector((state) => state.quiz.optionDisabled)
@@ -15,20 +18,22 @@ export const QuizStart = () => {
   const index = (useSelector((state) => state.quiz.questions)).indexOf(question)
   const { options } = question
 
-	const showSummaryButton = useSelector((state) => state.quiz.showSummary)
-	const answers = useSelector((state) => (state.quiz.answers))
-	const correct = (answers.filter((answer) => answer.isCorrect)).length
+  const showSummaryButton = useSelector((state) => state.quiz.showSummary)
+  const answers = useSelector((state) => (state.quiz.answers))
+  const correct = (answers.filter((answer) => answer.isCorrect)).length
 
 	const dispatch = useDispatch()
 
 	if (!question) {
-    return  <p>Oh no! I could not find the current question!</p>
+    return <p>Oh no! I could not find the current question!</p>
   }
 
 	return (
-		<>
+		<ContainerColor>
 		<h2>Question {(index + 1)} of {questions}: <span>{question.questionText}</span></h2>
-		<section>
+		<>
+			<QuizOptionsContainer>
+
       {options.map((option, optionindex) => {
         return (
           <Button
@@ -41,36 +46,25 @@ export const QuizStart = () => {
             </Button>
             )
        })}
-    </section>
-		
+      </QuizOptionsContainer>
+		</>
 		{showSummaryButton &&
       <section>
           <NavLink to="/summary">
-            <Button onClick={() => dispatch(quiz.actions.setSummary({ numberOfQuestions: questions, correctAnswers: correct }))}>See results</Button>
+            <SmallButton onClick={() => dispatch(quiz.actions.setSummary({ numberOfQuestions: questions, correctAnswers: correct }))}>See results</SmallButton>
           </NavLink>
         </section>}
       {!showSummaryButton &&
         <section>
-          <section>
-            <Button disabled={(index === 0)} onClick={() => dispatch(quiz.actions.goToPreviousQuestion())}>Back</Button>
-            <Button disabled={disabled} onClick={() => dispatch(quiz.actions.goToNextQuestion())}>Next</Button>
-            <NavLink to="/"><Button onClick={() => dispatch(quiz.actions.restart())}>Restart</Button></NavLink>
-          </section>
+					{(deciseconds > 0) ? <TimeIsUp color="rgba(0, 0, 0, 0)" /> : <TimeIsUp color="rgba(0, 0, 0, 1)" />}
+
+          <ContainerCenter>
+            <SmallButton disabled={(index === 0)} onClick={() => dispatch(quiz.actions.goToPreviousQuestion())}>Back</SmallButton>
+            <SmallButton disabled={disabled} onClick={() => dispatch(quiz.actions.goToNextQuestion())}>Next</SmallButton>
+            <NavLink to="/quiz-home"><SmallButton onClick={() => dispatch(quiz.actions.restart())}>Restart</SmallButton></NavLink>
+          </ContainerCenter>
+					<Timer />
         </section>}
-    </>
+    </ContainerColor>
   )
 }
-
-
-
-/** <section>
-          {(deciseconds > 0) ? <TimeIsUp color="rgba(0, 0, 0, 0)" /> : <TimeIsUp color="rgba(0, 0, 0, 1)" />}
-          <section>
-            <Button disabled={(index === 0)} onClick={() => dispatch(quiz.actions.goToPreviousQuestion())}>Back</Button>
-            <Button disabled={disabled} onClick={() => dispatch(quiz.actions.goToNextQuestion())}>Next</Button>
-            <NavLink to="/"><Button onClick={() => dispatch(quiz.actions.restart())}>Restart</Button></NavLink>
-          </section>
-          <Timer />
-        </section>}
-
- */

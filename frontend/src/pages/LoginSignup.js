@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux'
 
 import { SignUpPage } from '../components/SignUpPage'
 import { LoginPage } from '../components/LoginPage'
-import { QuizHome } from '../quiz/QuizHome'
+//import { QuizHome } from '../quiz/QuizHome'
+import { StartPage } from './StartPage'
 
 
 export const LoginSignup = () => {
@@ -18,7 +19,7 @@ export const LoginSignup = () => {
     )
   } else {
       return (
-        <QuizHome setPage={setPage} />
+        <StartPage setPage={setPage} />
       )
     }
 }

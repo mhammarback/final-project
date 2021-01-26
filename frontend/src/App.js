@@ -4,6 +4,7 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import { user } from './reducers/user'
+import { quiz } from './reducers/quiz'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Forum } from './components/Forum'
@@ -12,11 +13,12 @@ import { DiscussionsCards } from './pages/DiscussionsCards'
 import { Lawbook } from './pages/Lawbook'
 import { LoginSignup } from'./pages/LoginSignup'
 import { QuizHome } from './quiz/QuizHome'
-import { QuizStart } from './quiz/Quiz'
+import { Quiz } from './quiz/Quiz'
 
-
-const reducer = combineReducers({ user: user.reducer })
+const reducer = combineReducers({ user: user.reducer, quiz: quiz.reducer })
 const store = configureStore({ reducer })
+
+
 
 export const App = () => {
 
@@ -41,8 +43,7 @@ return (
           <QuizHome />
         </Route>
         <Route path='/quiz-start'>
-          <QuizStart />
-        
+          <Quiz/>
         </Route>
         <Route path='/sign' exact>
         <LoginSignup />

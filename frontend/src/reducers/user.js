@@ -64,7 +64,7 @@ export const login = (name, password) => {
 
 export const getSecretMessage = (userId, accessToken) => {
   return (dispatch) => {
-    fetch(`https://final-project-technigo.herokuapp.com/${userId}/secret`, {
+    fetch(`https://final-project-technigo.herokuapp.com/users/${userId}/secret`, {
       method: 'GET',
       headers: { Authorization: accessToken }
     })

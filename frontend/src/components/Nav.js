@@ -10,7 +10,7 @@ export const Nav = () => {
       SIGN UP
       </NavLink>
       ||
-      <NavLink to="/about" exact className="nav-links">
+      <NavLink to="/sign" exact className="nav-links">
       SIGN IN 
       </NavLink>
     </div>
@@ -25,7 +25,7 @@ export const Nav = () => {
       HOME 
       </NavLink>  
     </div> 
-  </section>
+    </section>
   )
 }
 

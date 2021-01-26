@@ -44,29 +44,6 @@ userSchema.pre('save', async function (next) {
 
 const User = mongoose.model('User', userSchema)
 
-/*
-const User = mongoose.model('User', {
-  name: {
-    type: String, 
-    unique: true,
-    required: true,
-  },
-  email: {
-    type: String,
-    unique: true,
-    required: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  accessToken: {
-    type: String,
-    default: () => crypto.randomBytes(128).toString('hex'),
-  },
-})
-*/
-
 const Story = mongoose.model('Story', {
   message: {
     type: String, 
@@ -118,12 +95,12 @@ app.use((req, res, next) => {
 })
 
 /*maybe delete*/
-app.get('/user', (req, res) => {
+app.get('/users', (req, res) => {
   res.send('Welcome to our shared forum')
 })
 
 
-app.post('/user', async (req, res) => {
+app.post('/users', async (req, res) => {
   try {
     const { name, password } = req.body
     const user = await new User({ name, password }).save()
@@ -153,8 +130,6 @@ app.post('/sessions', async (req, res) => {
     res.status(404).json({ notFound: true, message: 'Verify username and password is correct' })
   }
 })
-
-
 
 
 // ROUTES MESSAGES 
