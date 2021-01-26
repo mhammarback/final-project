@@ -5,7 +5,7 @@ import styled from 'styled-components/macro'
 import { user } from '../reducers/user'
 import { Button } from '../lib/Button'
 
-const SIGNUP_URL = 'https://final-project-technigo.herokuapp.com/user'
+const SIGNUP_URL = 'https://final-project-technigo.herokuapp.com/users'
 
 export const SignUpPage = ({ setPage }) => {
   const dispatch = useDispatch()
