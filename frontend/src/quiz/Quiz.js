@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { quiz } from '../reducers/quiz'
-import { Button, SmallButton, QuizButton } from '../lib/Button'
+import { SmallButton, QuizButton } from '../lib/Button'
 import { ContainerCenter , QuizOptionsContainer, ContainerColor  } from '../lib/Container'
 import { Timer } from '../quiz/Timer'
 import { TimeIsUp } from '../quiz/TimeIsUp'

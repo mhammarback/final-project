@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import swal from 'sweetalert'
 
-import { user, getSecretMessage, logout } from '../reducers/user'
+import { user, getSecretMessage } from '../reducers/user'
 import { Button } from '../lib/Button'
 import { ContainerCenter } from '../lib/Container'
 
@@ -21,7 +21,7 @@ export const QuizHome = ({ setPage }) => {
 	
 	const handleClick = () => {
 		swal({
-			title: 'Oh No 🙁',
+			title: 'Oh no!',
 			text: 'Are you sure you want to Log Out?',
 			buttons: ['Close this alert', 'Log me out!'],
 			dangerMode: true,

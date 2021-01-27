@@ -65,11 +65,11 @@ export const StartPage = () => {
       </Row>
       <Row>
         <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><span className="bold">Consent</span> can always be rewoked</p>
+        <p><span className="bold">Consent</span> can’t be given while sleeping</p>
       </Row>
       <Row>
         <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><span className="bold">Consent</span> can always be rewoked</p>
+        <p>silence is not<span className="bold">Consent</span></p>
       </Row>
       <Row>
         <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
