@@ -1,6 +1,6 @@
 import React,{ useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+//import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
 import { user, getSecretMessage, logout } from '../reducers/user'
@@ -13,15 +13,15 @@ export const QuizHome = ({ setPage }) => {
 	const accessToken = useSelector((store) => store.user.accessToken)
 	const secretMessage = useSelector((store) => store.user.SecretMessage)
 
-	useEffect(() => {
+  useEffect(() => {
     dispatch(user.actions.setErrorMessage({ errorMessage: null }))
     dispatch(getSecretMessage(userId, accessToken))
-	})
+  })
 	
 	const handleClick = () => {
-		dispatch(logout())
-		setPage('login')
-	}
+    dispatch(logout())
+    setPage('login')
+  }
 
 	return(
 		<>
@@ -30,7 +30,7 @@ export const QuizHome = ({ setPage }) => {
 		  <h3>{`${secretMessage}`}</h3>
 			<ContainerCenter>
 			  <Button type="button" onClick={handleClick}>Log out</Button>
-		    <NavLink to="/quiz-start"><Button>start</Button></NavLink>
+		    
 			 </ContainerCenter>
 		</Section>
 		</>
@@ -45,3 +45,5 @@ const Section = styled.section`
 `  
 
 //<h3>{`${secretMessage}`}</h3>
+
+//<NavLink to="/quiz-start"><Button>start</Button></NavLink>

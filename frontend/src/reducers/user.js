@@ -6,7 +6,6 @@ const initialState= {
     accessToken: localStorage.validToken || null,
     secretMessage:null,
     errorMessage:null, 
-    name: null, 
   }
 }
 
