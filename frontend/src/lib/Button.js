@@ -39,3 +39,28 @@ export const SmallButton = styled.button`
   transition-duration: 0.3s;
 } 
 `
+
+export const QuizButton = styled.button`
+  all: unset;
+  box-shadow: 1px 2px 2px 1px #888888;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background ease 0.5s;
+
+  :disabled{
+  background: ${(props) => (props.background ? props.background : '#fff')};
+  cursor: auto;
+
+  :hover{
+    transform: none;
+  }
+  &&.correct{
+    background: #98D5B9;
+  }
+}
+`

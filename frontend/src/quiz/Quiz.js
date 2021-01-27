@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { quiz } from '../reducers/quiz'
-import { Button, SmallButton } from '../lib/Button'
+import { Button, SmallButton, QuizButton } from '../lib/Button'
 import { ContainerCenter , QuizOptionsContainer, ContainerColor  } from '../lib/Container'
 import { Timer } from '../quiz/Timer'
 import { TimeIsUp } from '../quiz/TimeIsUp'
@@ -36,15 +36,15 @@ export const Quiz = () => {
 
       {options.map((option, optionindex) => {
         return (
-          <Button
-            key={optionindex}
-            background={(optionindex === question.correctAnswerIndex) ? 'green' : 'red'}
+          <QuizButton
+            background={(optionindex === question.correctAnswerIndex) ? '#98D5B9' : '#EC5569'}
             disabled={optionDisabled || deciseconds === 0}
+            
             onClick={() => {
             dispatch(quiz.actions.submitAnswer({ questionId: index, answerIndex: optionindex }))
             }}>
             <li key={optionindex}>{option}</li>
-            </Button>
+            </QuizButton>
             )
        })}
       </QuizOptionsContainer>
@@ -62,7 +62,7 @@ export const Quiz = () => {
           <ContainerCenter>
             <SmallButton disabled={(index === 0)} onClick={() => dispatch(quiz.actions.goToPreviousQuestion())}>Back</SmallButton>
             <SmallButton disabled={disabled} onClick={() => dispatch(quiz.actions.goToNextQuestion())}>Next</SmallButton>
-            <NavLink to="/quiz-home"><SmallButton onClick={() => dispatch(quiz.actions.restart())}>Restart</SmallButton></NavLink>
+            <NavLink to="/quiz"><SmallButton onClick={() => dispatch(quiz.actions.restart())}>Restart</SmallButton></NavLink>
           </ContainerCenter>
 					<Timer />
         </section>}
