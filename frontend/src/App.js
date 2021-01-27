@@ -18,8 +18,6 @@ import { Quiz } from './quiz/Quiz'
 const reducer = combineReducers({ user: user.reducer, quiz: quiz.reducer })
 const store = configureStore({ reducer })
 
-
-
 export const App = () => {
 
 return (
