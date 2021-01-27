@@ -25,11 +25,11 @@ export const Forum = () => {
 		})
 	}
 	
-	const postSingleStory = newStory => {
+	const postSingleStory = (message) => {
 		fetch(STORY_URL, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ text: newStory})
+			body: JSON.stringify({ message: message })
 		})
 		.then(() => fetchStorys())
 		.catch(error => console.error(error))
