@@ -26,9 +26,9 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   accessToken: {
-    type: String, 
+    type: String,
     default: () => crypto.randomBytes(128).toString('hex'),
-    unique: true,
+    unique: true
   },
 })
 
@@ -62,6 +62,13 @@ const Story = mongoose.model('Story', {
   }
 })
 
+const port = process.env.PORT || 8080
+const app = express()
+
+app.use(cors())
+app.use(bodyParser.json())
+
+
 //AUTENTICATION 
 
 const authenticateUser = async (req, res, next) => {
@@ -78,14 +85,10 @@ const authenticateUser = async (req, res, next) => {
   }
 }
 
-const port = process.env.PORT || 8080
-const app = express()
-
-app.use(cors())
-app.use(bodyParser.json())
 
 // ROUTES AUTHENTICATION 
 
+/*
 app.use((req, res, next) => {
   if (mongoose.connection.readyState === 1) {
     next()
@@ -93,7 +96,7 @@ app.use((req, res, next) => {
     res.status(503).json({ error: "Service unavailable" })
   }
 })
-
+*/
 /*maybe delete*/
 app.get('/users', (req, res) => {
   res.send('Welcome to our shared forum')
@@ -105,17 +108,18 @@ app.post('/users', async (req, res) => {
     const { name, password } = req.body
     const user = await new User({ name, password }).save()
     res.status(201).json({ userId: user._id, accessToken: user.accessToken })
-  } catch (err) {
-    res.status(400).json({ message: 'Could not create user', errors: err.errors })
+  } catch (error) {
+    res.status(400).json({ message: 'Could not create user', error })
   }
 })
 
 app.get('/users/:id/secret', authenticateUser)
-app.get('/users/:id/secret', async (req, res) => {
-  const secretMessage = `This is a super secret message for ${req.user.name}`
+app.get('/users/:id/secret', (req, res) => {
+  const secretMessage = `${req.user.name}, welcome.`
   res.status(201).json({ secretMessage })
 })
 
+// LOGIN ENDPOINT
 app.post('/sessions', async (req, res) => {
   try {
     const { name, password } = req.body
