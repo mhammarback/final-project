@@ -67,21 +67,21 @@ export const quiz = createSlice({
 		goToNextQuestion: (state) => {
 			state.disabled = true
 			state.optionDisabled = false
-			state.deciseconds = 200
+			state.deciseconds = 100
 			state.timerStart = true
 			state.currentQuestionIndex += 1
 		},
 		goToPreviousQuestion: (state) => {
 			state.disabled = true
 			state.optionDisabled = false
-			state.deciseconds = 200
+			state.deciseconds = 100
 			state.timerStart = true
 			state.currentQuestionIndex -= 1
 		},
 		restart: () => {
 			return initialState
 		},
-		setTime: (state) => {
+		setTimer: (state) => {
 			state.timerStart = false
 		},
 		countdowndeciseconds: (state) => {

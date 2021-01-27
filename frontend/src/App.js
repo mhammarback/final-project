@@ -41,7 +41,7 @@ return (
           <QuizHome />
         </Route>
         <Route path='/quiz-start'>
-          <Quiz/>
+          <Quiz />
         </Route>
         <Route path='/sign' exact>
         <LoginSignup />
