@@ -1,35 +1,35 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   userId: 0,
   accessToken: localStorage.validToken || null,
   secretMessage: null,
   errorMessage: null
-};
+}
 
 export const user = createSlice({
   name: 'user',
   initialState,
   reducers: {
     setUserId: (state, action) => {
-      const { userId } = action.payload;
-      state.userId = userId;
+      const { userId } = action.payload
+      state.userId = userId
     },
     setAccessToken: (state, action) => {
-      const { accessToken } = action.payload;
-      state.accessToken = accessToken;
-      localStorage.setItem('validToken', accessToken);
+      const { accessToken } = action.payload
+      state.accessToken = accessToken
+      localStorage.setItem('validToken', accessToken)
     },
     setErrorMessage: (state, action) => {
-      const { errorMessage } = action.payload;
-      state.errorMessage = errorMessage;
+      const { errorMessage } = action.payload
+      state.errorMessage = errorMessage
     },
     setSecretMessage: (state, action) => {
-      const { secretMessage } = action.payload;
-      state.secretMessage = secretMessage;
+      const { secretMessage } = action.payload
+      state.secretMessage = secretMessage
     }
   }
-});
+})
 
 // THUNKS
 export const getSecretMessage = (userId, accessToken) => {
@@ -40,18 +40,18 @@ export const getSecretMessage = (userId, accessToken) => {
     })
       .then((res) => {
         if (!res.ok) {
-          throw new Error('Could not get information, please make sure you are logged in.');
+          throw new Error('Could not get information, please make sure you are logged in.')
         }
-        return res.json();
+        return res.json()
       })
       .then((json) => {
-        dispatch(user.actions.setSecretMessage({ secretMessage: json.secretMessage }));
+        dispatch(user.actions.setSecretMessage({ secretMessage: json.secretMessage }))
       })
       .catch((error) => {
-        dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
-      });
-  };
-};
+        dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }))
+      })
+  }
+}
 
 export const login = (name, password) => {
   return (dispatch) => {
@@ -62,30 +62,30 @@ export const login = (name, password) => {
     })
       .then((res) => {
         if (!res.ok) {
-          throw new Error('Unable to log in, please check your username and password.');
+          throw new Error('Unable to log in, please check your username and password.')
         } else {
-          return res.json();
+          return res.json()
         }
       })
       .then((json) => {
-        dispatch(user.actions.setUserId({ userId: json.userId }));
-        dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }));
+        dispatch(user.actions.setUserId({ userId: json.userId }))
+        dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }))
       })
       .catch((error) => {
-        dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }));
-      });
-  };
-};
+        dispatch(user.actions.setErrorMessage({ errorMessage: error.toString() }))
+      })
+  }
+}
 
 export const logout = () => {
   return (dispatch) => {
-    dispatch(user.actions.setUserId({ userId: 0 }));
-    dispatch(user.actions.setAccessToken({ accessToken: null }));
-    dispatch(user.actions.setErrorMessage({ errorMessage: null }));
-    dispatch(user.actions.setSecretMessage({ secretMessage: null }));
-    localStorage.removeItem('validToken');
-  };
-};
+    dispatch(user.actions.setUserId({ userId: 0 }))
+    dispatch(user.actions.setAccessToken({ accessToken: null }))
+    dispatch(user.actions.setErrorMessage({ errorMessage: null }))
+    dispatch(user.actions.setSecretMessage({ secretMessage: null }))
+    localStorage.removeItem('validToken')
+  }
+}
 
 
 
