@@ -55,30 +55,7 @@ export const StartPage = () => {
     <div className="facts-container">
       <h2>FAST FACTS</h2>
     <LargeCard>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><span className="bold">Consent</span> can always be rewoked</p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><span className="bold">Consent</span> can always be rewoked</p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><span className="bold">Consent</span> can’t be given while sleeping</p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p>silence is not<span className="bold">Consent</span></p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><span className="bold">Consent</span> can always be rewoked</p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><span className="bold">Consent</span> can always be rewoked</p>
-      </Row>
+     
     </LargeCard>
     </div>
 
@@ -120,3 +97,32 @@ export const Row = styled.div`
   flex-direction:row;
   align-items:center;
 `
+
+/*
+
+ <Row>
+        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+        <p><span className="bold">Consent</span> can always be rewoked</p>
+      </Row>
+      <Row>
+        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+        <p><span className="bold">Consent</span> can always be rewoked</p>
+      </Row>
+      <Row>
+        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+        <p><span className="bold">Consent</span> can’t be given while sleeping</p>
+      </Row>
+      <Row>
+        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+        <p>silence is not<span className="bold"> Consent</span></p>
+      </Row>
+      <Row>
+        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+        <p><span className="bold">Consent</span> can always be rewoked</p>
+      </Row>
+      <Row>
+        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+        <p><span className="bold">Consent</span> can always be rewoked</p>
+      </Row>
+
+*/
