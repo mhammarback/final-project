@@ -6,7 +6,7 @@ import { StoryList } from '../components/StoryList'
 export const Forum = () => {
 	const [storys, setStorys] = useState([])
 	
-	const STORY_URL = 'https://nice-thoughts-api.herokuapp.com/thoughts'
+	const STORY_URL = 'https://final-project-technigo.herokuapp.com/forum'
 
 	useEffect(() => {
   fetchStorys()

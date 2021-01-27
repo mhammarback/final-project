@@ -88,7 +88,6 @@ const authenticateUser = async (req, res, next) => {
 
 // ROUTES AUTHENTICATION 
 
-/*
 app.use((req, res, next) => {
   if (mongoose.connection.readyState === 1) {
     next()
@@ -96,12 +95,6 @@ app.use((req, res, next) => {
     res.status(503).json({ error: "Service unavailable" })
   }
 })
-*/
-/*maybe delete*/
-app.get('/users', (req, res) => {
-  res.send('Welcome to our shared forum')
-})
-
 
 app.post('/users', async (req, res) => {
   try {
