@@ -4,8 +4,6 @@ import { useSelector } from 'react-redux'
 import { SignUpPage } from '../components/SignUpPage'
 import { LoginPage } from '../components/LoginPage'
 import { QuizHome } from '../quiz/QuizHome'
-//import { StartPage } from '../pages/StartPage'
-
 
 export const LoginSignup = () => {
   const [page, setPage] = useState('login')

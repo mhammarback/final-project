@@ -131,6 +131,11 @@ app.post('/sessions', async (req, res) => {
 
 // ROUTES MESSAGES 
 
+app.get('/forum', async (req, res) => {
+  const storys = await Story.find().sort({createdAt: 'desc' }).limit(20).exec()  
+  res.json(storys)
+})
+
 app.post('/forum' , async (req, res) => {
   const { message, username } = req.body 
   const story = new Story ({ message, username: username || 'Anonymous' })
