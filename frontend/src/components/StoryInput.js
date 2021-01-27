@@ -20,7 +20,7 @@ export const StoryInput = ({ onMessageChange }) => {
       <form className ="story-input-content" onSubmit={handleSubmit} >
         <input
         type='text'
-        placeholder='share consent tip'
+        placeholder='Share your thought on consent'
         className ='message-field'
         value={newStory}
         onChange={handleStory} 
