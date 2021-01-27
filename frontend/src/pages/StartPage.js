@@ -84,6 +84,7 @@ export const StartPage = () => {
 
     <div className ="wide-container">
       <WideCard>
+        <p>text</p>
       </WideCard>
     </div>
     </>
