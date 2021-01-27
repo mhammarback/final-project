@@ -37,6 +37,7 @@ export const Quiz = () => {
       {options.map((option, optionindex) => {
         return (
           <Button
+            key={optionindex}
             background={(optionindex === question.correctAnswerIndex) ? 'green' : 'red'}
             disabled={optionDisabled || deciseconds === 0}
             onClick={() => {

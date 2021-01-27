@@ -14,6 +14,7 @@ import { Lawbook } from './pages/Lawbook'
 import { LoginSignup } from'./pages/LoginSignup'
 import { QuizHome } from './quiz/QuizHome'
 import { Quiz } from './quiz/Quiz'
+import { Summary } from './quiz/Summary'
 
 const reducer = combineReducers({ user: user.reducer, quiz: quiz.reducer })
 const store = configureStore({ reducer })
@@ -37,15 +38,19 @@ return (
         <Route path='/lawbook' exact>
         <Lawbook />
         </Route>
+        <Route path='/sign' exact>
+        <LoginSignup />
+        </Route>
         <Route path='/quiz' exact>
           <QuizHome />
         </Route>
         <Route path='/quiz-start'>
           <Quiz />
         </Route>
-        <Route path='/sign' exact>
-        <LoginSignup />
+        <Route path='/summary'>
+          <Summary />
         </Route>
+       
       </Switch>
       <Footer />
     </BrowserRouter>

@@ -1,24 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const questions = [
-  {id: 0, questionText: 'First question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 1, questionText: 'Second question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 2, questionText: 'Third question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 3, questionText: 'Four question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 4, questionText: 'Five question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  {id: 5, questionText: 'Six question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  { id: 0, questionText: 'First question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  { id: 1, questionText: 'Second question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  { id: 2, questionText: 'Third question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  { id: 3, questionText: 'Four question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  { id: 4, questionText: 'Five question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  { id: 5, questionText: 'Six question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
 ]
 
 const results = [
-	{text: 'Great job all correct answers'},
-	{text: 'So close, one more time and you will ace it'},
-	{text: 'Keep on practicing'},
+	{ text: 'Great job all correct answers'},
+	{ text: 'So close, one more time and you will ace it'},
+	{ text: 'Keep on practicing'},
 ]
 
 const summary = {
-	numberOfQuestions: null, 
-	correctAnswers: null, 
-	quote: null, 
+  numberOfQuestions: null,
+  correctAnswers: null,
+  quote: null,
 }
 
 const initialState = {
@@ -26,7 +26,7 @@ const initialState = {
   answers: [],
   currentQuestionIndex: 0,
   disabled: true,
-  optionDisabled : false,
+  optionDisabled: false,
   deciseconds: 100,
   timerStart: true,
   showSummary: false,
@@ -40,29 +40,31 @@ export const quiz = createSlice({
 	reducers: {
 		submitAnswer: (state, action) => {
 			state.timerStart = false
-			state.disabled = false
-			state.optionDisabled = true
-			const { questionId , answerIndex } = action.payload
-			const question = state.questions.find((q) => q.id === questionId)
+      state.disabled = false
+      state.optionDisabled = true
+      const { questionId, answerIndex } = action.payload
+      const question = state.questions.find((q) => q.id === questionId)
 
 			if (state.currentQuestionIndex + 1 === state.questions.length) {
-				state.showSummary = true
-			}
-			if (!question) {
-				throw new Error('could not find question! ')
-			}
-			if (questions.options[answerIndex] === undefined ) {
-				throw new Error(`You passed answerIndex ${answerIndex}, but it is not in the possible answers array!`)
-			}
+        state.showSummary = true
+      }
 
-			state.answers.push({
-				questionId, 
-				answerIndex,
-				question, 
-				answer: question.options[answerIndex],
-				isCorrect: question.correctAnswerIndex === answerIndex
-			})
-		},
+      if (!question) {
+        throw new Error('Could not find question! Check to make sure you are passing the question id correctly.')
+      }
+
+      if (question.options[answerIndex] === undefined) {
+        throw new Error(`You passed answerIndex ${answerIndex}, but it is not in the possible answers array!`)
+			}
+			
+		  state.answers.push({
+        questionId,
+        answerIndex,
+        question,
+        answer: question.options[answerIndex],
+        isCorrect: question.correctAnswerIndex === answerIndex
+      })
+    },
 
 		goToNextQuestion: (state) => {
 			state.disabled = true
@@ -92,8 +94,8 @@ export const quiz = createSlice({
 		},
 		setSummary: (state, action) => {
 			const { numberOfQuestions, correctAnswers } = action.payload
-			state.summary.numberOfQuestions = numberOfQuestions
-			state.summary.correctAnswers = correctAnswers
+      state.summary.numberOfQuestions = numberOfQuestions
+      state.summary.correctAnswers = correctAnswers
 
 			if (correctAnswers > 5 ) {
 				state.summary.quote = state.results[0].text

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { ContainerCenter } from '../lib/Container'
+
 const Text = styled.p`
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
@@ -18,8 +20,8 @@ const Text = styled.p`
 
 export const TimeIsUp = ({ color }) => {
   return (
-    <>
-      <Text color={color}>You're too slow! Click next for another question, loser.</Text>
-    </>
+    <ContainerCenter>
+      <Text color={color}>You're too slow, consider taking the quiz again!</Text>
+    </ContainerCenter>
   )
 }
