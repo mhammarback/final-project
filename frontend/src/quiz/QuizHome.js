@@ -2,6 +2,7 @@ import React,{ useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
+import swal from 'sweetalert'
 
 import { user, getSecretMessage, logout } from '../reducers/user'
 import { Button } from '../lib/Button'
@@ -19,8 +20,19 @@ export const QuizHome = ({ setPage }) => {
   })
 	
 	const handleClick = () => {
-    dispatch(logout())
-    setPage('login')
+		swal({
+			title: 'Oh No 🙁',
+			text: 'Are you sure you want to Log Out?',
+			buttons: ['Close this alert', 'Log me out!'],
+			dangerMode: true,
+			icon: 'warning'
+		  })
+			.then((willLogout) => {
+			  if (willLogout) {
+          dispatch(user.actions.logout());
+          window.location.href = '/';
+			  }
+			})
   }
 
 	return(

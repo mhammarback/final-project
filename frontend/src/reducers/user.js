@@ -27,6 +27,14 @@ export const user = createSlice({
     setSecretMessage: (state, action) => {
       const { secretMessage } = action.payload
       state.secretMessage = secretMessage
+    },
+    logout: (state) => {
+      state.userId = 0;
+      state.accessToken = null;
+      state.errorMessage = null;
+      localStorage.removeItem('accessToken');
+      localStorage.removeItem('username');
+      localStorage.removeItem('validToken');
     }
   }
 })
@@ -77,6 +85,7 @@ export const login = (name, password) => {
   }
 }
 
+/*
 export const logout = () => {
   return (dispatch) => {
     dispatch(user.actions.setUserId({ userId: 0 }))
@@ -86,7 +95,7 @@ export const logout = () => {
     localStorage.removeItem('validToken')
   }
 }
-
+*/
 
 
 

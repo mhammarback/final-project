@@ -12,7 +12,7 @@ export const Header = () => {
     <header>
 			<div className="hidden-hamburger">
 			  <div ref={node}>
-          <HamburgerMenu pen={open} setOpen={setOpen} id={menuId} />   
+          <HamburgerMenu open={open} setOpen={setOpen} id={menuId} />   
         </div>
 		  </div>
 			<div className="hidden-nav">
