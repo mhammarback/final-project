@@ -27,7 +27,7 @@ export const QuizHome = ({ setPage }) => {
 		<>
 		<Section>
 		  <h1>Welcome to the quiz page username</h1>
-		  
+		  <h3>{`${secretMessage}`}</h3>
 			<ContainerCenter>
 			  <Button type="button" onClick={handleClick}>Log out</Button>
 				<NavLink to="/quiz-start"><Button>start</Button></NavLink>
@@ -37,8 +37,6 @@ export const QuizHome = ({ setPage }) => {
 		</>
 	)
 }
-
-//<h3>{`${secretMessage}`}</h3>
 
 const Section = styled.section`
   display:flex;
