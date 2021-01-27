@@ -31,7 +31,6 @@ export const QuizHome = ({ setPage }) => {
 			<ContainerCenter>
 			  <Button type="button" onClick={handleClick}>Log out</Button>
 				<NavLink to="/quiz-start"><Button>start</Button></NavLink>
-		    
 			 </ContainerCenter>
 		</Section>
 		</>
