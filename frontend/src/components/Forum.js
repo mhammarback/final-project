@@ -3,6 +3,7 @@ import React, { useState ,useEffect } from 'react'
 import { StoryInput } from './StoryInput'
 import { StoryList } from '../components/StoryList'
 
+
 export const Forum = () => {
 	const [storys, setStorys] = useState([])
 	
@@ -47,3 +48,5 @@ export const Forum = () => {
 		</section>
 	)
 }
+
+

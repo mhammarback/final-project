@@ -30,7 +30,7 @@ export const QuizHome = ({ setPage }) => {
 			.then((willLogout) => {
 			  if (willLogout) {
           dispatch(user.actions.logout());
-          window.location.href = '/';
+          window.location.href = '/quiz';
 			  }
 			})
   }

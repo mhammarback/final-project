@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Roboto ;
+  font-family: 'Roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,6 +21,11 @@ h2, h3 {
 
 .bold {
   font-weight: bold;
+}
+
+.star-button {
+  border-radius: 50%;
+
 }
 
 
@@ -353,6 +358,10 @@ nav {
 }
 
 @media (min-width: 1024px) {
+
+p {
+  font-size: 20px;
+}
 
 .hidden-hamburger {
   display: none;

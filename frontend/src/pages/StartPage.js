@@ -24,7 +24,6 @@ export const StartPage = () => {
           orem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem 
           ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem 
           ipsumvlorem ipsumlorem ipsumlorem ipsum
-          orem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem 
            </p>
          </div>
      </div>
@@ -119,6 +118,7 @@ export const Row = styled.div`
   display:flex;
   flex-direction:row;
   align-items:center;
+  padding: 5px;
 `
 
 /*

@@ -50,7 +50,6 @@ return (
         <Route path='/summary'>
           <Summary />
         </Route>
-       
       </Switch>
       <Footer />
     </BrowserRouter>

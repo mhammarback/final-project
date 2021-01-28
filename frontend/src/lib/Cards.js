@@ -9,7 +9,25 @@ export const SmallCard = styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
+
+  :hover {
+    box-shadow: 1px 2px 2px 1px #888888;
+  }
+ 
 `
+
+/*
+
+   -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    background-color: lightpink;
+  }
+  
+  :hover::after {
+    opacity: 1;
+  }
+
+*/
 
 export const MediumCard = styled.div`
   width: 300px;
