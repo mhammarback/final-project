@@ -36,16 +36,17 @@ export const QuizHome = ({ setPage }) => {
   }
 
 	return(
-		<>
-		<Section>
-		  <h1>Welcome to the quiz page username</h1>
-		  <h3>{`${secretMessage}`}</h3>
-			<ContainerCenter>
-			  <Button type="button" onClick={handleClick}>Log Out</Button>
-				<NavLink to="/quiz-start"><Button>Start Quiz</Button></NavLink>
-			 </ContainerCenter>
-		</Section>
-		</>
+	    <Section background={ '#F5E9DC;'}>
+		    <h1>Welcome to the quiz page username</h1>
+		    <h3>{`${secretMessage}`}</h3>
+			    <ContainerCenter>
+            <RowCoulmn>
+			        <Button type="button" onClick={handleClick}>Log Out</Button>
+				      <NavLink to="/quiz-start"><Button>Start Quiz</Button></NavLink>
+            </RowCoulmn>
+			    </ContainerCenter>
+	    </Section>
+	
 	)
 }
 
@@ -54,4 +55,15 @@ const Section = styled.section`
   flex-direction:column;
   align-items: center;
   margin-bottom: 40px;
+  background: ${(props) => (props.background ? props.background : '#fff')};
 `  
+export const RowCoulmn = styled.div`
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  padding: 5px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+`

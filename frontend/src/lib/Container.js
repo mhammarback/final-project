@@ -2,8 +2,11 @@ import styled from 'styled-components/macro'
 
 
 export const Container = styled.section`
-  width: 100%
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 10px;
+  background: ${(props) => (props.background ? props.background : '#F5E9DC;')};
 `
 
 export const ContainerColor = styled.section`
@@ -44,7 +47,6 @@ export const QuizOptionsContainer = styled.ul`
   max-height: max-content;
   @media (max-width: 800px) {
     margin-top: 10px;
-    grid-gap: 5px;
     height:
   }
   @media (max-width: 500px) {

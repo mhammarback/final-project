@@ -363,6 +363,10 @@ p {
   font-size: 20px;
 }
 
+h2 {
+  font-size: 40px;
+}
+
 .hidden-hamburger {
   display: none;
 }
@@ -474,5 +478,11 @@ nav p {
   text-align: right;
   margin-right: 150px;
 }
+
+.lawbook-header {
+  width: 600px;
+  padding: 0px 30px;
+}
+
 
 }

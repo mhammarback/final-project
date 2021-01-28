@@ -9,6 +9,7 @@ export const SmallCard = styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
+  padding-top:10px;
 
   :hover {
     box-shadow: 1px 2px 2px 1px #888888;
@@ -66,6 +67,8 @@ export const WideCard = styled.div`
   margin: 40px 0 40px 0;
   background-color: #F5E9DC;
   border-radius: 5px;
+  display:flex;
+  justify-content:center;
 
 @media (min-width: 700px) and (max-width: 1024px) {
   width: 600px;
