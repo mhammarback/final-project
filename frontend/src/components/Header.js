@@ -74,24 +74,24 @@ const HeaderTextSmall = styled.p`
 	
 	@media (min-width: 780px) and (max-width: 1024px) {
 		display:flex;
-		top: 40%;
-		left: 48%;
+		top: 44%;
+    left: 48%;
 		transform: translate(-50%, -50%);
 		font-size: 17px;
 	}
 
 	@media (min-width: 1024px) and (max-width: 1240px) {
 		display:flex;
-		top: 40%;
-		left: 50%;
+		top: 48%;
+		left: 54%;
 		transform: translate(-50%, -50%);
 		font-size: 22px;
 	}
 
 		@media (min-width: 1240px) {
 			display:flex;
-			top: 42%;
-		  left: 55%;
-		  font-size: 26px;
+			top: 50%;
+		  left: 52%;
+		  font-size: 24px;
 	}
 `
