@@ -7,13 +7,13 @@ export const StoryList = props => {
   const { message, createdAt, username } = props.story
   
   return (
-    <section className="forum-card">
+    <ForumCard >
       <p>{message}</p>
       <p>Posted by: {username}</p>
-      <span className ="message-time">
+      <Time>
         {moment(createdAt).fromNow()}; 
-      </span>
-    </section>
+      </Time >
+    </ForumCard >
   )
 }
 
@@ -30,3 +30,22 @@ export const SmallIcon = styled.img`
   width: 50px;
   height: 50px;
 `
+const ForumCard = styled.div`
+  margin-bottom: 40px;
+  padding: 20px;
+  width: 80%;
+  background-color: #0d335d;
+  color:#fff;
+  border-radius: 30px;
+  font-size: 18px;
+
+  @media (min-width: 1024px) {
+  width: 30%;
+}
+`
+
+export const Time = styled.span`
+  display: flex;
+  justify-content: flex-end;
+`
+

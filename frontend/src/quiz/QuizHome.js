@@ -40,10 +40,10 @@ export const QuizHome = ({ setPage }) => {
 		    <h1>Welcome to the quiz page username</h1>
 		    <h3>{`${secretMessage}`}</h3>
 			    <ContainerCenter>
-            <RowCoulmn>
+            <CoulmnRow>
 			        <Button type="button" onClick={handleClick}>Log Out</Button>
 				      <NavLink to="/quiz-start"><Button>Start Quiz</Button></NavLink>
-            </RowCoulmn>
+            </CoulmnRow>
 			    </ContainerCenter>
 	    </Section>
 	
@@ -57,7 +57,7 @@ const Section = styled.section`
   margin-bottom: 40px;
   background: ${(props) => (props.background ? props.background : '#fff')};
 `  
-export const RowCoulmn = styled.div`
+export const CoulmnRow = styled.div`
   display:flex;
   flex-direction: column;
   align-items:center;

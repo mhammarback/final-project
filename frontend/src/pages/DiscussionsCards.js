@@ -12,7 +12,7 @@ return (
     <h2>DISCUSSION CARDS</h2>
     <p>Divide into groups our pares and use the cards for help to start a discussion</p>
   </Section>
-	  <div className ="disc-cards">
+	  <FlexWrap>
 		  <SmallCard>Text</SmallCard>
 		  <SmallCard>Text</SmallCard>
 		  <SmallCard>Text</SmallCard>
@@ -21,26 +21,26 @@ return (
 		  <SmallCard>Text</SmallCard>
 		  <SmallCard>Text</SmallCard>
 		  <SmallCard>Text</SmallCard>
-	  </div>  
-		  <div className ="button-container">
+	  </FlexWrap>  
+		  <ButtonContainer>
 		    <Button onClick ={() =>setShow(true)}> MORE CARDS </Button>
-	  	</div> 
+	  	</ButtonContainer> 
 	    	<div>
 		      { show? 
 		       <>
-			      <div className ="disc-cards">
-            <SmallCard>Text</SmallCard>
-		        <SmallCard>Text</SmallCard>
-		        <SmallCard>Text</SmallCard>
-		        <SmallCard>Text</SmallCard>
-		        <SmallCard>Text</SmallCard>
-		        <SmallCard>Text</SmallCard>
-		        <SmallCard>Text</SmallCard>
-		        <SmallCard>Text</SmallCard>
-		        </div>  
-			        <div className ="button-container">
+			      <FlexWrap>
+              <SmallCard>Text</SmallCard>
+		          <SmallCard>Text</SmallCard>
+		          <SmallCard>Text</SmallCard>
+		          <SmallCard>Text</SmallCard>
+		          <SmallCard>Text</SmallCard>
+		          <SmallCard>Text</SmallCard>
+		          <SmallCard>Text</SmallCard>
+		          <SmallCard>Text</SmallCard>
+		        </FlexWrap>  
+			        <ButtonContainer>
 			         <Button onClick ={() =>setShow(false)}> LESS CARDS </Button>
-			      </div> 
+			      </ButtonContainer> 
 		       </>
 		      : null
 		      }
@@ -55,5 +55,30 @@ const Section = styled.section`
   align-items: center;
   margin-bottom: 40px;
 `  
+const FlexWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: 500px) and (max-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 100px 0px 50px 0px;
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 130px 0px 50px 0px;
+  }
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+`  
+
+
 
 
