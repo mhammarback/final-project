@@ -217,8 +217,6 @@ nav {
   justify-content: space-around;
 }
 
-
-
 .end-text {
   display: flex;
   justify-content: flex-end;
@@ -337,8 +335,6 @@ h2 {
   justify-content: space-evenly;
 }
   
-
-
 .start-text {
   display: flex;
   flex-direction: row;
@@ -355,8 +351,6 @@ h2 {
   display: flex;
   flex-direction: column;
 }
-
-
 
 .nav-links {
   padding: 20px;
@@ -382,11 +376,6 @@ nav p {
 /* FORUM*/
 .form-style {
   width: 40%;
-}
-
-.lawbook-header {
-  width: 600px;
-  padding: 0px 30px;
 }
 
 }

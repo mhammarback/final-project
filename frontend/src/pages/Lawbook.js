@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import { SmallCard } from '../lib/Cards'
-import Book from '../img/open-book.png'
 import { Container } from '../lib/Container'
+import Book from '../img/open-book.png'
 
 
 export const Lawbook = () => {
@@ -17,7 +17,7 @@ export const Lawbook = () => {
 		  <SmallCard>
 		    <Icon src={Book} alt="lawbook icon" />    
     	</SmallCard> 
-				<div className ="lawbook-header">
+				<LawHeader >
 					<p className="small-header">What does the lawbook say about consent?</p>
 					<Section> 
 					<h4>Den 1 juli 2018 ändrades sexualbrottslagstiftningen så att det
@@ -46,7 +46,7 @@ export const Lawbook = () => {
           3. gärningsmannen förmår personen att delta genom att allvarligt
            missbruka att personen står i beroendeställning till gärningsmannen</p>
 		     </Section>
-			 </div>
+			 </LawHeader >
 		</RowColumn >
 
 		<RowColumn>
@@ -55,7 +55,7 @@ export const Lawbook = () => {
 				<SmallCard>
 		    <Icon src={Book} alt="lawbook icon" />    
     	</SmallCard> 
-				<div className ="lawbook-header">
+				<LawHeader >
 					<p className="small-header">What does that mean in practice?</p>
 					<Section> 
 
@@ -74,7 +74,7 @@ export const Lawbook = () => {
 					 If sex is not an act of free will, it is a crime.
 					</p>		
 				  </Section>			
-				</div>
+				</LawHeader >
 			</RowReverse>
 			</RowColumn>
 		</Container>
@@ -103,7 +103,6 @@ const RowColumn = styled.div`
 		align-items: end;
   }
 `
-
 const RowReverse = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -113,11 +112,14 @@ const RowReverse = styled.div`
 		flex-direction: row-reverse;
 		align-items: end;
   }
-	
-
 `
 
-
+const LawHeader = styled.div`
+@media (min-width: 1024px) {
+	width: 600px;
+  padding: 0px 30px;
+}
+`
 
 
 
@@ -125,5 +127,3 @@ const RowReverse = styled.div`
 //<p>https://www.bra.se/download/18.7d27ebd916ea64de5306522c/1605178708066/2020_6_Den_nya_samtyckeslagen_i_praktiken.pdf</p>
 
 //https://www.frivilligtsex.se/summary-in-english/
-
-/*<*/
