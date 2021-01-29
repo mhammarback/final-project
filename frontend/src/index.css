@@ -40,37 +40,6 @@ header {
   padding: 80px 10px;
 }
 
-.header-color-container {
-  background-color: #F5E9DC;
-  width:70%;
-  height: 350px;
-  text-align: center;
-}
-
-.header-color-container h1 {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  color: #000;
-  margin:0px;
-  font-size: 70px;
-}
-
-.header-color-container p {
-  display: none;
-  position: absolute;
-  top: 40%;
-  left: 5%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  color: #000;
-  margin:0px;
-  font-size: 12px;
-}
-
-
 .navbar {
   display: flex;
   flex-direction: column;
@@ -85,13 +54,10 @@ header {
   display: none;
 }
 
-
-
 .header-text-container {
   display: flex;
   flex-direction: column;
 }
-
 
 /*Start page */
 
@@ -122,7 +88,6 @@ header {
   font-size: 30px;
   font-weight: bold;
 }
-
 
 /* SIGN IN / UP  */
 
@@ -200,9 +165,6 @@ main {
   width:50%
 }
 
-
-/* LOGIN /SIGN UP */
-
 /* Footer */
 .container {
   display: flex;
@@ -224,29 +186,6 @@ nav {
 
 @media (min-width: 700px) and (max-width: 1024px) {
 
-
-.header-color-container {
-  height: 450px;
-}
-
-.header-color-container h1 {
-  left: 60%;
-  font-size: 130px;
-}
-
-.header-color-container p {
-  display: flex;
-  position: absolute;
-  top: 40%;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  color: #000;
-  margin:0px;
-  font-size: 16px;
-}
-
-
 .end-text p { 
   width: 20%;
   margin: 40px 50px 0px 0px;
@@ -258,7 +197,6 @@ nav {
   justify-content: space-evenly;
 }
 
-
 .start-style {
   display: flex;
   flex-direction: column;
@@ -268,7 +206,6 @@ nav {
   padding: 20px;
   margin: 10px;
 }
-
 
 .start-text {
   display: flex;
@@ -280,7 +217,6 @@ nav {
   width:30%;
   margin: 10px;
 }
-
 }
 
 @media (min-width: 1024px) {
@@ -301,29 +237,6 @@ h2 {
   display: flex;
 }
 
-.header-color-container {
-  height: 450px;
-}
-
-.header-color-container h1 {
-  left: 60%;
-  font-size: 180px;
-}
-
-.header-color-container p {
-  display: flex;
-  position: absolute;
-  top: 40%;
-  left: 54%;
-  font-size: 26px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  color: #000;
-  margin:0px;
-}
-
-
 .end-text p { 
   width: 20%;
   margin: 40px 50px 0px 0px;
@@ -346,7 +259,6 @@ h2 {
   margin: 10px;
 }
 
-  
 .start-style {
   display: flex;
   flex-direction: column;
@@ -377,5 +289,4 @@ nav p {
 .form-style {
   width: 40%;
 }
-
 }

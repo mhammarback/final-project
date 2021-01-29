@@ -31,7 +31,7 @@ export const StartPage = () => {
     <div className ="container-cards">
       <NavLink to ="/forum" className="nav-links">
         <SmallCard> 
-          <h3>FEEDBACK FORUM</h3>
+          <h3>FORUM</h3>
           <Icon src={Feedback} alt="feedback icon" />  
         </SmallCard> 
       </NavLink>
