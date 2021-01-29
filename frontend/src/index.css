@@ -19,26 +19,11 @@ h2, h3 {
   text-align: center;
 }
 
-.bold {
-  font-weight: bold;
-}
-
 .star-button {
   border-radius: 50%;
-
 }
 
 /* Header */
-
-header {
-  margin-bottom: 100px;
-}
-.container-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 10px;
-}
 
 .navbar {
   display: flex;
@@ -59,17 +44,7 @@ header {
   flex-direction: column;
 }
 
-/*Start page */
-
-.wide-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 100px 0px 100px 0px;
-}
-
 /* SIGN IN / UP  */
-
 .login-container {
   display: flex;
   flex-direction: column;
@@ -99,10 +74,7 @@ header {
 .form-style h1 {
   text-align: center;
 }
-
-
 /* FORUM */
-
 main {
   width: 420px;
   max-width: 100%;
@@ -111,7 +83,6 @@ main {
   padding: 48px 16px 80px 16px;
   overflow: scroll;
 }
-
 
 .message-field {
   height: 48px;
@@ -125,7 +96,6 @@ main {
 
   flex: 1;
 }
-
 
 .button-send-message {
   margin-left: 8px;

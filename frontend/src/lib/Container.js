@@ -53,3 +53,16 @@ export const QuizOptionsContainer = styled.ul`
     height: 60%;
   }
 `
+
+export const FactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0px 60px 0px;
+`
+export const WideContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0px 100px 0px;
+`

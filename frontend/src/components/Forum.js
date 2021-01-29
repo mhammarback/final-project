@@ -2,7 +2,7 @@ import React, { useState ,useEffect } from 'react'
 
 import { StoryInput } from './StoryInput'
 import { StoryList } from '../components/StoryList'
-
+import { FactContainer } from '../lib/Container'
 
 export const Forum = () => {
 	const [storys, setStorys] = useState([])
@@ -37,7 +37,7 @@ export const Forum = () => {
 	}
 
 	return(
-		<section className ="facts-container ">
+		<FactContainer>
 			<StoryInput onMessageChange={postSingleStory} />
 			{storys.map((story) => (
 					<StoryList 
@@ -45,7 +45,7 @@ export const Forum = () => {
 					story={story} 
 					/>
 			))}
-		</section>
+		</FactContainer>
 	)
 }
 

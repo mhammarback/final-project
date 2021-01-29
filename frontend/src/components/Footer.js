@@ -5,19 +5,27 @@ import { Nav } from '../components/Nav'
 
 export const Footer = () => {
 	return (
-    <div className ="container">
+    <Footer>
       <div className="hidden-nav">
-			<Nav />
+		<Nav />
       </div>
-			  <EndTextContainer >
-          <EndText> This is my final project for the Technigo Bootcamp.
-						I wanted to build a webpage in a topic i care about. 
-						One way to reduce sexual assaults is to teach young adults about consent.
-					  And that is the purpose of this website. ....</EndText>
-			  </EndTextContainer >
-    </div>
+		  <EndTextContainer >
+        <EndText> This is my final project for the Technigo Bootcamp.
+					I wanted to build a webpage in a topic i care about. 
+					One way to reduce sexual assaults is to teach young adults about consent.
+					And that is the purpose of this website.
+		    </EndText>
+		  </EndTextContainer >
+    </Footer>
 	)
 }
+
+const Footer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  padding: 80px 10px;
+  background-color: #F5E9DC; 
+`
 
 const EndTextContainer = styled.div`
   display: flex;

@@ -4,6 +4,7 @@ import styled from 'styled-components/macro'
 import { SmallCard } from '../lib/Cards'
 import { Container } from '../lib/Container'
 import { SmallHeader } from '../lib/Text'
+import { Icon } from '../lib/Icons'
 import Book from '../img/open-book.png'
 
 
@@ -82,11 +83,6 @@ export const Lawbook = () => {
   )
 }
 
-export const Icon = styled.img`
-  width: 210px;
-  height: 210px;
-  margin-topp: 80px;
-`
 const Section = styled.section`
   display:flex;
   flex-direction:column;

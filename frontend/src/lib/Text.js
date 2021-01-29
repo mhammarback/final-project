@@ -8,3 +8,7 @@ export const SmallHeader = styled.p`
     font-size: 30px;
   }
 `
+
+export const BoldText = styled.p`
+  font-weight: bold;
+`
