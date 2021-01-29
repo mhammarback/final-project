@@ -61,32 +61,11 @@ header {
 
 /*Start page */
 
-.facts-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 40px 0px 60px 0px;
-}
-
 .wide-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 100px 0px 100px 0px;
-}
-
-.start-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-/*Discussion page */
-
-.small-header {
-  font-size: 30px;
-  font-weight: bold;
 }
 
 /* SIGN IN / UP  */
@@ -179,17 +158,7 @@ nav {
   justify-content: space-around;
 }
 
-.end-text {
-  display: flex;
-  justify-content: flex-end;
-}
-
 @media (min-width: 700px) and (max-width: 1024px) {
-
-.end-text p { 
-  width: 20%;
-  margin: 40px 50px 0px 0px;
-  }
 
 .container-cards {
   flex-direction: row;
@@ -207,12 +176,6 @@ nav {
   margin: 10px;
 }
 
-.start-text {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .start-text-header {
   width:30%;
   margin: 10px;
@@ -222,7 +185,7 @@ nav {
 @media (min-width: 1024px) {
 
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 h2 {
@@ -237,21 +200,10 @@ h2 {
   display: flex;
 }
 
-.end-text p { 
-  width: 20%;
-  margin: 40px 50px 0px 0px;
-}
-  
 .container-cards {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-  
-.start-text {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 .start-text-header {

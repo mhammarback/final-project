@@ -1,16 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const questions = [
-  { id: 0, questionText: 'First question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  { id: 1, questionText: 'Second question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  { id: 2, questionText: 'Third question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  { id: 3, questionText: 'Four question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  { id: 0, questionText: 'Can consent be rewoked?', options: ['No', 'Sometimes', 'Yes', 'Not sure'], correctAnswerIndex: 2 },
+  { id: 1, questionText: 'If you are in a relationship,do you automaticly have your partners consent?', options: ['Of course', 'Not sure', 'Yes, we are together?', 'No'], correctAnswerIndex: 3 },
+  { id: 2, questionText: 'Can people give consent while they are sleeping?', options: ['No', 'If they said yes before they fell to sleep', 'Yes', 'Not sure'], correctAnswerIndex: 0 },
+  { id: 3, questionText: 'Fourth question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
   { id: 4, questionText: 'Five question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
   { id: 5, questionText: 'Six question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
 ]
 
 const results = [
-	{ text: 'Great job all correct answers'},
+	{ text: 'Great job, all correct answers'},
 	{ text: 'So close, one more time and you will ace it'},
 	{ text: 'Keep on practicing'},
 ]
@@ -45,7 +45,7 @@ export const quiz = createSlice({
       const { questionId, answerIndex } = action.payload
       const question = state.questions.find((q) => q.id === questionId)
 
-			if (state.currentQuestionIndex + 1 === state.questions.length) {
+		if (state.currentQuestionIndex + 1 === state.questions.length) {
         state.showSummary = true
       }
 

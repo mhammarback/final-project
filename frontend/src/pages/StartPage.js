@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
 
 import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
+import { SmallHeader } from '../lib/Text'
 import Book from '../img/open-book.png'
 import Heart from '../img/love.png'
 import Discussion from '../img/debate.png'
@@ -12,37 +13,35 @@ import Tick from '../img/tick.png'
 export const StartPage = () => {
   return (
     <>
-    <div className ="start-text">
+    <StartContainer>
        <MediumCard>
        <LargeIcon src={Heart} alt="Heart icon" />     
       </MediumCard>
          <div className ="start-text-header">
-          <p className="small-header">What, Why and how?</p>
-          <p> lorem ipsumlorem ipsumlorem ipsumlorem ipsum
-          lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-          lorem ipsumlorem ipsumvlorem ipsumlorem ipsumlorem ipsum
-          orem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem 
-          ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsumlorem 
-          ipsumvlorem ipsumlorem ipsumlorem ipsum
-           </p>
+          <SmallHeader>What, Why and How?</SmallHeader>
+          <p> Every human being has the right to decide over their body and their sexuality. 
+						Therefore, Sweden has a sexual offence law based on the idea of free will. 
+						Sex must be an act of free will - otherwise it is a crime.</p>
+
+          <p>And now it is time for the next step. To start talking, learning
+             and sharing this knowledge.</p>
+           
          </div>
-     </div>
+     </StartContainer>
     
     <div className ="container-cards">
-      <NavLink to ="/forum" className="nav-links">
-        <SmallCard> 
-          <h3>FORUM</h3>
-          <Icon src={Feedback} alt="feedback icon" />  
-        </SmallCard> 
-      </NavLink>
-
       <NavLink to ="/lawbook" className="nav-links">
         <SmallCard> 
           <h3>LAW BOOK</h3>
           <Icon src={Book} alt="lawbook icon" />     
         </SmallCard>
       </NavLink>
-
+      <NavLink to ="/forum" className="nav-links">
+        <SmallCard> 
+          <h3>FORUM</h3>
+          <Icon src={Feedback} alt="feedback icon" />  
+        </SmallCard> 
+      </NavLink>
       <NavLink to ="/discussion" className="nav-links">
         <SmallCard> 
           <h3>DISCUSSIONS CARDS</h3>
@@ -51,7 +50,7 @@ export const StartPage = () => {
       </NavLink>  
     </div>
 
-    <div className="facts-container">
+    <FactContainer>
       <h2>FAST FACTS</h2>
     <LargeCard>
       <Row>
@@ -79,7 +78,7 @@ export const StartPage = () => {
         <p><span className="bold">Consent</span> can always be rewoked</p>
       </Row>
     </LargeCard>
-    </div>
+    </FactContainer>
 
     <div className ="wide-container">
       <WideCard>
@@ -121,8 +120,29 @@ export const Row = styled.div`
   padding: 5px;
 `
 
-/*
+export const FactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0px 60px 0px;
+`
 
+export const StartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  @media (min-width: 700px) and (max-width: 1024px) {
+  flex-direction: row;
+  justify-content: center;
+  }
+  @media (min-width: 1024px) {
+  flex-direction: row;
+  justify-content: center;
+}
+`
 
-*/
+export const Text = styled.p`
+  
+
+`

@@ -57,7 +57,6 @@ export const LargeCard = styled.div`
   @media (min-width: 700px) {
     width: 600px;
     padding: 0 16px;
-   
   }
 `
 

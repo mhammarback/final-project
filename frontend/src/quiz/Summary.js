@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components/macro'
 
 import { quiz } from '../reducers/quiz'
-
 import { Button } from '../lib/Button'
 
 export const Summary = () => {

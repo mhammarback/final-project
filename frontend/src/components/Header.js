@@ -88,10 +88,10 @@ const HeaderTextSmall = styled.p`
 		font-size: 22px;
 	}
 
-		@media (min-width: 1240px) {
-			display:flex;
-			top: 48%;
-		  left: 52%;
-		  font-size: 24px;
+	@media (min-width: 1240px) {
+		display:flex;
+		top: 48%;
+		left: 52%;
+		font-size: 24px;
 	}
 `

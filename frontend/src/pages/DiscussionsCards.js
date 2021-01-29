@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 
 import { SmallCard } from '../lib/Cards'
+import { SmallHeader } from '../lib/Text'
 import { Button } from 'lib/Button'
+
 
 export const DiscussionsCards = () => {
 	const [show, setShow] = useState(false)
@@ -10,13 +12,13 @@ return (
 	<>
   <Section>
     <h2>DISCUSSION CARDS</h2>
-    <p>Divide into groups our pares and use the cards for help to start a discussion</p>
+    <SmallHeader>Divide into groups our pares and use the cards for help to start a discussion</SmallHeader>
   </Section>
 	  <FlexWrap>
-		  <SmallCard>Text</SmallCard>
-		  <SmallCard>Text</SmallCard>
-		  <SmallCard>Text</SmallCard>
-		  <SmallCard>Text</SmallCard>
+		  <SmallCard><Text>What does consent mean?</Text></SmallCard>
+		  <SmallCard><Text>What can you do to make sure you have consent? </Text></SmallCard>
+		  <SmallCard><Text>What do you know about consent?</Text></SmallCard>
+		  <SmallCard><Text></Text></SmallCard>
 		  <SmallCard>Text</SmallCard>
 		  <SmallCard>Text</SmallCard>
 		  <SmallCard>Text</SmallCard>
@@ -78,6 +80,12 @@ const ButtonContainer = styled.div`
   justify-content: center;
   margin-bottom: 50px;
 `  
+
+export const Text = styled.p`
+  text-align:center;
+  margin-top: 120px;
+
+`
 
 
 

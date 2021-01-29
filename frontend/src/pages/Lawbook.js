@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 
 import { SmallCard } from '../lib/Cards'
 import { Container } from '../lib/Container'
+import { SmallHeader } from '../lib/Text'
 import Book from '../img/open-book.png'
 
 
@@ -18,7 +19,7 @@ export const Lawbook = () => {
 		    <Icon src={Book} alt="lawbook icon" />    
     	</SmallCard> 
 				<LawHeader >
-					<p className="small-header">What does the lawbook say about consent?</p>
+					<SmallHeader>What does the lawbook say about consent?</SmallHeader>
 					<Section> 
 					<h4>Den 1 juli 2018 ändrades sexualbrottslagstiftningen så att det
            tydligare slogs fast att gränsen för straffbar gärning ska gå vid om
@@ -56,9 +57,8 @@ export const Lawbook = () => {
 		    <Icon src={Book} alt="lawbook icon" />    
     	</SmallCard> 
 				<LawHeader >
-					<p className="small-header">What does that mean in practice?</p>
+					<SmallHeader>What does that mean in practice?</SmallHeader>
 					<Section> 
-
 					<h4>Every human being has the right to decide over their body and their sexuality. 
 						Therefore, Sweden has a sexual offence law based on the idea of free will. 
 						Sex must be an act of free will - otherwise it is a crime.</h4>
