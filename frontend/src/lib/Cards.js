@@ -66,8 +66,6 @@ export const WideCard = styled.div`
   margin: 40px 0 40px 0;
   background-color: #F5E9DC;
   border-radius: 5px;
-  display:flex;
-  justify-content:center;
 
 @media (min-width: 700px) and (max-width: 1024px) {
   width: 600px;

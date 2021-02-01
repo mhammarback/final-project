@@ -57,7 +57,7 @@ const Section = styled.section`
   align-items: center;
   margin-bottom: 40px;
 `  
-const FlexWrap = styled.div`
+export const FlexWrap = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

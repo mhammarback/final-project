@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
 import { SmallIcon, Icon, LargeIcon, Round } from '../lib/Icons'
-import { FactContainer, WideContainer } from '../lib/Container'
+import { FactContainer, WideContainer, CenterText } from '../lib/Container'
 import { SmallHeader, BoldText } from '../lib/Text'
 import Book from '../img/open-book.png'
 import Heart from '../img/love.png'
@@ -54,39 +54,53 @@ export const StartPage = () => {
 
     <FactContainer>
       <h2>FAST FACTS</h2>
-    <LargeCard>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><BoldText>Consent</BoldText> can always be rewoked</p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><BoldText>Consent</BoldText> can always be rewoked</p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><BoldText>Consent</BoldText> can’t be given while sleeping</p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p>silence is not<BoldText> Consent</BoldText></p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><BoldText>Consent</BoldText> can always be rewoked</p>
-      </Row>
-      <Row>
-        <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-        <p><BoldText>Consent</BoldText> can always be rewoked</p>
-      </Row>
-    </LargeCard>
+        <LargeCard>
+          <Row>
+            <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+            <BoldText>Consent</BoldText><p>can always be rewoked</p>
+          </Row>
+          <Row>
+            <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+            <BoldText>Consent</BoldText> <p> can always be rewoked</p>
+          </Row>
+          <Row>
+            <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+            <BoldText>Consent</BoldText> <p> can’t be given while sleeping</p>
+          </Row>
+          <Row>
+            <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+            <p>silence is not</p><BoldText> Consent</BoldText>
+          </Row>
+          <Row>
+            <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+            <BoldText>Consent</BoldText>  <p>can always be rewoked</p>
+          </Row>
+          <Row>
+            <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
+            <BoldText>Consent</BoldText> <p> can always be rewoked</p>
+          </Row>
+        </LargeCard>
     </FactContainer>
 
-    <WideContainer>
-      <WideCard>
-        <p>text</p>
-      </WideCard>
-    </WideContainer>
+   <CenterText>
+   <h2>HELP</h2>
+    <p>If you have encountered sexual assault, there is a lot of help to get. </p>
+    <p>Here are some links on where you can get more support</p>
+    <BoldText>You are not alone. </BoldText> 
+    </CenterText>
+
+      <WideContainer>
+        <WideCard>
+        
+          <p>texttext</p>
+          <p>texttext</p>
+          <p>texttext</p>
+          <p>texttext</p>
+          <p>texttext</p>
+          <p>texttext</p>
+          
+        </WideCard>
+      </WideContainer>
     </>
   )
 }

@@ -10,7 +10,7 @@ export const Header = () => {
 	const menuId = 'main-menu'
 	
 	return (
-    <Header>
+    <HeaderContainer>
 		  <div className="hidden-hamburger">
 			  <div ref={node}>
           <HamburgerMenu open={open} setOpen={setOpen} id={menuId} />   
@@ -23,11 +23,11 @@ export const Header = () => {
 				<HeaderText>CONSENT</HeaderText>
         <HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
 			</HeaderColorContainer>
-    </Header>
+    </HeaderContainer>
 	)
 }
 
-const Header = styled.header`
+const HeaderContainer = styled.header`
   margin-bottom: 100px;
 `
 

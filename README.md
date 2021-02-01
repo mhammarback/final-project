@@ -1,28 +1,31 @@
-# Authentication Project 🍃
+# Final Project - Consent 🍃
+This i my final project during the Technigo Bootcamp 2020/2021.
 
-This project's main goal was to use create a fullstack Authentication Page with Signup and Login.
-Once you have logged in you can reveal a secret message as well as logout.
 
-# Planning & What we learned 🧩
 
-We started with the backend creating endpoints and mongoose model called User. Then we added the authentication for the secure endpoints
-We used a redux store to be able to use the different states as per the requirement of the forms and to display data.
-We used react router to be able to navigate between pages.
-After Logging in you have two choices either to view a secret message or you have the option to logout.
+# About 
+
+# Pages
+- Home, welcome page and links to the other pages. 
+- Lawbook, here you can read what the actuall lawbook says about consent.  
+- Discussion Cards, here you have cards with consent topics you and your friends/classmates can use to start a conversation. 
+- Forum, Share a thought about consent. 
+- Sign up/Sign in, Once logged in you can take a consent quiz!
+
+
+# Planning 🧩
+
 
 # Tech ⚡️
-
+- React
+- React Router
+- Redux - Toolkit + Hooks
+- JavaScript
+- Styled components 
 - MongoDB
 - Mongoose
 - Node.js
 - Express
 - Heroku
-- React
-- React Router
-- Redux - Toolkit + Hooks
-- JS
 
-# View it live 🔴
-
-- FrontEnd : wk20-api-auth.netlify.app
-- BackEnd : https://login-logout-authentication.herokuapp.com/
+# View it live 

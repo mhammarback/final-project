@@ -58,11 +58,31 @@ export const FactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0px 60px 0px;
+  margin: 40px 0px 80px 0px;
 `
 export const WideContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px 0px 100px 0px;
+  margin: 20px 0px 100px 0px;
+`
+
+export const CenterText = styled.div`
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+`
+
+//Footer 
+
+export const FooterContainer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  padding: 80px 10px;
+  background-color: #F5E9DC; 
+`
+
+export const EndTextContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `
