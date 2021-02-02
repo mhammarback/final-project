@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 export const SmallHeader = styled.p`
   font-size: 24px;
   font-weight: bold;
+  text-align:center;
 
   @media (min-width: 500px) {
     font-size: 30px;
@@ -25,4 +26,8 @@ export const EndText = styled.p`
 	width: 20%;
 	margin: 40px 50px 0px 0px;
 	}
+`
+
+export const Text = styled.p`
+  padding: 15px;
 `

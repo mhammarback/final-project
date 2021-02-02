@@ -12,11 +12,7 @@ export const Footer = () => {
 		<Nav />
       </div>
 		  <EndTextContainer >
-        <EndText> This is my final project for the Technigo Bootcamp.
-					I wanted to build a webpage in a topic i care about. 
-					One way to reduce sexual assaults is to teach young adults about consent.
-					And that is the purpose of this website.
-		    </EndText>
+        <EndText> This is my final project for the Technigo Bootcamp.</EndText>
 		  </EndTextContainer >
     </FooterContainer>
 	)

@@ -4,8 +4,10 @@ import styled from 'styled-components/macro'
 import { SmallCard } from '../lib/Cards'
 import { Container } from '../lib/Container'
 import { SmallHeader } from '../lib/Text'
-import { Icon } from '../lib/Icons'
+import { Icon, CardIcon } from '../lib/Icons'
 import Book from '../img/open-book.png'
+//import Chat from '../img/chat.png'
+import Group from '../img/group.jpg'
 
 
 export const Lawbook = () => {
@@ -22,31 +24,29 @@ export const Lawbook = () => {
 				<LawHeader >
 					<SmallHeader>What does the lawbook say about consent?</SmallHeader>
 					<Section> 
-					<h4>Den 1 juli 2018 ändrades sexualbrottslagstiftningen så att det
-           tydligare slogs fast att gränsen för straffbar gärning ska gå vid om
-           deltagandet i en sexuell aktivitet är frivilligt eller inte. Syftet var att
-           tydliggöra att varje människa har en ovillkorlig rätt till personlig och
-           sexuell integritet och sexuellt självbestämmande.
-           Våldtäktsbestämmelsen enligt 6 kap. 1 § BrB är nu formulerad
-            på följande sätt:
+					<h4>On 1 July 2018, the sexual crime legislation was changed so that it was more clearly 
+						established that the limit for a criminal act must be set whether participation in a 
+						sexual activity is voluntary or not. The purpose was to clarify that every human being
+						 has an unconditional right to personal and sexual integrity and sexual self-determination. 
+						 The rape provision according to ch. 6 § 1 BrB is now formulated as follows:
 			     </h4>
-           <h4>1 § Den som, med en person som inte deltar frivilligt, genomför
-           ett samlag eller en annan sexuell handling som med hänsyn till
-           kränkningens allvar är jämförlig med samlag, döms för våldtäkt till
-           fängelse i lägst två år och högst sex år. Vid bedömningen av om ett
-           deltagande är frivilligt eller inte ska det särskilt beaktas om frivillighet har kommit till uttryck genom ord eller handling eller på annat
-           sätt. En person kan aldrig anses delta frivilligt om</h4>
+           <h4>1 § A person who, with a person who does not participate voluntarily, performs intercourse
+						  or another sexual act which, in view of the seriousness of the violation, is comparable to intercourse,
+							is sentenced for rape to imprisonment for a minimum of two years and a maximum of six years.
+							When assessing whether a participation is voluntary or not, special consideration must
+							be given to whether voluntariness has been expressed through words or deeds or 
+							in any other way. A person can never be considered to participate voluntarily</h4>
 
-		     <p>1. deltagandet är en följd av misshandel, annat våld eller hot om
-           brottslig gärning, hot om att åtala eller ange någon annan för brott
-          eller hot om att lämna ett menligt meddelande om någon annan,</p>
+		     <p>1. participation is the result of ill-treatment, other violence or threats of a criminal act, 
+					  threats to prosecute or report someone else for crimes or threats to make a harmful statement
+					  about someone else,</p>
 
-          <p>2. gärningsmannen otillbörligt utnyttjar att personen på grund av
-          medvetslöshet, sömn, allvarlig rädsla, berusning eller annan drogpåverkan, sjukdom, kroppsskada, psykisk störning eller annars med
-          hänsyn till omständigheterna befinner sig i en särskilt utsatt situation, eller</p>
-		     <p>
-          3. gärningsmannen förmår personen att delta genom att allvarligt
-           missbruka att personen står i beroendeställning till gärningsmannen</p>
+          <p>2. the perpetrator improperly exploits the fact that the person is in a particularly vulnerable
+						 situation due to unconsciousness, sleep, serious fear, intoxication or other drug exposure, 
+						 illness, bodily injury, mental disorder or otherwise, taking into account the circumstances</p>
+
+		     <p>3. the perpetrator persuades the person to participate by seriously abusing the person's dependence 
+					 on the perpetrator</p>
 		     </Section>
 			 </LawHeader >
 		</RowColumn >
@@ -55,7 +55,7 @@ export const Lawbook = () => {
 		
 			  <RowReverse>
 				<SmallCard>
-		    <Icon src={Book} alt="lawbook icon" />    
+		    <CardIcon src={Group} alt="lawbook icon" />    
     	</SmallCard> 
 				<LawHeader >
 					<SmallHeader>What does that mean in practice?</SmallHeader>
@@ -123,3 +123,5 @@ const LawHeader = styled.div`
 //<p>https://www.bra.se/download/18.7d27ebd916ea64de5306522c/1605178708066/2020_6_Den_nya_samtyckeslagen_i_praktiken.pdf</p>
 
 //https://www.frivilligtsex.se/summary-in-english/
+
+//pink color #ffedeb 

@@ -64,13 +64,16 @@ export const WideContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0px 100px 0px;
+  margin: 0px 0px 150px 0px;
+  background-color: #0d335d;
 `
 
 export const CenterText = styled.div`
   display:flex;
   flex-direction:column;
   text-align:center;
+  background-color: #0d335d;
+  color:#fff;
 `
 
 //Footer 

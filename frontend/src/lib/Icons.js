@@ -16,6 +16,11 @@ export const LargeIcon = styled.img`
   margin: 25px;
 `
 
+export const CardIcon = styled.img`
+  width: 275px;
+  height: 305px;  
+`
+
 export const Round = styled.span`
   height: 50px;
   width: 50px;

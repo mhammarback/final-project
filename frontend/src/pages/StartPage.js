@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
 import { SmallIcon, Icon, LargeIcon, Round } from '../lib/Icons'
 import { FactContainer, WideContainer, CenterText } from '../lib/Container'
-import { SmallHeader, BoldText } from '../lib/Text'
+import { SmallHeader, BoldText, Text } from '../lib/Text'
+import { LinkButton } from '../lib/Button'
 import Book from '../img/open-book.png'
 import Heart from '../img/love.png'
 import Discussion from '../img/debate.png'
@@ -21,12 +22,13 @@ export const StartPage = () => {
       </MediumCard>
          <div className ="start-text-header">
           <SmallHeader>What, Why and How?</SmallHeader>
-          <p> Every human being has the right to decide over their body and their sexuality. 
+          <Text> Every human being has the right to decide over their body and their sexuality. 
 						Therefore, Sweden has a sexual offence law based on the idea of free will. 
-						Sex must be an act of free will - otherwise it is a crime.</p>
+						Sex must be an act of free will - otherwise it is a crime.</Text>
 
-          <p>And now it is time for the next step. To start talking, learning
-             and sharing this knowledge.</p>
+          <Text>And now it is time for the next step. To start talking, learning
+          and sharing this knowledge.
+          </Text>
            
          </div>
      </StartContainer>
@@ -91,20 +93,27 @@ export const StartPage = () => {
 
       <WideContainer>
         <WideCard>
-        
-          <p>texttext</p>
-          <p>texttext</p>
-          <p>texttext</p>
-          <p>texttext</p>
-          <p>texttext</p>
-          <p>texttext</p>
-          
+          <LinkButton as="a" href="/https://storasyster.org/stod-och-hjalp-efter-sexuella-overgrepp/">Association Big Sister</LinkButton>
+          <LinkButton as="a" href="/">The Women's Protection Line</LinkButton>
+          <LinkButton as="a" href="/">BRIS</LinkButton>
+          <LinkButton as="a" href="/">Unizon Womens shelter </LinkButton>
+          <LinkButton as="a" href="/">Roks Womens shelter </LinkButton>
+          <LinkButton as="a" href="/">UMO</LinkButton>
         </WideCard>
       </WideContainer>
     </>
   )
 }
 
+export const Links = styled.p`
+  padding:10px;
+  color:#001a33;
+ 
+
+  @media (min-width: 700px) {
+  width:40%;
+  }
+`
 
 export const Row = styled.div`
   display:flex;
@@ -117,14 +126,29 @@ export const StartContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #0d335d;
+  color: #fff;
 
   @media (min-width: 700px) and (max-width: 1024px) {
   flex-direction: row;
   justify-content: center;
+  padding: 80px 0px;
+  
   }
   @media (min-width: 1024px) {
   flex-direction: row;
   justify-content: center;
+  padding: 100px 0px;
+  margin-bottom: 100px;
 }
 `
 
+
+
+//LINKS 
+//https://storasyster.org/stod-och-hjalp-efter-sexuella-overgrepp/
+//https://kvinnofridslinjen.se/telefonkort/engelska-english/
+//https://www.bris.se/ 
+//https://unizon.se/
+//https://www.roks.se/
+//https://www.umo.se/

@@ -133,6 +133,7 @@ nav {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 @media (min-width: 700px) and (max-width: 1024px) {
