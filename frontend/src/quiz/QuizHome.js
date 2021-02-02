@@ -12,7 +12,7 @@ export const QuizHome = ({ setPage }) => {
 	const dispatch = useDispatch()
 	const userId = useSelector((store) => store.user.userId)
 	const accessToken = useSelector((store) => store.user.accessToken)
-	const secretMessage = useSelector((store) => store.user.SecretMessage)
+	const secretMessage = useSelector((store) => store.user.secretMessage)
 
   useEffect(() => {
     dispatch(user.actions.setErrorMessage({ errorMessage: null }))
@@ -38,7 +38,7 @@ export const QuizHome = ({ setPage }) => {
 	return(
 	    <Section background={ '#F5E9DC;'}>
 		    <h1>Welcome to the quiz page username</h1>
-		    <h3>{`${secretMessage}`}</h3>
+		    <h2>{`${secretMessage}`}</h2>
 			    <ContainerCenter>
             <CoulmnRow>
 			        <Button type="button" onClick={handleClick}>Log Out</Button>

@@ -108,7 +108,7 @@ app.post('/users', async (req, res) => {
 
 app.get('/users/:id/secret', authenticateUser)
 app.get('/users/:id/secret', (req, res) => {
-  const secretMessage = `${req.user.name}, welcome.`
+  const secretMessage = ` Welcome ${req.user.name}`
   res.status(201).json({ secretMessage })
 })
 
