@@ -92,17 +92,20 @@ export const StartPage = () => {
 
       <WideContainer>
         <WideCard>
-          <LinkButton as="a" href="/https://storasyster.org/stod-och-hjalp-efter-sexuella-overgrepp/">Association Big Sister</LinkButton>
-          <LinkButton as="a" href="/">The Women's Protection Line</LinkButton>
-          <LinkButton as="a" href="/">BRIS</LinkButton>
-          <LinkButton as="a" href="/">Unizon Womens shelter </LinkButton>
-          <LinkButton as="a" href="/">Roks Womens shelter </LinkButton>
-          <LinkButton as="a" href="/">UMO</LinkButton>
+          <a className="help" href="https://storasyster.org/stod-och-hjalp-efter-sexuella-overgrepp/" target="_blank" rel="noopener noreferrer">Association Big Sister</a>
+          <a className="help" href="https://kvinnofridslinjen.se/telefonkort/engelska-english/" target="_blank" rel="noopener noreferrer">The Women's Protection Line</a>
+          <a className="help" href="https://www.bris.se/ " target="_blank" rel="noopener noreferrer">BRIS</a>
+          <a className="help" href="https://unizon.se/" target="_blank" rel="noopener noreferrer">Unizon Womens shelter </a>
+          <a className="help" href="https://www.roks.se/" target="_blank" rel="noopener noreferrer">Roks Womens shelter </a>
+          <a className="help" href="https://www.umo.se/" target="_blank" rel="noopener noreferrer">UMO</a>
+          
         </WideCard>
       </WideContainer>
     </>
   )
 }
+
+
 
 export const Links = styled.p`
   padding:10px;

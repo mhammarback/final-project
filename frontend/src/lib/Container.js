@@ -89,6 +89,38 @@ export const SmallHeaderContainer = styled.div`
   }
 `
 
+//Specific Flexbox
+
+export const FlexWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: 500px) and (max-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 100px 0px 50px 0px;
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 130px 0px 50px 0px;
+  }
+`
+
+//Cards 
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+`  
+
+
+
+
+
+
 //Footer 
 
 export const FooterContainer = styled.footer`
