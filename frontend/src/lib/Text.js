@@ -29,5 +29,13 @@ export const EndText = styled.p`
 `
 
 export const Text = styled.p`
+  font-size: 16px;
   padding: 15px;
+  margin: 0px;
+
+
+  @media (min-width: 700px) {
+    font-size: 20px;
+  }
+
 `

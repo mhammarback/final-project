@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 
 import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
 import { SmallIcon, Icon, LargeIcon, Round } from '../lib/Icons'
-import { FactContainer, WideContainer, CenterText } from '../lib/Container'
-import { SmallHeader, BoldText, Text } from '../lib/Text'
+import { FactContainer, WideContainer, CenterText, SmallHeaderContainer } from '../lib/Container'
+import { SmallHeader, BoldText, Text, } from '../lib/Text'
 import { LinkButton } from '../lib/Button'
 import Book from '../img/open-book.png'
 import Heart from '../img/love.png'
@@ -17,10 +17,10 @@ export const StartPage = () => {
   return (
     <>
     <StartContainer>
-       <MediumCard>
+       <MediumCard background={ '##0d335d;'}>
        <LargeIcon src={Heart} alt="Heart icon" />     
       </MediumCard>
-         <div className ="start-text-header">
+         <SmallHeaderContainer>
           <SmallHeader>What, Why and How?</SmallHeader>
           <Text> Every human being has the right to decide over their body and their sexuality. 
 						Therefore, Sweden has a sexual offence law based on the idea of free will. 
@@ -29,8 +29,7 @@ export const StartPage = () => {
           <Text>And now it is time for the next step. To start talking, learning
           and sharing this knowledge.
           </Text>
-           
-         </div>
+         </SmallHeaderContainer>
      </StartContainer>
     
     <div className ="container-cards">
@@ -59,36 +58,36 @@ export const StartPage = () => {
         <LargeCard>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <BoldText>Consent</BoldText><p>can always be rewoked</p>
+              <SmallFact><BoldText>Consent</BoldText><p>can always be rewoked</p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <BoldText>Consent</BoldText> <p> can always be rewoked</p>
+            <SmallFact><BoldText>Consent</BoldText> <p> can always be rewoked</p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <BoldText>Consent</BoldText> <p> can’t be given while sleeping</p>
+            <SmallFact><BoldText>Consent</BoldText> <p> can’t be given while sleeping</p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <p>silence is not</p><BoldText> Consent</BoldText>
+            <SmallFact><p>silence is not</p><BoldText> Consent</BoldText></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <BoldText>Consent</BoldText>  <p>can always be rewoked</p>
+            <SmallFact><BoldText>Consent</BoldText>  <p>can always be rewoked</p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <BoldText>Consent</BoldText> <p> can always be rewoked</p>
+            <SmallFact> <BoldText>Consent</BoldText> <p> can always be rewoked</p></SmallFact>
           </Row>
         </LargeCard>
     </FactContainer>
 
    <CenterText>
    <h2>HELP</h2>
-    <p>If you have encountered sexual assault, there is a lot of help to get. </p>
-    <p>Here are some links on where you can get more support</p>
-    <BoldText>You are not alone. </BoldText> 
+    <Text >If you have encountered sexual assault, there is a lot of help to get. </Text >
+    <Text >Here are some links on where you can get more support</Text >
+    <BoldText>You are not alone.</BoldText> 
     </CenterText>
 
       <WideContainer>
@@ -120,6 +119,7 @@ export const Row = styled.div`
   flex-direction:row;
   align-items:center;
   padding: 5px;
+ 
 `
 
 export const StartContainer = styled.div`
@@ -141,6 +141,16 @@ export const StartContainer = styled.div`
   padding: 100px 0px;
   margin-bottom: 100px;
 }
+`
+export const SmallFact = styled.div`
+  display:flex;
+  flex-directon: column;
+  align-items: center;
+
+  @media (min-width: 700px) {
+    flex-direction:row;
+    font-size: 24px;
+  }
 `
 
 

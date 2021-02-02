@@ -20,7 +20,7 @@ export const MediumCard = styled.div`
   width: 300px;
   height: 320px;
   margin: 40px 0 40px 0;
-  background-color: #F5E9DC;
+  background: ${(props) => (props.background ? props.background : '#F5E9DC;')};
   border-radius: 5px;
   display:flex;
   flex-direction: column;
@@ -29,12 +29,12 @@ export const MediumCard = styled.div`
   @media (min-width: 700px) {
     width: 480px;
     padding: 0 16px;
-   
+    background: #F5E9DC;
   }
 `
 
 export const LargeCard = styled.div`
-  width: 300px;
+  width: 320px;
   height: 720px;
   margin: 40px 0 40px 0;
   background-color: #F5E9DC;

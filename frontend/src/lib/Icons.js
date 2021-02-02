@@ -27,5 +27,9 @@ export const Round = styled.span`
   background-color: #fff;
   border-radius: 50%;
   display: inline-block;  
-  margin: 30px;
+  margin: 25px 5px;
+
+  @media (min-width: 700px) {
+    margin: 30px;
+  }
 `

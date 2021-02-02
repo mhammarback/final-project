@@ -76,6 +76,19 @@ export const CenterText = styled.div`
   color:#fff;
 `
 
+export const SmallHeaderContainer = styled.div`
+  padding-bottom: 60px;
+
+  @media (min-width: 700px) and (max-width: 1024px) {
+    width:30%;
+    margin: 10px;
+  }
+  @media (min-width: 1024px) {
+    width:30%;
+    margin: 10px;
+  }
+`
+
 //Footer 
 
 export const FooterContainer = styled.footer`
