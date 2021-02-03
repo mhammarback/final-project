@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { quiz } from '../reducers/quiz'
 import { SmallButton, QuizButton } from '../lib/Button'
-import { ContainerCenter , QuizOptionsContainer, ContainerColor, QuestionContainer } from '../lib/Container'
+import {  Container,ContainerCenter , QuizOptionsContainer, ContainerColor, QuestionContainer } from '../lib/Container'
 import { Question } from '../lib/Text'
 import { Timer } from '../quiz/Timer'
 import { TimeIsUp } from '../quiz/TimeIsUp'
@@ -40,9 +40,8 @@ export const Quiz = () => {
         return (
           <QuizButton
             key={optionindex}
-            background={(optionindex === question.correctAnswerIndex) ? '#98D5B9' : '#EC5569'}
+            background={(optionindex === question.correctAnswerIndex) ? '#157E4F' : '#DD3751'}
             disabled={optionDisabled || deciseconds === 0}
-            
             onClick={() => {
             dispatch(quiz.actions.submitAnswer({ questionId: index, answerIndex: optionindex }))
             }}>
@@ -53,11 +52,11 @@ export const Quiz = () => {
       </QuizOptionsContainer>
 		</QuestionContainer>
 		{showSummaryButton &&
-      <section>
+      <Container>
           <NavLink to="/summary">
             <SmallButton onClick={() => dispatch(quiz.actions.setSummary({ numberOfQuestions: questions, correctAnswers: correct }))}>See results</SmallButton>
           </NavLink>
-        </section>}
+      </Container>}
       {!showSummaryButton &&
         <section>
 					{(deciseconds > 0) ? <TimeIsUp color="rgba(0, 0, 0, 0)" /> : <TimeIsUp color="rgba(0, 0, 0, 1)" />}

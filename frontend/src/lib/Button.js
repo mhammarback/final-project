@@ -49,18 +49,22 @@ export const QuizButton = styled.button`
   background: #fff;
   color: #000;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   transition: background ease 0.5s;
 
   :disabled{
   background: ${(props) => (props.background ? props.background : '#fff')};
   cursor: auto;
+  color: #fff;
 
   :hover{
     transform: none;
   }
   &&.correct{
     background: #98D5B9;
+  }
+  @media (min-width: 800px) {
+    font-size: 25px;
   }
 }
 `
