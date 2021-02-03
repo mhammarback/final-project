@@ -7,6 +7,7 @@ import swal from 'sweetalert'
 import { user, getSecretMessage } from '../reducers/user'
 import { Button } from '../lib/Button'
 import { ContainerCenter } from '../lib/Container'
+import { Text } from '../lib/Text'
 
 export const QuizHome = ({ setPage }) => {
 	const dispatch = useDispatch()
@@ -37,8 +38,8 @@ export const QuizHome = ({ setPage }) => {
 
 	return(
 	    <Section background={ '#F5E9DC;'}>
-		    <h1>Welcome to the quiz page username</h1>
-		    <h2>{`${secretMessage}`}</h2>
+		    <h1>{`${secretMessage}`}</h1>
+				<Text>Take our consent quiz to practice your knowledge!</Text>
 			    <ContainerCenter>
             <CoulmnRow>
 			        <Button type="button" onClick={handleClick}>Log Out</Button>

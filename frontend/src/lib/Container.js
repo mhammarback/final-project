@@ -36,6 +36,37 @@ export const QuizQuestionContainer = styled.section`
     max-height: 70%;
   }
 `
+export const QuestionContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 65%;
+
+  @media (min-width: 500px) and (max-width: 1024px) {
+    height: 55%;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    max-height: 70%;
+  }
+`
+export const QuestionPicture = styled.img`
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
+  height: 200px;
+  @media (min-width: 500px) and (max-width: 1024px) {
+    width: 50%;
+    margin-right: 0;
+    padding-right: 8px;
+  }
+  @media (min-width: 1024px) {
+    border-radius: 7px;
+    width: 50%;
+    height: 375px;
+  }
+`
 
 export const QuizOptionsContainer = styled.ul`
   display: grid;

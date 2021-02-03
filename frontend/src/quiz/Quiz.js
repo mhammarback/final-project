@@ -4,9 +4,11 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { quiz } from '../reducers/quiz'
 import { SmallButton, QuizButton } from '../lib/Button'
-import { ContainerCenter , QuizOptionsContainer, ContainerColor  } from '../lib/Container'
+import { ContainerCenter , QuizOptionsContainer, ContainerColor, QuestionContainer } from '../lib/Container'
+import { Question } from '../lib/Text'
 import { Timer } from '../quiz/Timer'
 import { TimeIsUp } from '../quiz/TimeIsUp'
+import { Image } from '../quiz/Image'
 
  
 export const Quiz = () => {
@@ -30,13 +32,14 @@ export const Quiz = () => {
 
 	return (
 		<ContainerColor>
-		<h2>Question {(index + 1)} of {questions}: <span>{question.questionText}</span></h2>
-		<>
+		<Question>Question {(index + 1)} of {questions}: <span>{question.questionText}</span></Question>
+		<QuestionContainer>
+    <Image />
 			<QuizOptionsContainer>
-
       {options.map((option, optionindex) => {
         return (
           <QuizButton
+            key={optionindex}
             background={(optionindex === question.correctAnswerIndex) ? '#98D5B9' : '#EC5569'}
             disabled={optionDisabled || deciseconds === 0}
             
@@ -48,7 +51,7 @@ export const Quiz = () => {
             )
        })}
       </QuizOptionsContainer>
-		</>
+		</QuestionContainer>
 		{showSummaryButton &&
       <section>
           <NavLink to="/summary">

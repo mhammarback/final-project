@@ -33,9 +33,16 @@ export const Text = styled.p`
   padding: 15px;
   margin: 0px;
 
-
   @media (min-width: 700px) {
     font-size: 20px;
   }
+`
 
+export const Question = styled.h3`
+  font-size: 20px
+  text-align: center;
+
+  @media (min-width: 700px) {
+    font-size: 35px;
+  }
 `

@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const questions = [
-  { id: 0, questionText: 'Can consent be rewoked?', options: ['No', 'Sometimes', 'Yes', 'Not sure'], correctAnswerIndex: 2 },
-  { id: 1, questionText: 'If you are in a relationship,do you automaticly have your partners consent?', options: ['Of course', 'Not sure', 'Yes, we are together?', 'No'], correctAnswerIndex: 3 },
-  { id: 2, questionText: 'Can people give consent while they are sleeping?', options: ['No', 'If they said yes before they fell to sleep', 'Yes', 'Not sure'], correctAnswerIndex: 0 },
-  { id: 3, questionText: 'Fourth question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  { id: 4, questionText: 'Five question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
-  { id: 5, questionText: 'Six question', options: ['first', 'second', 'third', 'four'], correctAnswerIndex: 1 },
+  { id: 0, questionText: 'Can consent be rewoked?', options: ['No', 'Sometimes', 'Yes', 'Not sure'], image:'group.jpg', correctAnswerIndex: 2 },
+  { id: 1, questionText: 'If you are in a relationship,do you automaticly have your partners consent?', options: ['Of course', 'Not sure', 'Yes, we are together?', 'No'], image:'group.jpg', correctAnswerIndex: 3 },
+  { id: 2, questionText: 'Can people give consent while they are sleeping?', options: ['No', 'If they said yes before they fell to sleep', 'Yes', 'Not sure'], image:'group.jpg', correctAnswerIndex: 0 },
+  { id: 3, questionText: 'Fourth question', options: ['first', 'second', 'third', 'four'], image:'group.jpg', correctAnswerIndex: 1 },
+  { id: 4, questionText: 'Five question', options: ['first', 'second', 'third', 'four'], image:'group.jpg', correctAnswerIndex: 1 },
+  { id: 5, questionText: 'Six question', options: ['first', 'second', 'third', 'four'], image:'group.jpg', correctAnswerIndex: 1 },
 ]
 
 const results = [
