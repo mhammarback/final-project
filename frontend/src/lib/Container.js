@@ -52,16 +52,19 @@ export const QuestionContainer = styled.section`
   }
 `
 export const QuestionPicture = styled.img`
+  display:none;
   object-fit: cover;
   margin-right: 10px;
   border-radius: 10px;
   height: 200px;
   @media (min-width: 500px) and (max-width: 1024px) {
+    display:flex;
     width: 50%;
     margin-right: 0;
     padding-right: 8px;
   }
   @media (min-width: 1024px) {
+    display:flex;
     border-radius: 7px;
     width: 50%;
     height: 375px;
