@@ -49,7 +49,7 @@ export const QuestionContainer = styled.section`
   }
 `
 export const QuestionPicture = styled.img`
-  display:none;
+  
   object-fit: cover;
   margin-right: 10px;
   border-radius: 10px;
