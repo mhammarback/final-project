@@ -75,13 +75,11 @@ export const QuizOptionsContainer = styled.ul`
   width: 100%;
   list-style:none;
   padding:0;
-  max-height: max-content;
+  
   @media (max-width: 800px) {
     margin-top: 10px;
-    height:
   }
   @media (max-width: 500px) {
-    height: 60%;
   }
 `
 

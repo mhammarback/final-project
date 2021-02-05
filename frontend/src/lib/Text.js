@@ -43,6 +43,6 @@ export const Question = styled.h3`
   text-align: center;
 
   @media (min-width: 700px) {
-    font-size: 35px;
+    font-size: 30px;
   }
 `
