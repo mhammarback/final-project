@@ -84,7 +84,7 @@ const HeaderTextSmall = styled.p`
 		font-size: 17px;
 	}
 
-	@media (min-width: 1024px) and (max-width: 1240px) {
+	@media (min-width: 1024px) and (max-width: 1640px) {
 		display:flex;
 		top: 50%;
 		left: 54%;
@@ -92,10 +92,8 @@ const HeaderTextSmall = styled.p`
 		font-size: 22px;
 	}
 
-	@media (min-width: 1240px) {
-		display:flex;
-		top: 48%;
-		left: 52%;
-		font-size: 24px;
+	@media (min-width: 1640px) {
+		display: none;
+	
 	}
 `

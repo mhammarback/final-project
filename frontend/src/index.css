@@ -70,7 +70,7 @@ h2, h3 {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-  padding: 50px 50px;
+  padding: 20px 20px;
 }
 
 .content-container input {
@@ -81,6 +81,7 @@ h2, h3 {
 
 .form-style {
   background-color: #F5E9DC;
+  width:90%;
 }
 
 .form-style h1 {
@@ -167,6 +168,9 @@ nav {
   margin: 10px;
 }
 
+.form-style {
+  width: 50%;
+}
 }
 
 @media (min-width: 1024px) {
@@ -220,5 +224,8 @@ nav p {
 /* FORUM*/
 .form-style {
   width: 40%;
+}
+.content-container {
+  padding: 50px 50px;
 }
 }

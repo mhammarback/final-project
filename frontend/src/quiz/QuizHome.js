@@ -1,13 +1,13 @@
 import React,{ useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components/macro'
 import swal from 'sweetalert'
 
 import { user, getSecretMessage } from '../reducers/user'
 import { Button } from '../lib/Button'
-import { ContainerCenter } from '../lib/Container'
+import { ContainerCenter, Section, CoulmnRow  } from '../lib/Container'
 import { Text } from '../lib/Text'
+import { MediumCard } from '../lib/Cards'
 
 export const QuizHome = ({ setPage }) => {
 	const dispatch = useDispatch()
@@ -37,34 +37,18 @@ export const QuizHome = ({ setPage }) => {
   }
 
 	return(
-	    <Section background={ '#F5E9DC;'}>
+	  <Section background={ '#F5E9DC;'}>
+		  <MediumCard>
 		    <h1>{`${secretMessage}`}</h1>
-				<Text>Take our consent quiz to practice your knowledge!</Text>
-			    <ContainerCenter>
-            <CoulmnRow>
-			        <Button type="button" onClick={handleClick}>Log Out</Button>
-				      <NavLink to="/quiz-start"><Button>Start Quiz</Button></NavLink>
-            </CoulmnRow>
-			    </ContainerCenter>
-	    </Section>
-	
+				  <Text>Take our consent quiz to practice your knowledge!</Text>
+			      <ContainerCenter>
+              <CoulmnRow>
+			          <Button type="button" onClick={handleClick}>Log Out</Button>
+				        <NavLink to="/quiz-start"><Button>Start Quiz</Button></NavLink>
+              </CoulmnRow>
+			      </ContainerCenter>
+			</MediumCard>
+	  </Section>
 	)
 }
 
-const Section = styled.section`
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-  margin-bottom: 40px;
-  background: ${(props) => (props.background ? props.background : '#fff')};
-`  
-export const CoulmnRow = styled.div`
-  display:flex;
-  flex-direction: column;
-  align-items:center;
-  padding: 5px;
-
-  @media (min-width: 1024px) {
-    flex-direction: row;
-  }
-`

@@ -1,5 +1,12 @@
 import styled from 'styled-components/macro'
 
+export const Section = styled.section`
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin-bottom: 40px;
+`
+
 
 export const Container = styled.section`
   display: flex;
@@ -135,6 +142,17 @@ export const FlexWrap = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     margin: 130px 0px 50px 0px;
+  }
+`
+
+export const CoulmnRow = styled.div`
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  padding: 5px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
   }
 `
 
