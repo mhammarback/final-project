@@ -34,7 +34,17 @@ export const Forum = () => {
 		})
 		.then(() => fetchStorys())
 		.catch(error => console.error(error))
-	}
+  }
+  
+  const onLiked = storyId => {
+    const updatedStory = storys.map(story => {
+      if (story._id === storyId) {
+         story.hearts += 1
+        }
+      return story
+      })
+      setStorys(updatedStory)
+    }
 
 	return(
 		<FactContainer>
@@ -42,7 +52,8 @@ export const Forum = () => {
 			{storys.map((story) => (
 					<StoryList 
 					key={story._id}
-					story={story} 
+          story={story} 
+          onLiked={onLiked}
 					/>
 			))}
 		</FactContainer>

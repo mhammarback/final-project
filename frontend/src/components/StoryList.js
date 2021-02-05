@@ -1,21 +1,44 @@
 import React from 'react'
 import moment from 'moment'
 import styled from 'styled-components/macro'
-
+import Star from '../img/star.png'
 
 export const StoryList = props => {
-  const { message, createdAt, username } = props.story
+  const { message, createdAt, username, _id } = props.story
+
+  const LIKE_URL =`https://final-project-technigo.herokuapp.com/forum/${_id}/like`
+
+  const handleClick = () => {
+    fetch(LIKE_URL, {
+      method: "POST",
+      headers:
+      {"Content-Type":"application/json"},
+      body:"",
+      }).then(() => props.onLiked(_id)) 
+      }
   
   return (
     <ForumCard>
       <p>{message}</p>
       <p>Posted by: {username}</p>
+      <Button
+        onClick={handleClick}>
+       <span>
+       <SmallIcon src={Star} alt="star icon"/> 
+      </span>
+       </Button>
+       <p>{message.hearts}</p>
       <Time>
         {moment(createdAt).fromNow()}; 
       </Time >
     </ForumCard>
   )
 }
+
+export const Button = styled.button`
+  background: none;
+  border:none;
+`
 
 export const Round = styled.span`
   height: 50px;

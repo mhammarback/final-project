@@ -59,7 +59,11 @@ const Story = mongoose.model('Story', {
   createdAt: {
     type: Date, 
     default: Date.now
-  }
+  },
+  hearts: {
+    type: Number, 
+    default: 0
+  },
 })
 
 const port = process.env.PORT || 8080
@@ -147,6 +151,22 @@ app.post('/forum' , async (req, res) => {
     res.status(400).json ({ message: 'could not post story', errors:err.errors})
   }
 })
+
+app.post('/forum/:storyId/like', async (req,res) => {
+  const { storyId } = req.params.storyId
+
+  try {
+    const storyLiked = await Story.updateOne({_id: storyId }, { $inc : { hearts: 1 } })
+    res.json(storyLiked)
+  } catch (err) {
+    res.status(400).json({message: "story not found", error:err.errors})
+  }
+})
+
+
+
+
+
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`)
