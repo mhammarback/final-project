@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import styled from 'styled-components/macro'
 
 import { user, login } from '../reducers/user'
 import { Button } from '../lib/Button'
+import { Form, Section, FormContent, FormInput } from '../lib/Form'
 
 export const LoginPage = ({ setPage }) => {
   const dispatch = useDispatch()
@@ -23,11 +23,11 @@ export const LoginPage = ({ setPage }) => {
 	return ( 
 		<>
     <Section>
-		<form className='login-form form-style' onSubmit={handleSubmit}>
-      <h1>SIGN IN </h1>
-        <div className='content-container'>
+		<Form onSubmit={handleSubmit}>
+      <h2>SIGN IN </h2>
+        <FormContent>
           <label>Name</label>
-          <input
+          <FormInput
             type='text'
             placeholder='Enter Name...'
             value={name}
@@ -37,7 +37,7 @@ export const LoginPage = ({ setPage }) => {
             required
           />
           <label>Password</label>
-          <input
+          <FormInput
             type='password'
             placeholder='Enter Password...'
             value={password}
@@ -48,31 +48,13 @@ export const LoginPage = ({ setPage }) => {
           <Button className='input-button' type='submit'>Sign in</Button>
             <p>Not a user?</p>
               <Button className="input-button" type="button" onClick={() => setPage('signup')}>Sign up</Button>
-        </div>
-      </form>
+        </FormContent>
+      </Form>
       {error && <div className="div-error">{`${error}`}</div>}
       </Section>
 		</>
 	)
 }
 
-const Section = styled.section`
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-  margin-bottom: 40px;
-`
 
-/*const Input = styled.input`
-  height: 48px;
-  padding: 0 16px 0 16px;
-  background: #ffffff;
-  border: 1px solid black;
-  border-radius: 24px;
-  font-size: 16px;
-  line-height: 100%;
-  color: rgba(0, 0, 0, 0.87);
-
-  flex: 1;
-` */
 

@@ -7,13 +7,13 @@ export const StoryList = props => {
   const { message, createdAt, username } = props.story
   
   return (
-    <ForumCard >
+    <ForumCard>
       <p>{message}</p>
       <p>Posted by: {username}</p>
       <Time>
         {moment(createdAt).fromNow()}; 
       </Time >
-    </ForumCard >
+    </ForumCard>
   )
 }
 

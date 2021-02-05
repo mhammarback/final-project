@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
 import { SmallIcon, Icon, LargeIcon, Round } from '../lib/Icons'
-import { FactContainer, WideContainer, CenterText, SmallHeaderContainer } from '../lib/Container'
+import { StartContainer, FactContainer, WideContainer, CenterText, SmallHeaderContainer, CardsContainer, Row  } from '../lib/Container'
 import { SmallHeader, BoldText, Text, } from '../lib/Text'
 import Book from '../img/open-book.png'
 import Heart from '../img/love.png'
@@ -31,7 +31,7 @@ export const StartPage = () => {
          </SmallHeaderContainer>
      </StartContainer>
     
-    <div className ="container-cards">
+    <CardsContainer>
       <NavLink to ="/lawbook" className="nav-links">
         <SmallCard> 
           <h3>LAW BOOK</h3>
@@ -50,7 +50,7 @@ export const StartPage = () => {
           <Icon src={Discussion} alt="discussion icon" />  
         </SmallCard>
       </NavLink>  
-    </div>
+    </CardsContainer>
 
     <FactContainer>
       <h2>FAST FACTS</h2>
@@ -65,7 +65,7 @@ export const StartPage = () => {
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <SmallFact><BoldText>Consent</BoldText> <p> can’t be given while sleeping</p></SmallFact>
+            <SmallFact><BoldText>Consent</BoldText> <p> can’t be </p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
@@ -91,59 +91,26 @@ export const StartPage = () => {
 
       <WideContainer>
         <WideCard>
-          <a className="help" href="https://storasyster.org/stod-och-hjalp-efter-sexuella-overgrepp/" target="_blank" rel="noopener noreferrer">Association Big Sister</a>
-          <a className="help" href="https://kvinnofridslinjen.se/telefonkort/engelska-english/" target="_blank" rel="noopener noreferrer">The Women's Protection Line</a>
-          <a className="help" href="https://www.bris.se/ " target="_blank" rel="noopener noreferrer">BRIS</a>
-          <a className="help" href="https://unizon.se/" target="_blank" rel="noopener noreferrer">Unizon Womens shelter </a>
-          <a className="help" href="https://www.roks.se/" target="_blank" rel="noopener noreferrer">Roks Womens shelter </a>
-          <a className="help" href="https://www.umo.se/" target="_blank" rel="noopener noreferrer">UMO</a>
-          
+          <HelpLink href="https://storasyster.org/stod-och-hjalp-efter-sexuella-overgrepp/" target="_blank" rel="noopener noreferrer">Association Big Sister</HelpLink>
+          <HelpLink href="https://kvinnofridslinjen.se/telefonkort/engelska-english/" target="_blank" rel="noopener noreferrer">The Women's Protection Line</HelpLink>
+          <HelpLink href="https://www.bris.se/ " target="_blank" rel="noopener noreferrer">BRIS</HelpLink>
+          <HelpLink href="https://unizon.se/" target="_blank" rel="noopener noreferrer">Unizon Womens shelter </HelpLink>
+          <HelpLink href="https://www.roks.se/" target="_blank" rel="noopener noreferrer">Roks Womens shelter </HelpLink>
+          <HelpLink href="https://www.umo.se/" target="_blank" rel="noopener noreferrer">UMO</HelpLink>
         </WideCard>
       </WideContainer>
     </>
   )
 }
 
-
-
 export const Links = styled.p`
   padding:10px;
   color:#001a33;
- 
-
   @media (min-width: 700px) {
   width:40%;
   }
 `
 
-export const Row = styled.div`
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  padding: 5px;
- 
-`
-
-export const StartContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #0d335d;
-  color: #fff;
-
-  @media (min-width: 700px) and (max-width: 1024px) {
-  flex-direction: row;
-  justify-content: center;
-  padding: 80px 0px;
-  
-  }
-  @media (min-width: 1024px) {
-  flex-direction: row;
-  justify-content: center;
-  padding: 100px 0px;
-  margin-bottom: 100px;
-}
-`
 export const SmallFact = styled.div`
   display:flex;
   flex-directon: column;
@@ -154,13 +121,13 @@ export const SmallFact = styled.div`
     font-size: 24px;
   }
 `
-
-
-
-//LINKS 
-//https://storasyster.org/stod-och-hjalp-efter-sexuella-overgrepp/
-//https://kvinnofridslinjen.se/telefonkort/engelska-english/
-//https://www.bris.se/ 
-//https://unizon.se/
-//https://www.roks.se/
-//https://www.umo.se/
+export const HelpLink = styled.a`
+  display: inline-block;
+  color: #0d335d;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid #0d335d;
+  border-radius: 3px;
+  display: block;
+`

@@ -88,6 +88,49 @@ export const QuizOptionsContainer = styled.ul`
   }
   @media (max-width: 500px) {
   }
+ `
+
+ export const StartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0d335d;
+  color: #fff;
+
+  @media (min-width: 700px) and (max-width: 1024px) {
+  flex-direction: row;
+  justify-content: center;
+  padding: 80px 0px;
+  
+  }
+  @media (min-width: 1024px) {
+  flex-direction: row;
+  justify-content: center;
+  padding: 100px 0px;
+  margin: 150px 0px;
+}
+`
+ 
+
+export const CardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 100px 0px;
+
+  @media (min-width: 700px) and (max-width: 1024px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  @media (min-width: 1024px) {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  }
 `
 
 export const FactContainer = styled.div`
@@ -155,6 +198,12 @@ export const CoulmnRow = styled.div`
     flex-direction: row;
   }
 `
+export const Row = styled.div`
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  padding: 5px;
+`
 
 //Cards 
 export const ButtonContainer = styled.div`
@@ -163,7 +212,20 @@ export const ButtonContainer = styled.div`
   margin-bottom: 50px;
 `  
 
+//header and footer
 
+export const HiddenBurger = styled.div`
+  @media (min-width: 1024px) { 
+		display:none;
+	}
+`
+export const HiddenNav = styled.div`
+	display: none;
+	
+  @media (min-width: 1024px) {
+		display:flex;
+	}
+`
 
 
 

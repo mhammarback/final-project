@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import styled from 'styled-components/macro'
 
 import { user } from '../reducers/user'
 import { Button } from '../lib/Button'
+import { Form, Section, FormContent, FormInput } from '../lib/Form'
 
 const SIGNUP_URL = 'https://final-project-technigo.herokuapp.com/users'
 
@@ -20,7 +20,6 @@ export const SignUpPage = ({ setPage }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
   
-
   fetch(SIGNUP_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -44,11 +43,11 @@ export const SignUpPage = ({ setPage }) => {
 return ( 
   <>
   <Section>
-  <form className='login-form form-style' onSubmit={handleSubmit}>
-    <h1>SIGN UP</h1>
-      <div className='content-container'>
+    <Form onSubmit={handleSubmit}>
+    <h2>SIGN UP</h2>
+      <FormContent>
         <label>Name</label>
-        <input
+        <FormInput
           type='text'
           placeholder='Enter Name...'
           value={name}
@@ -58,7 +57,7 @@ return (
           required
         />
         <label>Password</label>
-        <input
+        <FormInput
           type='password'
           placeholder='Enter Password...'
           value={password}
@@ -69,18 +68,11 @@ return (
           <Button className='input-button' type='submit'>Sign up</Button>
           <p>Already a user?</p>
             <Button className="input-button" type="button" onClick={() => setPage('login')}>Log in</Button>
-        </div>
-      </form>
+        </FormContent>
+      </Form>
       {error && <div className="div-error">{`${error}`}</div>}
     </Section>
   </>
   )
 }
-
-const Section = styled.section`
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-  margin-bottom: 40px;
-`  
 

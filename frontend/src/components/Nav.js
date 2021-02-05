@@ -1,10 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import styled from 'styled-components/macro'
 
 export const Nav = () => {
   return (
-    <section className ="navbar">
+    <NavBar>
      <div>
       <NavLink to ="/sign" className="nav-links">
       SIGN UP
@@ -14,7 +15,7 @@ export const Nav = () => {
       SIGN IN 
       </NavLink>
     </div>
-    <div className ="links-right">
+    <div>
       <NavLink to ="/lawbook" className="nav-links">
       LAWBOOK 
       </NavLink>
@@ -28,7 +29,16 @@ export const Nav = () => {
       HOME 
       </NavLink>   
     </div> 
-    </section>
+    </NavBar>
   )
 }
 
+export const NavBar = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin:10px;  
+
+  @media (min-width: 1024px) {
+  flex-direction: row;
+  }
+`

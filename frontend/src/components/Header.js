@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 
 import { Nav } from '../components/Nav'
 import  { HamburgerMenu }  from '../components/Menu'
+import { HiddenBurger, HiddenNav } from '../lib/Container'
 
 export const Header = () => {
 	const [open, setOpen] = useState(false)
@@ -11,14 +12,14 @@ export const Header = () => {
 	
 	return (
     <HeaderContainer>
-		  <div className="hidden-hamburger">
+		  <HiddenBurger>
 			  <div ref={node}>
           <HamburgerMenu open={open} setOpen={setOpen} id={menuId} />   
         </div>
-		  </div>
-			<div className="hidden-nav">
+		  </HiddenBurger>
+			<HiddenNav>
         <Nav />
-			</div>	
+			</HiddenNav>	
 			<HeaderColorContainer>
 				<HeaderText>CONSENT</HeaderText>
         <HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
@@ -26,6 +27,7 @@ export const Header = () => {
     </HeaderContainer>
 	)
 }
+
 
 const HeaderContainer = styled.header`
   margin-bottom: 100px;

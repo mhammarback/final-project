@@ -10,17 +10,6 @@ code {
     monospace;
 }
 
-.help {
-  display: inline-block;
-  color: #0d335d;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #0d335d;
-  border-radius: 3px;
-  display: block;
-}
-
 a {
   color: #000;
   text-decoration: none;
@@ -31,85 +20,7 @@ h2, h3 {
   text-align: center;
 }
 
-.star-button {
-  border-radius: 50%;
-}
-
-/* Header */
-
-.navbar {
-  display: flex;
-  flex-direction: column;
-  margin:10px;
-}
-
-.links-right { 
-  justify-content: right;
-}
-
-.hidden-nav {
-  display: none;
-}
-
-.header-text-container {
-  display: flex;
-  flex-direction: column;
-}
-
-/* SIGN IN / UP  */
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-/*USE AS CONTAINER FOR STYLED COMPONENT? */ 
-.content-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 50px;
-  padding: 20px 20px;
-}
-
-.content-container input {
-  margin: 10px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.form-style {
-  background-color: #F5E9DC;
-  width:90%;
-}
-
-.form-style h1 {
-  text-align: center;
-}
 /* FORUM */
-main {
-  width: 420px;
-  max-width: 100%;
-  height: 400px;
-  margin: 0 auto;
-  padding: 48px 16px 80px 16px;
-  overflow: scroll;
-}
-
-.message-field {
-  height: 48px;
-  padding: 0 16px 0 16px;
-  background: #ffffff;
-  border: 1px solid black;
-  border-radius: 24px;
-  font-size: 16px;
-  line-height: 100%;
-  color: rgba(0, 0, 0, 0.87);
-
-  flex: 1;
-}
-
 .button-send-message {
   margin-left: 8px;
   width: 48px;
@@ -118,7 +29,6 @@ main {
   border-radius: 50%;
   background-color: #F5E9DC;
 }
-
 /* Aligns the icon in the button */
 .button-send-message img {
   position: relative;
@@ -127,90 +37,29 @@ main {
   width:50%
 }
 
-/* Footer */
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 80px 10px;
-  background-color: #F5E9DC; 
-}
-
 nav { 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.container-cards {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 100px 0px;
-}
-
 @media (min-width: 700px) and (max-width: 1024px) {
-
-.container-cards {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.start-style {
-  display: flex;
-  flex-direction: column;
-}
 
 .nav-links {
   padding: 20px;
   margin: 10px;
-}
-
-.form-style {
-  width: 50%;
 }
 }
 
 @media (min-width: 1024px) {
 
-
-
 h2 {
   font-size: 40px;
-}
-
-.hidden-hamburger {
-  display: none;
-}
-
-.hidden-nav {
-  display: flex;
-}
-
-.container-cards {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.start-style {
-  display: flex;
-  flex-direction: column;
 }
 
 .nav-links {
   padding: 20px;
   margin: 10px;
-}
-
-.love {
-  width: 50%;
-}
-
-.navbar {
-  flex-direction: row;
 }
 
 nav {
@@ -219,13 +68,5 @@ nav {
 
 nav p {
   padding:10px 30px 0px 0px;
-}
-
-/* FORUM*/
-.form-style {
-  width: 40%;
-}
-.content-container {
-  padding: 50px 50px;
 }
 }

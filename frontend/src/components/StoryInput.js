@@ -18,12 +18,11 @@ export const StoryInput = ({ onMessageChange }) => {
   return(
     <StoryInputContainer>
       <StoryInputContent onSubmit={handleSubmit} >
-        <input
-        type='text'
-        placeholder='Share your thought on consent'
-        className ='message-field'
-        value={newStory}
-        onChange={handleStory} 
+        <Input
+          type='text'
+          placeholder='Share your thought on consent'
+          value={newStory}
+          onChange={handleStory} 
         /> 
        <button
         className="button-send-message button-send-message-active">
@@ -53,4 +52,17 @@ const StoryInputContent = styled.form`
   max-width: 320px;
   padding: 16px 0px;
   margin: 0 auto;
+`
+
+const Input = styled.input`
+  height: 48px;
+  padding: 0 16px 0 16px;
+  background: #ffffff;
+  border: 1px solid black;
+  border-radius: 24px;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 0.87);
+
+  flex: 1;
 `
