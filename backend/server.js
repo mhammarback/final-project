@@ -153,7 +153,7 @@ app.post('/forum' , async (req, res) => {
 })
 
 app.post('/forum/:storyId/like', async (req,res) => {
-  const { storyId } = req.params.storyId
+  const storyId = req.params.storyId
 
   try {
     const storyLiked = await Story.updateOne({_id: storyId }, { $inc : { hearts: 1 } })
