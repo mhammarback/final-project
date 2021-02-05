@@ -26,14 +26,12 @@ export const QuizQuestionContainer = styled.section`
   padding: 0 20px 0 20px;
   display: flex;
   width: 100%;
-  height: 55%;
   @media (max-width: 800px) {
     flex-direction: column;
-    min-height: 65%;
   }
   @media (max-width: 500px) {
     padding: 20px 0 0 0;
-    max-height: 70%;
+   
   }
 `
 export const QuestionContainer = styled.section`
@@ -43,7 +41,7 @@ export const QuestionContainer = styled.section`
  
 
   @media (min-width: 500px) and (max-width: 1024px) {
-    height: 55%;
+    
     align-items: center;
   }
   @media (min-width: 1024px) {
