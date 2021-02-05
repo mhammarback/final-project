@@ -33,3 +33,9 @@ export const Round = styled.span`
     margin: 30px;
   }
 `
+
+export const QuizIcon = styled.img`
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+`

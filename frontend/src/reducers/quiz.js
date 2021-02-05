@@ -4,13 +4,13 @@ const questions = [
   { id: 0, questionText: 'Can consent be rewoked?', options: ['No', 'Sometimes', 'Yes', 'Not sure'], image:'group.jpg', correctAnswerIndex: 2 },
   { id: 1, questionText: 'If you are in a relationship,do you automaticly have your partners consent?', options: ['Of course', 'Not sure', 'Yes, we are together?', 'No'], image:'group.jpg', correctAnswerIndex: 3 },
   { id: 2, questionText: 'Can people give consent while they are sleeping?', options: ['No', 'If they said yes before they fell to sleep', 'Yes', 'Not sure'], image:'group.jpg', correctAnswerIndex: 0 },
-  { id: 3, questionText: 'Do i need to make sure i have consent?', options: ['Yes', 'Not sure', 'No', 'Sometimes'], image:'group.jpg', correctAnswerIndex: 1 },
+  { id: 3, questionText: 'Do i need to make sure i have consent?', options: ['Yes', 'Not sure', 'No', 'Sometimes'], image:'group.jpg', correctAnswerIndex: 0 },
   { id: 4, questionText: 'Does a person need to say No verbaly to not give consent?', options: ['Not sure', 'Ofcourse', ' Yes', 'No'], image:'group.jpg', correctAnswerIndex: 3 },
-  { id: 5, questionText: 'What year did Sweden add the consent law?', options: ['2000', '2010', '2018', '2020'], image:'group.jpg', correctAnswerIndex: 2 },
+  { id: 5, questionText: 'What year did Sweden add the consent law?', options: ['2000', '2018', '2010', '2020'], image:'group.jpg', correctAnswerIndex: 1 },
 ]
 
 const results = [
-	{ text: 'Great job, all correct answers!'},
+	{ text: 'Great job, all correct answers!', image: './images/love.png' },
 	{ text: 'So close, one more time and you will ace it!'},
 	{ text: 'Keep on practicing, this is important!'},
 ]
@@ -19,6 +19,7 @@ const summary = {
   numberOfQuestions: null,
   correctAnswers: null,
   quote: null,
+  image: null,
 }
 
 const initialState = {
@@ -99,10 +100,13 @@ export const quiz = createSlice({
 
 			if (correctAnswers > 5 ) {
 				state.summary.quote = state.results[0].text
+				state.summary.image = state.results[0].image
 			} else if ( correctAnswers > 4) {
 				state.summary.quote = state.results[1].text
+				state.summary.image = state.results[1].image
 			} else if ( correctAnswers > 2) {
 				state.summary.quote = state.results[2].text
+				state.summary.image = state.results[2].image
 			}
 		}
 	}

@@ -35,5 +35,19 @@ export const Form = styled.form`
   @media (min-width: 1024px) {
     width: 40%;
   }
+`
+export const SectionQuiz = styled.section`
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5E9DC;
+  padding-bottom:30px;
+  width:90%;
 
+  @media (min-width: 700px) and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media (min-width: 1024px) {
+    width: 40%;
+  }
 `

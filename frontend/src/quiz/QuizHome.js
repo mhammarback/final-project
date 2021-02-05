@@ -7,7 +7,7 @@ import { user, getSecretMessage } from '../reducers/user'
 import { Button } from '../lib/Button'
 import { ContainerCenter, Section, CoulmnRow  } from '../lib/Container'
 import { Text } from '../lib/Text'
-import { MediumCard } from '../lib/Cards'
+import { SectionQuiz} from '../lib/Form'
 
 export const QuizHome = ({ setPage }) => {
 	const dispatch = useDispatch()
@@ -38,8 +38,8 @@ export const QuizHome = ({ setPage }) => {
 
 	return(
 	  <Section background={ '#F5E9DC;'}>
-		  <MediumCard>
-		    <h1>{`${secretMessage}`}</h1>
+		  <SectionQuiz>
+		    <h2>{`${secretMessage}`}</h2>
 				  <Text>Take our consent quiz to practice your knowledge!</Text>
 			      <ContainerCenter>
               <CoulmnRow>
@@ -47,7 +47,7 @@ export const QuizHome = ({ setPage }) => {
 				        <NavLink to="/quiz-start"><Button>Start Quiz</Button></NavLink>
               </CoulmnRow>
 			      </ContainerCenter>
-			</MediumCard>
+			</SectionQuiz>
 	  </Section>
 	)
 }

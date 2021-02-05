@@ -1,6 +1,5 @@
 # Final Project - Consent 🍃
-This i my final project during the Technigo Bootcamp 2020/2021.
-
+This i my final project during the Technigo Bootcamp 2020/2021. 
 
 
 # About 
@@ -14,6 +13,7 @@ This i my final project during the Technigo Bootcamp 2020/2021.
 
 
 # Planning 🧩
+I used Figma to create a basic design and prepare for how i wanted my different pages to look like. 
 
 
 # Tech ⚡️

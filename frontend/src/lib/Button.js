@@ -6,7 +6,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 15px 60px;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -49,7 +49,7 @@ export const QuizButton = styled.button`
   background: #fff;
   color: #000;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   transition: background ease 0.5s;
 
   :disabled{
