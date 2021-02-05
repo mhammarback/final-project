@@ -40,7 +40,7 @@ export const QuestionContainer = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 65%;
+ 
 
   @media (min-width: 500px) and (max-width: 1024px) {
     height: 55%;
@@ -48,7 +48,6 @@ export const QuestionContainer = styled.section`
   }
   @media (min-width: 1024px) {
     flex-direction: row;
-    max-height: 70%;
   }
 `
 export const QuestionPicture = styled.img`

@@ -49,7 +49,7 @@ export const QuizButton = styled.button`
   background: #fff;
   color: #000;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   transition: background ease 0.5s;
 
   :disabled{
