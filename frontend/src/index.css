@@ -20,53 +20,22 @@ h2, h3 {
   text-align: center;
 }
 
-/* FORUM */
-.button-send-message {
-  margin-left: 8px;
-  width: 48px;
-  height: 48px;
-  border: 1px solid black;
-  border-radius: 50%;
-  background-color: #F5E9DC;
-}
-/* Aligns the icon in the button */
-.button-send-message img {
-  position: relative;
-  left: 2px;
-  top: 1px;
-  width:50%
-}
-
-nav { 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
 @media (min-width: 700px) and (max-width: 1024px) {
-
+  
 .nav-links {
   padding: 20px;
   margin: 10px;
-}
+  }
 }
 
 @media (min-width: 1024px) {
 
 h2 {
   font-size: 40px;
-}
+  }
 
 .nav-links {
   padding: 20px;
   margin: 10px;
-}
-
-nav {
-  justify-content: left;
-}
-
-nav p {
-  padding:10px 30px 0px 0px;
-}
+  }
 }

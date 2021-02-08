@@ -40,6 +40,15 @@ export const SmallButton = styled.button`
 } 
 `
 
+export const SendButton = styled.button `
+  margin-left: 8px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #F5E9DC;
+`
+
 export const QuizButton = styled.button`
   all: unset;
   box-shadow: 1px 2px 2px 1px #888888;

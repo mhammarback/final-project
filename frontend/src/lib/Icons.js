@@ -39,3 +39,9 @@ export const QuizIcon = styled.img`
   height: 180px;
   margin: 10px;
 `
+export const SendIcon = styled.img`
+  position: relative;
+  left: 2px;
+  top: 1px;
+  width:50%
+` 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 import icon from '../img/send-button.png'
+import { SendButton } from '../lib/Button'
+import { SendIcon } from '../lib/Icons'
 
 export const StoryInput = ({ onMessageChange }) => {
   const [newStory, setNewStory] = useState('')
@@ -24,14 +26,14 @@ export const StoryInput = ({ onMessageChange }) => {
           value={newStory}
           onChange={handleStory} 
         /> 
-       <button
-        className="button-send-message button-send-message-active">
-          <img src={icon} alt="send-icon" />
-       </button>
+          <SendButton>
+            <SendIcon src={icon} alt="send-icon" />
+          </SendButton>
       </StoryInputContent >  
     </StoryInputContainer>
   )
 }
+ 
 
  const StoryInputContainer = styled.section`
   height: 96px;
