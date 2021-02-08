@@ -57,15 +57,15 @@ export const StartPage = () => {
         <LargeCard>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-              <SmallFact><BoldText>Consent</BoldText><p>can always be rewoked</p></SmallFact>
+            <SmallFact><BoldText>Consent</BoldText> <p>is important</p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <SmallFact><BoldText>Consent</BoldText> <p> is important</p></SmallFact>
+            <SmallFact><BoldText>Consent</BoldText><p>can always be rewoked</p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <SmallFact><BoldText>Consent</BoldText><p></p></SmallFact>
+            <SmallFact><p>Talk about</p><BoldText>Consent</BoldText></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
@@ -73,7 +73,7 @@ export const StartPage = () => {
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <SmallFact><BoldText>Consent</BoldText><p>can always be rewoked</p></SmallFact>
+            <SmallFact><BoldText>Consent</BoldText><p>can't be forced</p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>

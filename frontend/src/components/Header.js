@@ -22,6 +22,7 @@ export const Header = () => {
 			</HiddenNav>	
 			<HeaderColorContainer>
 				<HeaderText>CONSENT</HeaderText>
+				<HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
         
 			</HeaderColorContainer>
     </HeaderContainer>
@@ -98,4 +99,4 @@ const HeaderTextSmall = styled.p`
 	}
 `
 
-//<HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
+//

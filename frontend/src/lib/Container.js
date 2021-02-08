@@ -227,9 +227,6 @@ export const HiddenNav = styled.div`
 	}
 `
 
-
-
-
 //Footer 
 
 export const FooterContainer = styled.footer`
@@ -237,6 +234,7 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   padding: 50px 10px;
   background-color: #F5E9DC; 
+  margin-top: 80px;
 `
 
 export const EndTextContainer = styled.div`
