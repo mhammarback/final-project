@@ -77,7 +77,7 @@ export const QuestionPicture = styled.img`
 
 export const QuizOptionsContainer = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px;
   width: 100%;
   list-style:none;
@@ -98,7 +98,7 @@ export const QuizOptionsContainer = styled.ul`
   color: #fff;
 
   @media (min-width: 700px) and (max-width: 1024px) {
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   padding: 80px 0px;
   
@@ -159,7 +159,7 @@ export const SmallHeaderContainer = styled.div`
   padding-bottom: 60px;
 
   @media (min-width: 700px) and (max-width: 1024px) {
-    width:30%;
+    width:50%;
     margin: 10px;
   }
   @media (min-width: 1024px) {
@@ -235,7 +235,7 @@ export const HiddenNav = styled.div`
 export const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
-  padding: 80px 10px;
+  padding: 50px 10px;
   background-color: #F5E9DC; 
 `
 

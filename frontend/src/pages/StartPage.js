@@ -61,11 +61,11 @@ export const StartPage = () => {
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <SmallFact><BoldText>Consent</BoldText> <p> can always be rewoked</p></SmallFact>
+            <SmallFact><BoldText>Consent</BoldText> <p> is important</p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <SmallFact><BoldText>Consent</BoldText> <p> can’t be </p></SmallFact>
+            <SmallFact><BoldText>Consent</BoldText><p></p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
@@ -73,11 +73,11 @@ export const StartPage = () => {
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <SmallFact><BoldText>Consent</BoldText>  <p>can always be rewoked</p></SmallFact>
+            <SmallFact><BoldText>Consent</BoldText><p>can always be rewoked</p></SmallFact>
           </Row>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>
-            <SmallFact> <BoldText>Consent</BoldText> <p> can always be rewoked</p></SmallFact>
+            <SmallFact><p>Being drunk is not</p><BoldText>Consent</BoldText></SmallFact>
           </Row>
         </LargeCard>
     </FactContainer>

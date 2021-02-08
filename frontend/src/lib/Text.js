@@ -18,6 +18,7 @@ export const BoldText = styled.p`
 //Footer 
 
 export const EndText = styled.p`
+  font-family: Abril Fatface;
   @media (min-width: 700px) and (max-width: 1024px) {
   width: 20%;
 	margin: 40px 50px 0px 0px;

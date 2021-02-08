@@ -12,7 +12,7 @@ export const Footer = () => {
 		    <Nav />
       </HiddenNav>
 		    <EndTextContainer >
-          <EndText></EndText>
+          <EndText>This is my final project during the Technigo Bootcamp 2020/2021</EndText>
 		    </EndTextContainer >
     </FooterContainer>
 	)

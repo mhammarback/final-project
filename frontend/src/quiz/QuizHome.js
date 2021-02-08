@@ -9,7 +9,7 @@ import { ContainerCenter, Section, CoulmnRow  } from '../lib/Container'
 import { Text } from '../lib/Text'
 import { SectionQuiz} from '../lib/Form'
 
-export const QuizHome = ({ setPage }) => {
+export const QuizHome = () => {
 	const dispatch = useDispatch()
 	const userId = useSelector((store) => store.user.userId)
 	const accessToken = useSelector((store) => store.user.accessToken)
@@ -30,14 +30,14 @@ export const QuizHome = ({ setPage }) => {
 		  })
 			.then((willLogout) => {
 			  if (willLogout) {
-          dispatch(user.actions.logout());
-          window.location.href = '/sign';
+          dispatch(user.actions.logout())
+          window.location.href = '/sign'
 			  }
 			})
   }
 
 	return(
-	  <Section background={ '#F5E9DC;'}>
+	  <Section background={ '#F5E9DC;' }>
 		  <SectionQuiz>
 		    <h2>{`${secretMessage}`}</h2>
 				  <Text>Take our consent quiz to practice your knowledge!</Text>

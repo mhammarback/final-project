@@ -22,7 +22,7 @@ export const Header = () => {
 			</HiddenNav>	
 			<HeaderColorContainer>
 				<HeaderText>CONSENT</HeaderText>
-        <HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
+        
 			</HeaderColorContainer>
     </HeaderContainer>
 	)
@@ -47,14 +47,13 @@ const HeaderColorContainer = styled.div`
   }
 `
  const HeaderText = styled.h1`
-position: absolute;
-top: 30%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-size: 14px;
-color: #000;
-margin:0px;
-font-size: 70px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  margin:0px;
+  font-size: 70px;
 
 @media (min-width: 700px) and (max-width: 1024px) {
 	left: 60%;
@@ -96,6 +95,7 @@ const HeaderTextSmall = styled.p`
 
 	@media (min-width: 1640px) {
 		display: none;
-	
 	}
 `
+
+//<HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>

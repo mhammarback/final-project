@@ -15,12 +15,12 @@ export const Summary = () => {
   return (
 		<Section>
       <SectionQuiz>
-		  <h2>We have your results</h2> 
-		    <p>You answered {summary.correctAnswers} correct  out of {summary.numberOfQuestions} questions! </p>
-			  <p>{summary.quote}</p>
-			  <QuizIcon  src={summary.image} alt="" />
-			  <NavLink to="/quiz"><Button onClick={() => dispatch(quiz.actions.restart())}>Restart</Button></NavLink>
-        </SectionQuiz>
+		    <h2>We have your results</h2> 
+		      <p>You answered {summary.correctAnswers} correct  out of {summary.numberOfQuestions} questions! </p>
+			      <p>{summary.quote}</p>
+			        <QuizIcon  src={summary.image} alt="" />
+			          <NavLink to="/quiz"><Button onClick={() => dispatch(quiz.actions.restart())}>Restart</Button></NavLink>
+      </SectionQuiz>
     </Section>
   )
 }
