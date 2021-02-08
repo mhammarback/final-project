@@ -40,6 +40,7 @@ export const StoryList = props => {
 export const Button = styled.button`
   background: none;
   border:none;
+  cursor: pointer;
 `
 
 export const Row = styled.div`

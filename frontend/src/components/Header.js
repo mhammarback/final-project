@@ -81,15 +81,15 @@ const HeaderTextSmall = styled.p`
 	@media (min-width: 780px) and (max-width: 1024px) {
 		display:flex;
 		top: 44%;
-    left: 48%;
+    left: 50%;
 		transform: translate(-50%, -50%);
 		font-size: 17px;
 	}
 
 	@media (min-width: 1024px) and (max-width: 1640px) {
 		display:flex;
-		top: 50%;
-		left: 54%;
+		top: 45%;
+		left: 52%;
 		transform: translate(-50%, -50%);
 		font-size: 22px;
 	}
