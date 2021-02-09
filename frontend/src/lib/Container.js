@@ -38,7 +38,6 @@ export const QuizQuestionContainer = styled.section`
   }
   @media (max-width: 500px) {
     padding: 20px 0 0 0;
-   
   }
 `
 export const QuestionContainer = styled.section`
