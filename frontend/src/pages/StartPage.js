@@ -53,7 +53,7 @@ export const StartPage = () => {
     </CardsContainer>
 
     <FactContainer>
-      <h2>FAST FACTS</h2>
+      <h2 tabindex="0">FAST FACTS</h2>
         <LargeCard>
           <Row>
             <Round><SmallIcon src={Tick} alt="tick icon"/></Round>

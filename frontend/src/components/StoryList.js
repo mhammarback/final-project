@@ -19,11 +19,13 @@ export const StoryList = props => {
   
   return (
     <ForumCard>
-      <p>{message}</p>
-      <p>Posted by: {username}</p>
+      <p tabindex="0">{message}</p>
+      <p tabindex="0">Posted by: {username}</p>
         <Row>
           <Button
-            onClick={handleClick}>
+            onClick={handleClick}
+            tabindex="0" role="button" aria-pressed="false" aria-label="add star" target="_blank" rel="noreferrer"
+            >
             <span>
             <SmallIcon src={Star} alt="star icon"/> 
             </span>
