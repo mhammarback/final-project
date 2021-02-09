@@ -56,7 +56,6 @@ export const QuestionContainer = styled.section`
   }
 `
 export const QuestionPicture = styled.img`
-  
   object-fit: cover;
   margin-right: 10px;
   border-radius: 10px;
@@ -77,17 +76,11 @@ export const QuestionPicture = styled.img`
 
 export const QuizOptionsContainer = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 10px;
   width: 100%;
   list-style:none;
   padding:0;
-  
-  @media (max-width: 800px) {
-    margin-top: 10px;
-  }
-  @media (max-width: 500px) {
-  }
  `
 
  export const StartContainer = styled.div`
