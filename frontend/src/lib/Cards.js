@@ -14,7 +14,6 @@ export const SmallCard = styled.div`
   :hover {
     box-shadow: 1px 2px 2px 1px #888888;
   }
- 
 `
 export const MediumCard = styled.div`
   width: 300px;
@@ -57,16 +56,28 @@ export const WideCard = styled.div`
   flex-direction: column;
   justify-content:space-evenly;
 
-@media (min-width: 700px) and (max-width: 1024px) {
+  @media (min-width: 700px) and (max-width: 1024px) {
   width: 600px;
   padding: 0 16px;
   text-align:center;
-  
-}
-
-@media (min-width: 1025px) {
+  }
+  @media (min-width: 1025px) {
   width: 1000px;
   text-align:center;
-}
+  }
+`
+
+export const ForumCard = styled.div`
+  margin-bottom: 40px;
+  padding: 20px;
+  width: 80%;
+  background-color: #0d335d;
+  color:#fff;
+  border-radius: 30px;
+  font-size: 18px;
+
+  @media (min-width: 1024px) {
+  width: 30%;
+  }
 `
 

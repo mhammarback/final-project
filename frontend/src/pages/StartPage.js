@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
 import { SmallIcon, Icon, LargeIcon, Round } from '../lib/Icons'
-import { StartContainer, FactContainer, WideContainer, CenterText, SmallHeaderContainer, CardsContainer, Row  } from '../lib/Container'
+import { StartContainer, FactContainer, WideContainer, CenterText, SmallHeaderContainer, CardsContainer, Row, SmallFact  } from '../lib/Container'
 import { SmallHeader, BoldText, Text, } from '../lib/Text'
 import Book from '../img/open-book.png'
 import Heart from '../img/love.png'
@@ -30,8 +30,7 @@ export const StartPage = () => {
           </Text>
          </SmallHeaderContainer>
      </StartContainer>
-    
-    <CardsContainer>
+     <CardsContainer>
       <NavLink to ="/lawbook" className="nav-links">
         <SmallCard> 
           <h3>LAW BOOK</h3>
@@ -82,13 +81,12 @@ export const StartPage = () => {
         </LargeCard>
     </FactContainer>
 
-   <CenterText>
-   <h2>HELP</h2>
-    <Text >If you have encountered sexual assault, there is a lot of help to get. </Text >
-    <Text >Here are some links on where you can get more support</Text >
-    <BoldText>You are not alone.</BoldText> 
-    </CenterText>
-
+      <CenterText>
+        <h2>HELP</h2>
+          <Text >If you have encountered sexual assault, there is a lot of help to get. </Text >
+          <Text >Here are some links on where you can get more support</Text >
+          <BoldText>You are not alone.</BoldText> 
+      </CenterText>
       <WideContainer>
         <WideCard>
           <HelpLink href="https://storasyster.org/stod-och-hjalp-efter-sexuella-overgrepp/" target="_blank" rel="noopener noreferrer">Association Big Sister</HelpLink>
@@ -103,31 +101,20 @@ export const StartPage = () => {
   )
 }
 
-export const Links = styled.p`
-  padding:10px;
-  color:#001a33;
-  @media (min-width: 700px) {
-  width:40%;
-  }
-`
-
-export const SmallFact = styled.div`
-  display:flex;
-  flex-directon: column;
-  align-items: center;
-
-  @media (min-width: 700px) {
-    flex-direction:row;
-    font-size: 24px;
-  }
-`
 export const HelpLink = styled.a`
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   color: #0d335d;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
+  font-size: 16px;
+  margin: 16px;
+  padding: 4px 16px;
   border: 2px solid #0d335d;
   border-radius: 3px;
-  display: block;
+
+  &:hover {
+    background: #0d335d;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  } 
 `

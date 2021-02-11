@@ -12,19 +12,19 @@ export const Menu = ({ open }) => {
       <a href="/lawbook">
         <span role="img" aria-label="Lawbook"></span>
         LAWBOOK
-        </a>
-        <a href="/discussion">
+      </a>
+      <a href="/discussion">
         <span role="img" aria-label="Discussion cards"></span>
         DISCUSSION CARDS
-        </a>
-				<a href="/forum">
+      </a>
+			<a href="/forum">
         <span role="img" aria-label="Forum"></span>
         FORUM
-        </a>
-        <a href="/">
+      </a>
+      <a href="/">
         <span role="img" aria-label="Home"></span>
         HOME
-        </a>
+      </a>
     </StyledMenu>
   )
 }
@@ -40,8 +40,8 @@ export const Burger = ({ open, setOpen }) => {
 }
 
 export const HamburgerMenu = () => {
-  const [open, setOpen] = React.useState(false);
-  const node = React.useRef();
+  const [open, setOpen] = React.useState(false)
+  const node = React.useRef()
   return (
     <div>
       <div ref={node}>

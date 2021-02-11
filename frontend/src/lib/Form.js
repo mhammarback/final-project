@@ -40,6 +40,7 @@ export const SectionQuiz = styled.section`
   display:flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   background-color: #F5E9DC;
   padding-bottom:30px;
   width:90%;

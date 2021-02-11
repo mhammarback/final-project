@@ -39,7 +39,7 @@ export const Forum = () => {
   const onLiked = storyId => {
     const updatedStory = storys.map(story => {
       if (story._id === storyId ) {
-         story.hearts += 1
+         story.stars += 1
         }
       return story
       })

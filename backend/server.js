@@ -60,7 +60,7 @@ const Story = mongoose.model('Story', {
     type: Date, 
     default: Date.now
   },
-  hearts: {
+  stars: {
     type: Number, 
     default: 0
   },
@@ -71,7 +71,6 @@ const app = express()
 
 app.use(cors())
 app.use(bodyParser.json())
-
 
 //AUTENTICATION 
 
@@ -88,7 +87,6 @@ const authenticateUser = async (req, res, next) => {
     res.status(403).json({ message: 'Access token is missing or wrong', errors: err })
   }
 }
-
 
 // ROUTES AUTHENTICATION 
 
@@ -156,16 +154,12 @@ app.post('/forum/:storyId/like', async (req,res) => {
   const storyId = req.params.storyId
 
   try {
-    const storyLiked = await Story.updateOne({_id: storyId }, { $inc : { hearts: 1 } })
+    const storyLiked = await Story.updateOne({_id: storyId }, { $inc : { stars: 1 } })
     res.json(storyLiked)
   } catch (err) {
     res.status(400).json({message: "story not found", error:err.errors})
   }
 })
-
-
-
-
 
 
 app.listen(port, () => {
