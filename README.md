@@ -33,3 +33,4 @@ I started with creating my MVP both for the backend and the frontend. Then i wen
 https://final-project-consent.netlify.app/
 
 # Icons from Flaticon 
+Icons made by https://www.freepik.com  from https://www.flaticon.com/ 

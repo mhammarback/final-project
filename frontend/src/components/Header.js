@@ -23,7 +23,6 @@ export const Header = () => {
 			<HeaderColorContainer>
 				<HeaderText>CONSENT</HeaderText>
 				<HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
-        
 			</HeaderColorContainer>
     </HeaderContainer>
 	)
@@ -98,5 +97,3 @@ const HeaderTextSmall = styled.p`
 		display: none;
 	}
 `
-
-//

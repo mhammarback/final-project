@@ -7,7 +7,6 @@ export const Section = styled.section`
   margin-bottom: 40px;
 `
 
-
 export const Container = styled.section`
   display: flex;
   flex-direction: column;
@@ -33,12 +32,12 @@ export const QuizQuestionContainer = styled.section`
   padding: 0 20px 0 20px;
   display: flex;
   width: 100%;
+
   @media (max-width: 800px) {
     flex-direction: column;
   }
   @media (max-width: 500px) {
     padding: 20px 0 0 0;
-   
   }
 `
 export const QuestionContainer = styled.section`
@@ -46,9 +45,7 @@ export const QuestionContainer = styled.section`
   flex-direction: column;
   width: 100%;
  
-
   @media (min-width: 500px) and (max-width: 1024px) {
-    
     align-items: center;
   }
   @media (min-width: 1024px) {
@@ -60,6 +57,7 @@ export const QuestionPicture = styled.img`
   margin-right: 10px;
   border-radius: 10px;
   height: 200px;
+
   @media (min-width: 500px) and (max-width: 1024px) {
     display:flex;
     width: 50%;
@@ -81,7 +79,7 @@ export const QuizOptionsContainer = styled.ul`
   width: 100%;
   list-style:none;
   padding:0;
- `
+`
 
  export const StartContainer = styled.div`
   display: flex;
@@ -91,20 +89,19 @@ export const QuizOptionsContainer = styled.ul`
   color: #fff;
 
   @media (min-width: 700px) and (max-width: 1024px) {
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 0px;
-  
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0px;
   }
+
   @media (min-width: 1024px) {
-  flex-direction: row;
-  justify-content: center;
-  padding: 100px 0px;
-  margin: 150px 0px;
-}
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px 0px;
+    margin: 150px 0px;
+  }
 `
  
-
 export const CardsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -132,6 +129,18 @@ export const FactContainer = styled.div`
   align-items: center;
   margin: 40px 0px 80px 0px;
 `
+
+export const SmallFact = styled.div`
+  display:flex;
+  flex-directon: column;
+  align-items: center;
+
+  @media (min-width: 700px) {
+    flex-direction:row;
+    font-size: 24px;
+  }
+`
+
 export const WideContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -196,6 +205,36 @@ export const Row = styled.div`
   flex-direction:row;
   align-items:center;
   padding: 5px;
+`
+
+export const RowColumn = styled.div`
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+
+	@media (min-width: 1024px) {
+		flex-direction: row;
+		align-items: end;
+  }
+`
+export const RowReverse = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+
+	@media (min-width: 1024px) {
+		flex-direction: row-reverse;
+		align-items: end;
+  }
+`
+
+// lawbook 
+
+export const LawHeader = styled.div`
+  @media (min-width: 1024px) {
+	  width: 600px;
+    padding: 0px 30px;
+  }
 `
 
 //Cards 

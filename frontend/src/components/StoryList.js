@@ -3,6 +3,9 @@ import moment from 'moment'
 import styled from 'styled-components/macro'
 import Star from '../img/star.png'
 
+import { SmallIcon } from '../lib/Icons'
+import { ForumCard } from '../lib/Cards'
+
 export const StoryList = props => {
   const { message, createdAt, username, _id, hearts } = props.story
 
@@ -19,8 +22,8 @@ export const StoryList = props => {
   
   return (
     <ForumCard>
-      <p tabindex="0">{message}</p>
-      <p tabindex="0">Posted by: {username}</p>
+      <p>{message}</p>
+      <p>Posted by: {username}</p>
         <Row>
           <Button
             onClick={handleClick}
@@ -39,45 +42,18 @@ export const StoryList = props => {
   )
 }
 
-export const Button = styled.button`
+const Button = styled.button`
   background: none;
   border:none;
   cursor: pointer;
 `
 
-export const Row = styled.div`
+const Row = styled.div`
   display: flex;
   flex-direction:row;
 `
 
-export const Round = styled.span`
-  height: 50px;
-  width: 50px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;  
-  margin: 30px;
-`
-
-export const SmallIcon = styled.img`
-  width: 50px;
-  height: 50px;
-`
-const ForumCard = styled.div`
-  margin-bottom: 40px;
-  padding: 20px;
-  width: 80%;
-  background-color: #0d335d;
-  color:#fff;
-  border-radius: 30px;
-  font-size: 18px;
-
-  @media (min-width: 1024px) {
-  width: 30%;
-}
-`
-
-export const Time = styled.span`
+const Time = styled.span`
   display: flex;
   justify-content: flex-end;
 `

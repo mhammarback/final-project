@@ -5,7 +5,10 @@
     "postinstall": "npm install --prefix backend"
   },
   "dependencies": {
+    "framer-motion": "^3.3.0",
     "moment": "^2.29.1",
+    "react-reveal": "^1.2.2",
+    "react-reveal-effects": "^1.0.10",
     "sweetalert": "^2.1.2"
   }
 }

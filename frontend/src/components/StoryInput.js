@@ -34,8 +34,7 @@ export const StoryInput = ({ onMessageChange }) => {
   )
 }
  
-
- const StoryInputContainer = styled.section`
+const StoryInputContainer = styled.section`
   height: 96px;
   position: fixed;
   bottom: 0;
