@@ -7,25 +7,25 @@ export const Nav = () => {
   return (
     <NavBar>
       <div>
-        <NavLink to ="/sign" className="nav-links">
+        <NavLink to ='/sign' exact className='nav-links'>
         SIGN UP
         </NavLink>
         ||
-        <NavLink to="/sign" exact className="nav-links">
+        <NavLink to='/sign' exact className='nav-links'>
         SIGN IN 
         </NavLink>
       </div>
       <div>
-        <NavLink to ="/lawbook" className="nav-links">
+        <NavLink to ='/lawbook' exact className='nav-links'>
         LAWBOOK 
         </NavLink>
-        <NavLink to="/discussion" exact className="nav-links">
+        <NavLink to='/discussion' exact className='nav-links'>
         DISCUSSION CARDS
         </NavLink>
-        <NavLink to="/forum" exact className="nav-links">
+        <NavLink to='/forum' exact className='nav-links'>
         FORUM
         </NavLink>
-        <NavLink to="/" exact className="nav-links">
+        <NavLink to='/' exact className='nav-links'>
         HOME 
         </NavLink>   
       </div> 
