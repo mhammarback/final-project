@@ -7,19 +7,19 @@ export const Menu = ({ open }) => {
     <StyledMenu open={open}>
       <a href="/sign">
         <span role="img" aria-label="Sign up or sign in"></span>
-        SIGN UP || SIGN IN 
+          SIGN UP || SIGN IN 
       </a>
       <a href="/lawbook">
         <span role="img" aria-label="Lawbook"></span>
-        LAWBOOK
+          LAWBOOK
       </a>
       <a href="/discussion">
         <span role="img" aria-label="Discussion cards"></span>
-        DISCUSSION CARDS
+          DISCUSSION CARDS
       </a>
 			<a href="/forum">
         <span role="img" aria-label="Forum"></span>
-        FORUM
+          FORUM
       </a>
       <a href="/">
         <span role="img" aria-label="Home"></span>
