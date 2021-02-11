@@ -44,8 +44,7 @@ export const Forum = () => {
       return story
       })
       setStorys(updatedStory)
-    }
-
+  }
 	return(
 		<FactContainer>
 			<StoryInput onMessageChange={postSingleStory} />
@@ -60,4 +59,3 @@ export const Forum = () => {
 	)
 }
 
-//Comment to try fix indentation on github 
