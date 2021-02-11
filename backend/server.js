@@ -72,7 +72,6 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
-
 //AUTENTICATION 
 
 const authenticateUser = async (req, res, next) => {
@@ -88,7 +87,6 @@ const authenticateUser = async (req, res, next) => {
     res.status(403).json({ message: 'Access token is missing or wrong', errors: err })
   }
 }
-
 
 // ROUTES AUTHENTICATION 
 
@@ -132,7 +130,6 @@ app.post('/sessions', async (req, res) => {
   }
 })
 
-
 // ROUTES MESSAGES 
 
 app.get('/forum', async (req, res) => {
@@ -162,7 +159,6 @@ app.post('/forum/:storyId/like', async (req,res) => {
     res.status(400).json({message: "story not found", error:err.errors})
   }
 })
-
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`)
