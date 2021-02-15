@@ -40,17 +40,18 @@ const initialState = {
 
 
 export const quiz = createSlice({
-	name: 'quiz',
-	initialState,
-	reducers: {
-		submitAnswer: (state, action) => {
-			state.timerStart = false
+  name: 'quiz',
+  initialState,
+  reducers: {
+    submitAnswer: (state, action) => {
+      state.timerStart = false
       state.disabled = false
       state.optionDisabled = true
+	    
       const { questionId, answerIndex } = action.payload
       const question = state.questions.find((q) => q.id === questionId)
 
-		if (state.currentQuestionIndex + 1 === state.questions.length) {
+      if (state.currentQuestionIndex + 1 === state.questions.length) {
         state.showSummary = true
       }
 
@@ -60,9 +61,9 @@ export const quiz = createSlice({
 
       if (question.options[answerIndex] === undefined) {
         throw new Error(`You passed answerIndex ${answerIndex}, but it is not in the possible answers array!`)
-			}
+       }
 			
-		  state.answers.push({
+	state.answers.push({
         questionId,
         answerIndex,
         question,
@@ -71,47 +72,47 @@ export const quiz = createSlice({
       })
     },
 
-		goToNextQuestion: (state) => {
-			state.disabled = true
-			state.optionDisabled = false
-			state.deciseconds = 100
-			state.timerStart = true
-			state.currentQuestionIndex += 1
-		},
-		goToPreviousQuestion: (state) => {
-			state.disabled = true
-			state.optionDisabled = false
-			state.deciseconds = 100
-			state.timerStart = true
-			state.currentQuestionIndex -= 1
-		},
-		restart: () => {
-			return initialState
-		},
-		setTimer: (state) => {
-			state.timerStart = false
-		},
-		countdowndeciseconds: (state) => {
-      state.deciseconds -= 1
-		},
-		enableNextButton: (state) => {
-      state.disabled = false
-		},
-		setSummary: (state, action) => {
-			const { numberOfQuestions, correctAnswers } = action.payload
-      state.summary.numberOfQuestions = numberOfQuestions
-      state.summary.correctAnswers = correctAnswers
+      goToNextQuestion: (state) => {
+	state.disabled = true
+	state.optionDisabled = false
+        state.deciseconds = 100
+	state.timerStart = true
+	state.currentQuestionIndex += 1
+	},
+      goToPreviousQuestion: (state) => {
+	state.disabled = true
+	state.optionDisabled = false
+	state.deciseconds = 100
+	state.timerStart = true
+	state.currentQuestionIndex -= 1
+	},
+      restart: () => {
+	return initialState
+	},
+      setTimer: (state) => {
+	state.timerStart = false
+	},
+      countdowndeciseconds: (state) => {
+        state.deciseconds -= 1
+        },
+      enableNextButton: (state) => {
+        state.disabled = false
+	},
+       setSummary: (state, action) => {
+	const { numberOfQuestions, correctAnswers } = action.payload
+        state.summary.numberOfQuestions = numberOfQuestions
+        state.summary.correctAnswers = correctAnswers
 
-			if (correctAnswers > 5 ) {
-				state.summary.quote = state.results[0].text
-				state.summary.image = state.results[0].image
-			} else if ( correctAnswers > 4) {
-				state.summary.quote = state.results[1].text
-				state.summary.image = state.results[1].image
-			} else if ( correctAnswers > 2) {
-				state.summary.quote = state.results[2].text
-				state.summary.image = state.results[2].image
-			}
-		}
-	}
+	  if (correctAnswers > 5 ) {
+	    state.summary.quote = state.results[0].text
+	    state.summary.image = state.results[0].image
+	  } else if ( correctAnswers > 4) {
+	      state.summary.quote = state.results[1].text
+	      state.summary.image = state.results[1].image
+	  } else if ( correctAnswers > 2) {
+	      state.summary.quote = state.results[2].text
+	      state.summary.image = state.results[2].image
+	  }
+       }
+    }
 })
