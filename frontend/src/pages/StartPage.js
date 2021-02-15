@@ -22,10 +22,10 @@ export const StartPage = () => {
          <SmallHeaderContainer>
           <SmallHeader>What, Why and How?</SmallHeader>
           <Text> Every human being has the right to decide over their body and their sexuality. 
-						Therefore, Sweden has a sexual offence law based on the idea of free will. 
-						Sex must be an act of free will - otherwise it is a crime.</Text>
-          <Text>And now it is time for the next step. To start talking, learning
-          and sharing this knowledge.
+	         Therefore, Sweden has a sexual offence law based on the idea of free will. 
+		  Sex must be an act of free will - otherwise it is a crime.</Text>
+          <Text> And now it is time for the next step. To start talking, learning
+                 and sharing this knowledge.
           </Text>
          </SmallHeaderContainer>
      </StartContainer>
@@ -49,7 +49,6 @@ export const StartPage = () => {
         </SmallCard>
       </NavLink>  
     </CardsContainer>
-
     <FactContainer>
       <h2 tabindex="0">FAST FACTS</h2>
         <LargeCard>
@@ -79,7 +78,6 @@ export const StartPage = () => {
           </Row>
         </LargeCard>
     </FactContainer>
-
       <CenterText>
         <h2>HELP</h2>
           <Text >If you have encountered sexual assault, there is a lot of help to get. </Text >
