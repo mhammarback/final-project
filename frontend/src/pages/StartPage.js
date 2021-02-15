@@ -24,7 +24,6 @@ export const StartPage = () => {
           <Text> Every human being has the right to decide over their body and their sexuality. 
 						Therefore, Sweden has a sexual offence law based on the idea of free will. 
 						Sex must be an act of free will - otherwise it is a crime.</Text>
-
           <Text>And now it is time for the next step. To start talking, learning
           and sharing this knowledge.
           </Text>
