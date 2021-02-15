@@ -6,16 +6,16 @@ import { EndText } from '../lib/Text'
 
 
 export const Footer = () => {
-	return (
+  return (
     <FooterContainer>
       <HiddenNav>
-		    <Nav />
+        <Nav />
       </HiddenNav>
-		    <EndTextContainer >
+        <EndTextContainer >
           <EndText>This is my final project during the Technigo Bootcamp 2020/2021</EndText>
-		    </EndTextContainer >
+	</EndTextContainer >
     </FooterContainer>
-	)
+  )
 }
 
 
