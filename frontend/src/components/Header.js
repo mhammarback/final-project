@@ -6,26 +6,26 @@ import  { HamburgerMenu }  from '../components/Menu'
 import { HiddenBurger, HiddenNav } from '../lib/Container'
 
 export const Header = () => {
-	const [open, setOpen] = useState(false)
-	const node = useRef()
-	const menuId = 'main-menu'
+  const [open, setOpen] = useState(false)
+  const node = useRef()
+  const menuId = 'main-menu'
 	
-	return (
+  return (
     <HeaderContainer>
-		  <HiddenBurger>
-			  <div ref={node}>
+      <HiddenBurger>
+	<div ref={node}>
           <HamburgerMenu open={open} setOpen={setOpen} id={menuId} />   
         </div>
-		  </HiddenBurger>
-			<HiddenNav>
-        <Nav />
-			</HiddenNav>	
-			<HeaderColorContainer>
-				<HeaderText>CONSENT</HeaderText>
-				<HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
-			</HeaderColorContainer>
+      </HiddenBurger>
+	<HiddenNav>
+          <Nav />
+	</HiddenNav>	
+	  <HeaderColorContainer>
+	    <HeaderText>CONSENT</HeaderText>
+	      <HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
+	  </HeaderColorContainer>
     </HeaderContainer>
-	)
+  )
 }
 
 
@@ -37,13 +37,13 @@ const HeaderColorContainer = styled.div`
   background-color: #F5E9DC;
   width:70%;
   height: 400px;
-	text-align: center;
+  text-align: center;
 
-	@media (min-width: 700px) and (max-width: 1024px) {
-		height: 450px;
+  @media (min-width: 700px) and (max-width: 1024px) {
+    height: 450px;
   }
   @media (min-width: 1024px) {
-		height: 450px;
+    height: 450px;
   }
 `
  const HeaderText = styled.h1`
@@ -56,12 +56,12 @@ const HeaderColorContainer = styled.div`
   font-size: 70px;
 
 @media (min-width: 700px) and (max-width: 1024px) {
-	left: 60%;
+  left: 60%;
   font-size: 130px;
 }
 
 @media (min-width: 1024px) {
-	left: 60%;
+  left: 60%;
   font-size: 180px;
 }
 `
@@ -75,25 +75,25 @@ const HeaderTextSmall = styled.p`
   transform: translate(-50%, -50%);
   font-size: 24px;
   color: #000;
-	margin:0px;
+  margin:0px;
 	
-	@media (min-width: 780px) and (max-width: 1024px) {
-		display:flex;
-		top: 44%;
+  @media (min-width: 780px) and (max-width: 1024px) {
+    display:flex;
+    top: 44%;
     left: 50%;
-		transform: translate(-50%, -50%);
-		font-size: 17px;
-	}
+    transform: translate(-50%, -50%); 
+    font-size: 17px;
+   }
 
-	@media (min-width: 1024px) and (max-width: 1640px) {
-		display:flex;
-		top: 45%;
-		left: 52%;
-		transform: translate(-50%, -50%);
-		font-size: 22px;
-	}
+  @media (min-width: 1024px) and (max-width: 1640px) {
+    display:flex;
+    top: 45%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+  }
 
-	@media (min-width: 1640px) {
-		display: none;
-	}
+  @media (min-width: 1640px) {
+    display: none;
+  }
 `
