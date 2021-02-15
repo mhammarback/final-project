@@ -9,21 +9,21 @@ export const LoginPage = ({ setPage }) => {
   const dispatch = useDispatch()
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
-	const error = useSelector((store) => store.user.errorMessage)
+  const error = useSelector((store) => store.user.errorMessage)
 	
-	useEffect(() => {
+  useEffect(() => {
     dispatch(user.actions.setErrorMessage({ errorMessage: null }))
-	}, [dispatch])
+  }, [dispatch])
 
-	const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
     dispatch(login(name, password))
-	}
+  }
 	
-	return ( 
-		<>
+  return ( 
+  <>
     <Section>
-		<Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
       <h2>SIGN IN </h2>
         <FormContent>
           <label>Name</label>
@@ -32,8 +32,8 @@ export const LoginPage = ({ setPage }) => {
             placeholder='Enter Name...'
             value={name}
             onChange={(event) => setName(event.target.value)}
-						minLength='2'
-						maxLength='20'
+	    minLength='2'
+	    maxLength='20'
             required
           />
           <label>Password</label>
@@ -52,8 +52,8 @@ export const LoginPage = ({ setPage }) => {
       </Form>
       {error && <div className="div-error">{`${error}`}</div>}
       </Section>
-		</>
-	)
+    </>
+  )
 }
 
 
