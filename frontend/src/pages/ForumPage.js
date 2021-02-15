@@ -6,7 +6,6 @@ import { FactContainer } from '../lib/Container'
 
 export const ForumPage = () => {
 	const [storys, setStorys] = useState([])
-
 	const STORY_URL = 'https://final-project-technigo.herokuapp.com/forum'
 
 	useEffect(() => {
@@ -29,7 +28,7 @@ export const ForumPage = () => {
 	const postSingleStory = (message) => {
 		fetch(STORY_URL, {
 			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
+			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({ message: message })
 		})
 		.then(() => fetchStorys())
@@ -38,14 +37,14 @@ export const ForumPage = () => {
   
   const onLiked = storyId => {
     const updatedStory = storys.map(story => {
-      if (story._id === storyId ) {
-         story.hearts += 1
-        }
+      if (story._id === storyId ){
+        story.hearts += 1
+      }
       return story
       })
       setStorys(updatedStory)
   }
-	return(
+	return (
 		<FactContainer>
 			<StoryInput onMessageChange={postSingleStory} />
 			{storys.map((story) => (
