@@ -13,9 +13,8 @@ const questions = [
 const results = [
   { text: 'Great job, all correct answers!', image: './images/love.png' },
   { text: 'So close, one more time and you will ace it!', image: './images/good-review.png' },
-  { text: 'Keep on practicing, this is important!', image:'./images/message.png' },
+  { text: 'Keep on practicing, this is important!', image: './images/message.png' },
 ]
-
 
 const summary = {
   numberOfQuestions: null,
@@ -23,7 +22,6 @@ const summary = {
   quote: null,
   image: null,
 }
-
 
 const initialState = {
   questions,
@@ -37,7 +35,6 @@ const initialState = {
   results,
   summary
 }
-
 
 export const quiz = createSlice({
   name: 'quiz',
