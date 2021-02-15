@@ -50,8 +50,8 @@ export const ForumPage = () => {
 	   {storys.map((story) => (
 	      <StoryList 
 	       key={story._id}
-               story={story} 
-               onLiked={onLiked}
+         story={story} 
+          onLiked={onLiked}
 	       />
 	    ))}
       </FactContainer>
