@@ -7,7 +7,7 @@ import { user } from './reducers/user'
 import { quiz } from './reducers/quiz'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
-import { Forum } from './components/Forum'
+import { ForumPage } from './pages/ForumPage'
 import { StartPage } from './pages/StartPage'
 import { DiscussionsCards } from './pages/DiscussionsCards'
 import { Lawbook } from './pages/Lawbook'
@@ -33,7 +33,7 @@ return (
         <DiscussionsCards />
         </Route>
         <Route path='/forum' exact>
-        <Forum />
+        <ForumPage />
         </Route>
         <Route path='/lawbook' exact>
         <Lawbook />
