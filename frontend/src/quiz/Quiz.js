@@ -12,7 +12,7 @@ import { Image } from '../quiz/Image'
 
  
 export const Quiz = () => {
-	const disabled = useSelector((state) => state.quiz.disabled)
+  const disabled = useSelector((state) => state.quiz.disabled)
   const deciseconds = useSelector((state) => state.quiz.deciseconds)
   const optionDisabled = useSelector((state) => state.quiz.optionDisabled)
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex])
@@ -24,50 +24,49 @@ export const Quiz = () => {
   const answers = useSelector((state) => (state.quiz.answers))
   const correct = (answers.filter((answer) => answer.isCorrect)).length
 
-	const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-	if (!question) {
-    return <p>Oh no! I could not find the current question!</p>
-  }
+    if (!question) {
+      return <p>Oh no! I could not find the current question!</p>
+    }
 
-	return (
-		<ContainerColor>
-		<Question>Question {(index + 1)} of {questions}: <span>{question.questionText}</span></Question>
-		<QuestionContainer>
-    <Image />
-			<QuizOptionsContainer>
-      {options.map((option, optionindex) => {
-        return (
-          <QuizButton
-            key={optionindex}
-            background={(optionindex === question.correctAnswerIndex) ? '#157E4F' : '#DD3751'}
-            disabled={optionDisabled || deciseconds === 0}
-            onClick={() => {
-            dispatch(quiz.actions.submitAnswer({ questionId: index, answerIndex: optionindex }))
-            }}>
-            <li key={optionindex}>{option}</li>
-            </QuizButton>
-            )
-       })}
-      </QuizOptionsContainer>
-		</QuestionContainer>
-		{showSummaryButton &&
-      <Container>
-          <NavLink to="/summary">
-            <SmallButton onClick={() => dispatch(quiz.actions.setSummary({ numberOfQuestions: questions, correctAnswers: correct }))}>See results</SmallButton>
-          </NavLink>
-      </Container>}
-      {!showSummaryButton &&
-        <section>
-					{(deciseconds > 0) ? <TimeIsUp color="rgba(0, 0, 0, 0)" /> : <TimeIsUp color="rgba(0, 0, 0, 1)" />}
-
-          <ContainerCenter>
-            <SmallButton disabled={(index === 0)} onClick={() => dispatch(quiz.actions.goToPreviousQuestion())}>Back</SmallButton>
-            <SmallButton disabled={disabled} onClick={() => dispatch(quiz.actions.goToNextQuestion())}>Next</SmallButton>
-            <NavLink to="/quiz"><SmallButton onClick={() => dispatch(quiz.actions.restart())}>Restart</SmallButton></NavLink>
-          </ContainerCenter>
-					<Timer />
-        </section>}
+   return (
+     <ContainerColor>
+       <Question>Question {(index + 1)} of {questions}: <span>{question.questionText}</span></Question>
+	<QuestionContainer>
+          <Image />
+	    <QuizOptionsContainer>
+              {options.map((option, optionindex) => {
+                return (
+                  <QuizButton
+                   key={optionindex}
+                   background={(optionindex === question.correctAnswerIndex) ? '#157E4F' : '#DD3751'}
+                   disabled={optionDisabled || deciseconds === 0}
+                   onClick={() => {
+                   dispatch(quiz.actions.submitAnswer({ questionId: index, answerIndex: optionindex }))
+                 }}>
+                   <li key={optionindex}>{option}</li>
+                 </QuizButton>
+               )
+             })}
+           </QuizOptionsContainer>
+        </QuestionContainer>
+	  {showSummaryButton &&
+            <Container>
+              <NavLink to="/summary">
+                <SmallButton onClick={() => dispatch(quiz.actions.setSummary({ numberOfQuestions: questions, correctAnswers: correct }))}>See results</SmallButton>
+              </NavLink>
+            </Container>}
+          {!showSummaryButton &&
+            <section>
+	      {(deciseconds > 0) ? <TimeIsUp color="rgba(0, 0, 0, 0)" /> : <TimeIsUp color="rgba(0, 0, 0, 1)" />}
+                <ContainerCenter>
+                 <SmallButton disabled={(index === 0)} onClick={() => dispatch(quiz.actions.goToPreviousQuestion())}>Back</SmallButton>
+                 <SmallButton disabled={disabled} onClick={() => dispatch(quiz.actions.goToNextQuestion())}>Next</SmallButton>
+                 <NavLink to="/quiz"><SmallButton onClick={() => dispatch(quiz.actions.restart())}>Restart</SmallButton></NavLink>
+                </ContainerCenter>
+	          <Timer />
+            </section>}
     </ContainerColor>
   )
 }
