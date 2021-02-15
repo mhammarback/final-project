@@ -5,7 +5,7 @@ import { StoryList } from '../components/StoryList'
 import { FactContainer } from '../lib/Container'
 
 export const ForumPage = () => {
-  const [story, setStorys] = useState([])
+  const [storys, setStorys] = useState([])
   const STORY_URL = 'https://final-project-technigo.herokuapp.com/forum'
 
   useEffect(() => {
