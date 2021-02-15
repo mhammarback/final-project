@@ -17,7 +17,7 @@ export const Menu = ({ open }) => {
         <span role='img' aria-label='Discussion cards'></span>
           DISCUSSION CARDS
       </a>
-			<a href='/forum'>
+      <a href='/forum'>
         <span role='img' aria-label='Forum'></span>
           FORUM
       </a>
