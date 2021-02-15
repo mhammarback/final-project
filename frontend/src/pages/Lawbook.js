@@ -24,17 +24,17 @@ export const Lawbook = () => {
 					  <SmallHeader>What does the lawbook say about consent?</SmallHeader>
 					    <Section> 
 					      <BoldText>On 1 July 2018, the sexual crime legislation was changed so that it was more clearly 
-					          established that the limit for a criminal act must be set whether participation in a 
-						        sexual activity is voluntary or not. The purpose was to clarify that every human being
-						        has an unconditional right to personal and sexual integrity and sexual self-determination. 
-						        The rape provision according to ch. 6 § 1 BrB is now formulated as follows:
+					        established that the limit for a criminal act must be set whether participation in a 
+						      sexual activity is voluntary or not. The purpose was to clarify that every human being
+						      has an unconditional right to personal and sexual integrity and sexual self-determination. 
+						      The rape provision according to ch. 6 § 1 BrB is now formulated as follows:
 			          </BoldText>
                   <p>1 § A person who, with a person who does not participate voluntarily, performs intercourse
-						         or another sexual act which, in view of the seriousness of the violation, is comparable to intercourse,
-						      	 is sentenced for rape to imprisonment for a minimum of two years and a maximum of six years.
-						         When assessing whether a participation is voluntary or not, special consideration must
-							       be given to whether voluntariness has been expressed through words or deeds or 
-							       in any other way. A person can never be considered to participate voluntarily
+						       or another sexual act which, in view of the seriousness of the violation, is comparable to intercourse,
+						       is sentenced for rape to imprisonment for a minimum of two years and a maximum of six years.
+						       When assessing whether a participation is voluntary or not, special consideration must
+							     be given to whether voluntariness has been expressed through words or deeds or 
+							     in any other way. A person can never be considered to participate voluntarily
 								  </p>
 						 	      <List>
 								      <ListItem> participation is the result of ill-treatment, other violence or threats of a criminal act, 
