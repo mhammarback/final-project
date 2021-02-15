@@ -20,12 +20,12 @@ export const EndText = styled.p`
 
   @media (min-width: 700px) and (max-width: 1024px) {
     width: 20%;
-	  margin: 40px 50px 0px 0px;
-	}
-	@media (min-width: 1024px) {
-	  width: 20%;
-	  margin: 40px 50px 0px 0px;
-	}
+    margin: 40px 50px 0px 0px;
+  }
+  @media (min-width: 1024px) {
+    width: 20%;
+    margin: 40px 50px 0px 0px;
+  }
 `
 
 export const Text = styled.p`
