@@ -208,23 +208,23 @@ export const Row = styled.div`
 `
 
 export const RowColumn = styled.div`
-	display:flex;
-	flex-direction: column;
-	align-items:center;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
 
-	@media (min-width: 1024px) {
-		flex-direction: row;
-		align-items: end;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: end;
   }
 `
 export const RowReverse = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
 
-	@media (min-width: 1024px) {
-		flex-direction: row-reverse;
-		align-items: end;
+  @media (min-width: 1024px) {
+    flex-direction: row-reverse;
+    align-items: end;
   }
 `
 
@@ -232,7 +232,7 @@ export const RowReverse = styled.div`
 
 export const LawHeader = styled.div`
   @media (min-width: 1024px) {
-	  width: 600px;
+    width: 600px;
     padding: 0px 30px;
   }
 `
@@ -248,15 +248,15 @@ export const ButtonContainer = styled.div`
 
 export const HiddenBurger = styled.div`
   @media (min-width: 1024px) { 
-		display:none;
-	}
+    display:none;
+  }
 `
 export const HiddenNav = styled.div`
-	display: none;
+  display: none;
 	
   @media (min-width: 1024px) {
-		display:flex;
-	}
+    display:flex;
+  }
 `
 
 //Footer 
