@@ -47,13 +47,13 @@ export const ForumPage = () => {
      return (
        <FactContainer>
          <StoryInput onMessageChange={postSingleStory} />
-	         {storys.map((story) => (
-	          <StoryList 
-	          key={story._id}
+           {storys.map((story) => (
+            <StoryList 
+            key={story._id}
             story={story} 
             onLiked={onLiked}
-	       />
-	    ))}
+         />
+      ))}
       </FactContainer>
   )
 }

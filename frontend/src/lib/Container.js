@@ -195,7 +195,7 @@ export const HiddenBurger = styled.div`
 `
 export const HiddenNav = styled.div`
   display: none;
-	
+  
   @media (min-width: 544px) {
     display:flex;
   }

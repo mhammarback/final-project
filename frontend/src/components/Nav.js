@@ -9,20 +9,18 @@ export const Nav = () => {
       <NavLink to='/sign' exact className='nav-links'>
         LOGIN 
       </NavLink> 
-     
-        <NavLink to ='/lawbook' exact className='nav-links'>
+      <NavLink to ='/lawbook' exact className='nav-links'>
         LAWBOOK 
-        </NavLink>
-        <NavLink to='/discussion' exact className='nav-links'>
+      </NavLink>
+      <NavLink to='/discussion' exact className='nav-links'>
         DISCUSSION CARDS
-        </NavLink>
-        <NavLink to='/forum' exact className='nav-links'>
+      </NavLink>
+      <NavLink to='/forum' exact className='nav-links'>
         FORUM
-        </NavLink>
-        <NavLink to='/' exact className='nav-links'>
+      </NavLink>
+      <NavLink to='/' exact className='nav-links'>
         HOME 
-        </NavLink>   
- 
+      </NavLink>   
     </NavBar>
   )
 }

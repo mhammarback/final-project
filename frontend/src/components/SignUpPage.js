@@ -19,7 +19,7 @@ export const SignUpPage = ({ setPage }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-  
+ 
   fetch(SIGNUP_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -75,4 +75,6 @@ return (
   </>
   )
 }
+
+
 

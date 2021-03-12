@@ -9,21 +9,21 @@ export const Header = () => {
   const [open, setOpen] = useState(false)
   const node = useRef()
   const menuId = 'main-menu'
-	
+  
   return (
     <HeaderContainer>
       <HiddenBurger>
-	<div ref={node}>
+  <div ref={node}>
           <HamburgerMenu open={open} setOpen={setOpen} id={menuId} />   
         </div>
       </HiddenBurger>
-	<HiddenNav>
+  <HiddenNav>
           <Nav />
-	</HiddenNav>	
-	  <HeaderColorContainer>
-	    <HeaderText>CONSENT</HeaderText>
-	      <HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
-	  </HeaderColorContainer>
+  </HiddenNav>	
+    <HeaderColorContainer>
+      <HeaderText>CONSENT</HeaderText>
+        <HeaderTextSmall>from 1 july 2018 consent is a part of the Swedish law</HeaderTextSmall>
+    </HeaderColorContainer>
     </HeaderContainer>
   )
 }
@@ -75,7 +75,7 @@ const HeaderTextSmall = styled.p`
   font-size: 24px;
   color: #000;
   margin:0px;
-	
+  
   @media (min-width: 780px) and (max-width: 1024px) {
     display:flex;
     top: 44%;

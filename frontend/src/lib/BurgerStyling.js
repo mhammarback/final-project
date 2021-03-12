@@ -53,8 +53,8 @@ export const StyledMenu = styled.nav`
   text-align: left;
   position: absolute;
   top: 0;
-	left: 0;
-	padding-top: 80px;
+  left: 0;
+  padding-top: 80px;
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: 576px) {

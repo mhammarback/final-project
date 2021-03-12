@@ -40,8 +40,8 @@ export const Text = styled.p`
 
 export const CenterText = styled.p`
   font-size: 18px;
-	text-align:center;
-	padding:10px;
+  text-align:center;
+  padding:10px;
 `
 
 export const Question = styled.h2`

@@ -20,7 +20,7 @@ export const QuizHome = () => {
     dispatch(user.actions.setErrorMessage({ errorMessage: null }))
     dispatch(getSecretMessage(userId, accessToken))
   })
-	
+  
   const handleClick = () => {
     swal({
       title: 'Oh no!',
@@ -41,13 +41,13 @@ export const QuizHome = () => {
     <Section background={ '#F5E9DC;' }>
       <SectionQuiz>
         <h2>{`${secretMessage}`}</h2>
-	        <Text>Take our consent quiz to practice your knowledge!</Text>
-	          <ContainerCenter>
+          <Text>Take our consent quiz to practice your knowledge!</Text>
+            <ContainerCenter>
               <CoulmnRow>
-	              <Button type="button" onClick={handleClick}>Log Out</Button>
-	          	    <NavLink to="/quiz-start"><Button>Start Quiz</Button></NavLink>
+                <Button type="button" onClick={handleClick}>Log Out</Button>
+                  <NavLink to="/quiz-start"><Button>Start Quiz</Button></NavLink>
               </CoulmnRow>
-	          </ContainerCenter>
+            </ContainerCenter>
        </SectionQuiz>
     </Section>
   )
