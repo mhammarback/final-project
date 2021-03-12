@@ -10,7 +10,7 @@ export const LoginPage = ({ setPage }) => {
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
   const error = useSelector((store) => store.user.errorMessage)
-  
+	
   useEffect(() => {
     dispatch(user.actions.setErrorMessage({ errorMessage: null }))
   }, [dispatch])
@@ -19,7 +19,7 @@ export const LoginPage = ({ setPage }) => {
     event.preventDefault()
     dispatch(login(name, password))
   }
-  
+	
   return ( 
   <>
     <Section>
@@ -32,8 +32,8 @@ export const LoginPage = ({ setPage }) => {
             placeholder='Enter Name...'
             value={name}
             onChange={(event) => setName(event.target.value)}
-            minLength='2'
-            maxLength='20'
+	          minLength='2'
+	          maxLength='20'
             required
           />
           <label>Password</label>
@@ -45,12 +45,12 @@ export const LoginPage = ({ setPage }) => {
             minLength='5'
             required
           />
-          <Button className='input-button' type='submit'>Sign in</Button>
-            <p>Not a user?</p>
-              <Button className="input-button" type="button" onClick={() => setPage('signup')}>Sign up</Button>
+            <Button className='input-button' type='submit'>Sign in</Button>
+              <p>Not a user?</p>
+                <Button className="input-button" type="button" onClick={() => setPage('signup')}>Sign up</Button>
         </FormContent>
       </Form>
-      {error && <div className="div-error">{`${error}`}</div>}
+        {error && <div className="div-error">{`${error}`}</div>}
       </Section>
     </>
   )
