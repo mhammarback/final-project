@@ -6,16 +6,10 @@ import styled from 'styled-components/macro'
 export const Nav = () => {
   return (
     <NavBar>
-      <div>
-        <NavLink to ='/sign' exact className='nav-links'>
-        SIGN UP
-        </NavLink>
-        ||
-        <NavLink to='/sign' exact className='nav-links'>
-        SIGN IN 
-        </NavLink>
-      </div>
-      <div>
+      <NavLink to='/sign' exact className='nav-links'>
+        LOGIN 
+      </NavLink> 
+     
         <NavLink to ='/lawbook' exact className='nav-links'>
         LAWBOOK 
         </NavLink>
@@ -28,14 +22,14 @@ export const Nav = () => {
         <NavLink to='/' exact className='nav-links'>
         HOME 
         </NavLink>   
-      </div> 
+ 
     </NavBar>
   )
 }
 
 export const NavBar = styled.section`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin:10px;  
 
   @media (min-width: 1024px) {

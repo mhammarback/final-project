@@ -189,14 +189,14 @@ export const ButtonContainer = styled.div`
 //header and footer
 
 export const HiddenBurger = styled.div`
-  @media (min-width: 1024px) { 
+  @media (min-width: 544px) { 
     display:none;
   }
 `
 export const HiddenNav = styled.div`
   display: none;
 	
-  @media (min-width: 1024px) {
+  @media (min-width: 544px) {
     display:flex;
   }
 `

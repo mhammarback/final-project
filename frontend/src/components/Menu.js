@@ -6,8 +6,8 @@ export const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
       <a href='/sign'>
-        <span role='img' aria-label='Sign up or sign in'></span>
-          SIGN UP || SIGN IN 
+        <span role='img' aria-label='login or sign up'></span>
+          LOGIN
       </a>
       <a href='/lawbook'>
         <span role='img' aria-label='Lawbook'></span>
