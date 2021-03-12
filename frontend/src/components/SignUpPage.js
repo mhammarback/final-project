@@ -66,8 +66,8 @@ return (
           required
         />
           <Button className='input-button' type='submit'>Sign up</Button>
-          <p>Already a user?</p>
-            <Button className='input-button' type='button' onClick={() => setPage('login')}>Log in</Button>
+            <p>Already a user?</p>
+              <Button className='input-button' type='button' onClick={() => setPage('login')}>Log in</Button>
         </FormContent>
       </Form>
       {error && <div>{`${error}`}</div>}

@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import { SmallCard } from '../lib/Cards'
-import { Section, Container, RowColumn, RowReverse, LawHeader } from '../lib/Container'
+import { Section, Container,  LawHeader } from '../lib/Container'
 import { BoldText, SmallHeader } from '../lib/Text'
 import { Icon, CardIcon } from '../lib/Icons'
+import { RowColumn, RowReverse } from '../lib/FlexBox'
 import Book from '../img/open-book.png'
 import Group from '../img/group.jpg'
 
@@ -85,7 +86,6 @@ export const Lawbook = () => {
 
 export const List = styled.ol`
   margin: 0;
-	padding: 0;
 `
 
 export const ListItem = styled.li`

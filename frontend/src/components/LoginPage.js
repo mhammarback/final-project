@@ -32,8 +32,8 @@ export const LoginPage = ({ setPage }) => {
             placeholder='Enter Name...'
             value={name}
             onChange={(event) => setName(event.target.value)}
-	    minLength='2'
-	    maxLength='20'
+	          minLength='2'
+	          maxLength='20'
             required
           />
           <label>Password</label>

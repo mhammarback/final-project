@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import { SmallCard } from '../lib/Cards'
 import { SmallHeader, CenterText } from '../lib/Text'
 import { Button } from '../lib/Button'
-import { Section, FlexWrap, ButtonContainer } from '../lib/Container'
+import { Section,  ButtonContainer } from '../lib/Container'
+import { FlexWrap } from '../lib/FlexBox'
 
 export const DiscussionsCards = () => {
   const [show, setShow] = useState(false)

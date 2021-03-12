@@ -35,7 +35,6 @@ const HeaderContainer = styled.header`
 
 const HeaderColorContainer = styled.div`
   background-color: #F5E9DC;
-  width:70%;
   height: 400px;
   text-align: center;
 

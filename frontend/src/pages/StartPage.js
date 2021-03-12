@@ -4,8 +4,9 @@ import { NavLink } from 'react-router-dom'
 
 import { LargeCard, MediumCard, SmallCard, WideCard } from '../lib/Cards'
 import { SmallIcon, Icon, LargeIcon, Round } from '../lib/Icons'
-import { StartContainer, FactContainer, WideContainer, CenterText, SmallHeaderContainer, CardsContainer, Row, SmallFact  } from '../lib/Container'
+import { StartContainer, FactContainer, WideContainer, CenterText, SmallHeaderContainer, CardsContainer,  SmallFact  } from '../lib/Container'
 import { SmallHeader, BoldText, Text, } from '../lib/Text'
+import { Row } from '../lib/FlexBox'
 import Book from '../img/open-book.png'
 import Heart from '../img/love.png'
 import Discussion from '../img/debate.png'
@@ -23,9 +24,11 @@ export const StartPage = () => {
           <SmallHeader>What, Why and How?</SmallHeader>
           <Text> Every human being has the right to decide over their body and their sexuality. 
 	         Therefore, Sweden has a sexual offence law based on the idea of free will. 
-		  Sex must be an act of free will - otherwise it is a crime.</Text>
+		       Sex must be an act of free will - otherwise it is a crime.</Text>
           <Text> And now it is time for the next step. To start talking, learning
                  and sharing this knowledge.
+          </Text>
+          <Text> Sign up to take a consent quiz to see your current knowledge!
           </Text>
          </SmallHeaderContainer>
      </StartContainer>

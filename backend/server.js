@@ -4,8 +4,9 @@ import cors from 'cors'
 import mongoose from 'mongoose'
 import crypto from 'crypto'
 import bcrypt from 'bcrypt'
+import listEndpoints from 'express-list-endpoints'
 
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/final-project'
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/consent'
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
@@ -54,7 +55,6 @@ const Story = mongoose.model('Story', {
   username: {
     type: String, 
     maxlength: 20, 
-    default: 'Anonymous'
   },
   createdAt: {
     type: Date, 
@@ -98,6 +98,10 @@ app.use((req, res, next) => {
   }
 })
 
+app.get('/', (req, res) => {
+  res.send(listEndpoints(app));
+})
+
 app.post('/users', async (req, res) => {
   try {
     const { name, password } = req.body
@@ -132,14 +136,14 @@ app.post('/sessions', async (req, res) => {
 
 // ROUTES MESSAGES 
 
-app.get('/forum', async (req, res) => {
+app.get('/stories', async (req, res) => {
   const storys = await Story.find().sort({createdAt: 'desc' }).limit(20).exec()  
   res.json(storys)
 })
 
-app.post('/forum' , async (req, res) => {
+app.post('/stories' , async (req, res) => {
   const { message, username } = req.body 
-  const story = new Story ({ message, username: username || 'Anonymous' })
+  const story = new Story ({ message })
 
   try {
     const savedStory = await story.save()
@@ -149,7 +153,7 @@ app.post('/forum' , async (req, res) => {
   }
 })
 
-app.post('/forum/:storyId/like', async (req,res) => {
+app.post('/stories/:storyId/like', async (req,res) => {
   const storyId = req.params.storyId
 
   try {

@@ -30,7 +30,7 @@ I started with creating my MVP both for the backend and the frontend. Then i wen
 - Heroku
 
 # View it live 
-https://final-project-consent.netlify.app/
+consent-in-sweden.netlify.app
 
 # Icons from Flaticon 
 Icons made by https://www.freepik.com  from https://www.flaticon.com/ 

@@ -5,6 +5,7 @@
     "postinstall": "npm install --prefix backend"
   },
   "dependencies": {
+    "express-list-endpoints": "^5.0.0",
     "framer-motion": "^3.3.0",
     "moment": "^2.29.1",
     "react-reveal": "^1.2.2",

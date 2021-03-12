@@ -33,9 +33,9 @@ export const Quiz = () => {
    return (
      <ContainerColor>
        <Question>Question {(index + 1)} of {questions}: <span>{question.questionText}</span></Question>
-	<QuestionContainer>
-          <Image />
-	    <QuizOptionsContainer>
+          <QuestionContainer>
+            <Image />
+              <QuizOptionsContainer>
               {options.map((option, optionindex) => {
                 return (
                   <QuizButton
@@ -51,7 +51,7 @@ export const Quiz = () => {
              })}
            </QuizOptionsContainer>
         </QuestionContainer>
-	  {showSummaryButton &&
+    {showSummaryButton &&
             <Container>
               <NavLink to="/summary">
                 <SmallButton onClick={() => dispatch(quiz.actions.setSummary({ numberOfQuestions: questions, correctAnswers: correct }))}>See results</SmallButton>
@@ -59,13 +59,13 @@ export const Quiz = () => {
             </Container>}
           {!showSummaryButton &&
             <section>
-	      {(deciseconds > 0) ? <TimeIsUp color="rgba(0, 0, 0, 0)" /> : <TimeIsUp color="rgba(0, 0, 0, 1)" />}
+        {(deciseconds > 0) ? <TimeIsUp color="rgba(0, 0, 0, 0)" /> : <TimeIsUp color="rgba(0, 0, 0, 1)" />}
                 <ContainerCenter>
                  <SmallButton disabled={(index === 0)} onClick={() => dispatch(quiz.actions.goToPreviousQuestion())}>Back</SmallButton>
                  <SmallButton disabled={disabled} onClick={() => dispatch(quiz.actions.goToNextQuestion())}>Next</SmallButton>
                  <NavLink to="/quiz"><SmallButton onClick={() => dispatch(quiz.actions.restart())}>Restart</SmallButton></NavLink>
                 </ContainerCenter>
-	          <Timer />
+            <Timer />
             </section>}
     </ContainerColor>
   )
